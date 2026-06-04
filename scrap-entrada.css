@@ -1,0 +1,80 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-scrapentradabbox{
+max-width:700px;
+width:100%;
+margin:0 auto;
+position:relative;
+}
+
+.cm-scrapentradabbox br{
+display:none!important;
+}
+
+/* polaroid */
+.cm-scrapentradabpolaroid{
+position:relative;
+background:#f8f8f8;
+padding:14px 14px 26px;
+border:1px solid rgba(0,0,0,.12);
+box-shadow:0 6px 16px rgba(0,0,0,.15);
+}
+
+/* imagen REAL (no background) */
+.cm-scrapentradabpolaroid img{
+display:block;
+width:100%;
+height:auto;
+border:1px solid rgba(0,0,0,.18);
+}
+
+/* cinta */
+.cm-scrapentradabtape{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%) rotate(-2deg);
+width:200px;
+height:28px;
+background:var(--scrapentradab-acc);
+opacity:.55;
+z-index:5;
+}
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

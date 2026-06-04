@@ -1,0 +1,193 @@
+.cm-reldar-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.cm-reldar-wrap * {
+  box-sizing: border-box;
+}
+
+.cm-reldar-inner {
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+  }
+
+.cm-reldar-left {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 48px 18px 0;
+  gap: 10px;
+}
+
+.cm-reldar-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30pt;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--eldar-acc1);
+  line-height: 1.1;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.cm-reldar-subtitle {
+  font-size: 15pt;
+  color: var(--eldar-acc2);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  margin: 0 0 14px 0;
+  letter-spacing: 0.01em;
+}
+
+.cm-reldar-divider {
+  border: none;
+  border-top: 2px solid var(--eldar-acc1);
+  margin: 0 0 12px 0;
+}
+
+.cm-reldar-prep-label {
+  color: var(--eldar-acc1);
+  font-weight: 700;
+  font-size: 12pt;
+  margin: 0 0 6px 0;
+  font-style: normal;
+}
+
+.cm-reldar-body-area {
+  width: 100%;
+  min-height: 80px;
+  line-height: 1.6;
+  text-align: justify;
+  outline: none;
+  hyphens: none !important;
+}
+
+.cm-reldar-body-area b,
+.cm-reldar-body-area strong {
+  color: var(--eldar-acc1) !important;
+  font-weight: 700 !important;
+}
+
+.cm-reldar-body-area i,
+.cm-reldar-body-area em {
+  color: var(--eldar-acc2) !important;
+  font-style: italic !important;
+}
+
+.cm-reldar-right {
+  width: 140px;
+  min-width: 120px;
+  max-width: 140px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.cm-reldar-img-box {
+  width: 190px;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin-bottom: -95px;
+}
+
+.cm-reldar-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cm-reldar-info-box {
+  background: var(--eldar-acc1);
+  color: var(--bckg-1);
+  max-width: 140px;
+  padding-top: 110px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+}
+
+.cm-reldar-info-item {
+  text-align: center;
+  line-height: 1.35;
+}
+
+.cm-reldar-info-label {
+  font-size: 10pt;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.cm-reldar-info-value {
+  font-size: 10pt;
+  font-weight: 700;
+  display: block;
+}
+
+.cm-reldar-info-value a {
+  color: var(--bckg-1) !important; 
+}
+
+.cm-reldar-avatar-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+  height: 38px;
+}
+
+.cm-reldar-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+}
+
+.cm-reldar-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

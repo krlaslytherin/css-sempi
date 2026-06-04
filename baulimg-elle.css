@@ -1,0 +1,91 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-baulimg-elle {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 22px;
+  background-image:
+    repeating-linear-gradient(127deg, transparent 0px, transparent 40px, rgba(0,0,0,0.04) 40px, rgba(0,0,0,0.04) 41px, transparent 41px, transparent 90px, rgba(255,255,255,0.02) 90px, rgba(255,255,255,0.02) 91px),
+    repeating-linear-gradient(92deg, transparent 0px, transparent 3px, rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px),
+    repeating-linear-gradient(88deg, transparent 0px, transparent 7px, rgba(255,255,255,0.03) 7px, rgba(255,255,255,0.03) 8px),
+    linear-gradient(160deg, #5a3a1a 0%, #3d2409 20%, #6b4420 35%, #2e1a05 50%, #7a5028 65%, #3a2108 80%, #5c3b18 100%);
+  border: 3px solid #1a0e03;
+  border-radius: 3px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.8),
+    0 8px 20px rgba(0,0,0,0.6),
+    inset 3px 3px 8px rgba(255,200,100,0.15),
+    inset -3px -3px 8px rgba(0,0,0,0.5),
+    inset 0 0 0 1px rgba(180,130,60,0.3);
+}
+
+/* Clavos esquinas superiores */
+.cm-baulimg-elle::before,
+.cm-baulimg-elle::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #8a7a60, #3a2e1a 60%, #1a1208);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.1);
+  z-index: 2;
+}
+.cm-baulimg-elle::before { top: 7px; left: 7px; }
+.cm-baulimg-elle::after  { top: 7px; right: 7px; }
+
+/* Imagen con passe-partout envejecido */
+.cm-baulimg-elle img {
+  display: block;
+  width: 100%;
+  height: auto;
+  outline: 12px solid #d4c9a8;
+  outline-offset: -1px;
+  box-shadow:
+    0 0 0 1px #b8a980,
+    0 0 0 13px #c9bc96,
+    0 0 0 14px #a89870;
+  filter: sepia(8%) contrast(0.97) brightness(0.98);
+  position: relative;
+  z-index: 1;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

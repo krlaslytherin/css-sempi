@@ -1,0 +1,464 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-egmail-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #f0f4f9 0%, #e8edf5 100%);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.cm-egmail-wrap * {
+    box-sizing: border-box;
+}
+
+/* ── Topbar ── */
+.cm-egmail-topbar {
+    background: #fff;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 8px 8px 0 0;
+}
+
+.cm-egmail-topbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.cm-egmail-topbar-logo-icon {
+    font-size: 22px;
+}
+
+.cm-egmail-topbar-logo-text {
+    font-size: 20px;
+    color: #5f6368;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.cm-egmail-topbar-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #eaf1fb;
+    border-radius: 24px;
+    padding: 8px 16px;
+    gap: 10px;
+}
+
+.cm-egmail-topbar-search-icon {
+    color: #444746;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.cm-egmail-topbar-search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #202124;
+    width: 100%;
+    font-family: inherit;
+}
+
+.cm-egmail-topbar-search-input::placeholder {
+    color: #5f6368;
+}
+
+.cm-egmail-topbar-search-filter {
+    color: #444746;
+    font-size: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.cm-egmail-topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.cm-egmail-topbar-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #444746;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.cm-egmail-topbar-btn:hover {
+    background: #f2f6fc;
+}
+
+.cm-egmail-topbar-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #c0392b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+    transition: box-shadow 0.2s;
+    margin-left: 4px;
+    overflow: hidden;
+}
+
+.cm-egmail-topbar-avatar:hover {
+    box-shadow: 0 0 0 2px #1a73e8;
+}
+
+.cm-egmail-topbar-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+/* ── Contenedor de lista ── */
+.cm-egmail-container {
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+}
+
+/* ── Header ── */
+.cm-egmail-header {
+    background: #f6f8fc;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cm-egmail-header-title {
+    font-size: 20px;
+    color: #444746;
+    font-weight: 400;
+}
+
+.cm-egmail-header-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.cm-egmail-header-icon {
+    color: #444746;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.cm-egmail-header-icon:hover {
+    background: #f2f6fc;
+}
+
+/* ── Toolbar ── */
+.cm-egmail-toolbar {
+    background: #f6f8fc;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cm-egmail-toolbar-icon {
+    color: #444746;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.cm-egmail-toolbar-icon:hover {
+    background: #f2f6fc;
+}
+
+.cm-egmail-toolbar-sep {
+    width: 1px;
+    height: 16px;
+    background: #e0e0e0;
+    margin: 0 2px;
+}
+
+/* ── Tabs ── */
+.cm-egmail-tabs {
+    background: #f6f8fc;
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cm-egmail-tab {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.cm-egmail-tab i {
+    font-size: 13px;
+}
+
+.cm-egmail-tab-active {
+    color: #1a73e8;
+    border-bottom-color: #1a73e8;
+}
+
+/* ── Lista de correos ── */
+.cm-egmail-list {
+    background: #fff;
+}
+
+.cm-egmail-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 9px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.15s;
+    gap: 8px;
+}
+
+.cm-egmail-item:hover {
+    background: #f2f6fc;
+}
+
+.cm-egmail-item-unread .cm-egmail-item-sender {
+    font-weight: 700;
+}
+
+.cm-egmail-item-unread .cm-egmail-item-subject {
+    font-weight: 700;
+}
+
+.cm-egmail-item-check {
+    color: #444746;
+    font-size: 13px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.cm-egmail-item-star {
+    font-size: 13px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.cm-egmail-item-star-off {
+    color: #bdc1c6;
+}
+
+.cm-egmail-item-star-on {
+    color: #f4b400;
+}
+
+.cm-egmail-item-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    margin-top: 1px;
+}
+
+.cm-egmail-item-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-egmail-item-top-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
+}
+
+.cm-egmail-item-sender {
+    font-size: 13px;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.cm-egmail-item-date {
+    font-size: 12px;
+    color: #5f6368;
+    flex-shrink: 0;
+}
+
+.cm-egmail-item-bottom-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    overflow: hidden;
+}
+
+.cm-egmail-item-subject {
+    font-size: 13px;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    max-width: 44%;
+}
+
+.cm-egmail-item-sep {
+    color: #5f6368;
+    flex-shrink: 0;
+    font-size: 13px;
+}
+
+.cm-egmail-item-preview {
+    font-size: 13px;
+    color: #5f6368;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cm-egmail-item-attach-row {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.cm-egmail-item-attach {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: #5f6368;
+}
+
+.cm-egmail-item-attach i {
+    font-size: 10px;
+    color: #5f6368;
+}
+
+/* ── Etiquetas de cuenta ── */
+.cm-egmail-item-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.cm-egmail-item-tag-supersonic {
+    background: color-mix(in srgb, var(--cm-accent-supersonic) 12%, white);
+    color: var(--cm-accent-supersonic);
+}
+
+.cm-egmail-item-tag-personal {
+    background: color-mix(in srgb, var(--cm-accent-personal) 12%, white);
+    color: var(--cm-accent-personal);
+}
+
+.cm-egmail-item-tag-gmail {
+    background: color-mix(in srgb, var(--cm-accent-gmail) 12%, white);
+    color: var(--cm-accent-gmail);
+}
+
+/* ── Footer ── */
+.cm-egmail-footer {
+    background: #f6f8fc;
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #5f6368;
+    border-top: 1px solid #e0e0e0;
+}
+
+.cm-egmail-footer-link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+.signature-catta {
+    margin-top: 5px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #fff;
+}

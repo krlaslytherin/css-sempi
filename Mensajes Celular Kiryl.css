@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-conv-phone-wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cm-conv-phone-wrapper ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cm-conv-phone-wrapper ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.cm-conv-phone-wrapper ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.cm-conv-phone-wrapper ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.cm-conv-phone-wrapper {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.cm-conv-phone {
+    width: 385px;
+    height: 830px;
+    background: #1a1a1a;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 8px #0a0a0a, 0 0 0 10px #333;
+    position: relative;
+    overflow: visible;
+    white-space: normal;
+}
+
+.cm-conv-camera {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #1a1a3e 40%, #0a0a1e 100%);
+    border-radius: 50%;
+    z-index: 105;
+    box-shadow: 0 0 0 2px #1a1a1a;
+}
+
+.cm-conv-screen {
+    width: 100%;
+    height: 100%;
+    background: #ECE5DD;
+    border-radius: 42px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cm-conv-chat-header {
+    background: #075E54;
+    color: white;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.cm-conv-back-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.cm-conv-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.cm-conv-contact-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    flex-shrink: 0;
+}
+
+.cm-conv-contact-details {
+    flex: 1;
+}
+
+.cm-conv-contact-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.cm-conv-contact-status {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.cm-conv-header-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.cm-conv-header-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cm-conv-messages-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><rect fill="%23000" width="100" height="100"/><path fill="%23fff" d="M20 20h10v10H20zM40 40h10v10H40zM60 20h10v10H60zM40 60h10v10H40z"/></svg>');
+    background-size: 300px 300px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cm-conv-message {
+    display: flex;
+    width: 100%;
+    animation: cm-conv-slideIn 0.3s ease;
+}
+
+.cm-conv-message.cm-conv-received {
+    justify-content: flex-start;
+}
+
+.cm-conv-message.cm-conv-sent {
+    justify-content: flex-end;
+}
+
+.cm-conv-bubble {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.cm-conv-bubble-received {
+    background: white;
+    border-radius: 8px 8px 8px 0;
+}
+
+.cm-conv-bubble-sent {
+    background: #DCF8C6;
+    border-radius: 8px 8px 0 8px;
+}
+
+.cm-conv-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 2px;
+    padding-right: 50px;
+}
+
+.cm-conv-image-bubble {
+    padding: 4px;
+    max-width: 80%;
+}
+
+.cm-conv-image-bubble .cm-conv-text {
+    padding: 8px 12px 8px 8px;
+    margin-top: 4px;
+}
+
+.cm-conv-image-only {
+    padding: 4px;
+}
+
+.cm-conv-image-only .cm-conv-text {
+    display: none;
+}
+
+.cm-conv-message-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.cm-conv-message-image:active {
+    opacity: 0.9;
+}
+
+.cm-conv-time {
+    font-size: 11px;
+    color: #667;
+    text-align: right;
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+}
+
+.cm-conv-bubble-sent .cm-conv-time {
+    color: #5a5;
+}
+
+.cm-conv-input-bar {
+    background: #F0F0F0;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cm-conv-input-icon {
+    font-size: 22px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.cm-conv-input-field {
+    flex: 1;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 22px;
+    font-size: 14px;
+    color: #667;
+}
+
+.cm-conv-send-icon {
+    font-size: 22px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+@keyframes cm-conv-slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .cm-conv-phone {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 385/830;
+    }
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

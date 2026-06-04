@@ -1,0 +1,287 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+word-break: auto-phrase;
+}
+
+.cm-erling-rol-wrap {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 0;
+  color: var(--color);
+  line-height: 1.45;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.cm-erling-rol-wrap br{
+  display: none;
+}
+
+.cm-erling-rol-topbar {
+  height: 18px;
+  background: var(--erl-acc1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  letter-spacing: .2px;
+  color: var(--background-1);
+}
+
+.cm-erling-rol-box {
+  padding: 18px 14px 14px;
+  position: relative;
+}
+
+.cm-erling-rol-title {
+  font-size: 26px;
+  line-height: 1.1;
+  text-align: center;
+  margin: 4px 40px 18px;
+}
+
+.cm-erling-rol-data {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 34px;
+  gap: 6px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.cm-erling-rol-dataitem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cm-erling-rol-label {
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--erl-acc1), var(--erl-acc2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--background-1);
+}
+
+.cm-erling-rol-value {
+  min-height: 28px;
+  border-radius: 8px;
+  background: #d7d4d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: 13px;
+  text-align: center;
+  color:#222;
+}
+
+.cm-erling-rol-sideicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 62px;
+  color: var(--erl-acc1);
+  font-size: 24px;
+}
+
+.cm-erling-rol-sideicon i {
+  display: block;
+  line-height: .7;
+}
+
+.cm-erling-rol-sectiontitle {
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--erl-acc1), var(--erl-acc2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--background-1);
+  margin: 0 0 16px;
+}
+
+.cm-erling-rol-content {
+  position: relative;
+  padding: 0 18px 12px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.cm-erling-rol-content {
+  position: relative;
+  padding: 0 18px 12px;
+  font-size: 14px;
+  text-align: justify;
+  background-image: url('https://i.imgur.com/fh9a9Mj.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px, 200px;
+}
+
+.cm-erling-rol-text {
+  position: relative;
+  z-index: 1;
+  min-height: 220px;
+  overflow: visible;
+  word-wrap: break-word;
+  font-size: 15px !important;
+}
+
+.cm-erling-rol-text br{
+  display: block !important;
+}
+
+.cm-erling-rol-text b,
+.cm-erling-rol-text strong {
+  color: var(--erl-acc1) !important;
+  font-weight: 700 !important;
+}
+
+.cm-erling-rol-text i,
+.cm-erling-rol-text em {
+  color: var(--erl-acc2) !important;
+  font-style: italic !important;
+}
+
+.cm-erling-rol-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.45fr;
+  gap: 6px;
+  padding: 0 14px 14px;
+  align-items: end;
+}
+
+.cm-erling-rol-meterbox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cm-erling-rol-meterlabel {
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--erl-acc1), var(--erl-acc2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--background-1);
+}
+
+.cm-erling-rol-meter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+.cm-erling-rol-meter span {
+  height: 28px;
+  border-radius: 4px;
+  background: var(--erl-acc1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--background-1);
+}
+
+.cm-erling-rol-meter span:nth-child(5) {
+  background: var(--erl-acc2);
+}
+
+.cm-erling-rol-signbox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cm-erling-rol-signlabel {
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--erl-acc1), var(--erl-acc2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--background-1);
+}
+
+.cm-erling-rol-sign {
+  height: 58px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cambia esta URL por tu firma */
+.cm-erling-rol-sign:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% auto;
+  background-image: url('https://imgur.com/Mvdlwpk.png');
+  opacity: .75;
+}
+
+@media screen and (max-width: 580px) {
+  .cm-erling-rol-data {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cm-erling-rol-sideicon {
+    grid-column: 1 / -1;
+    height: 30px;
+  }
+
+  .cm-erling-rol-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+body.night .cm-erling-rol-content {
+    background-color: var(--background-1);
+    background-blend-mode: color-burn;
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

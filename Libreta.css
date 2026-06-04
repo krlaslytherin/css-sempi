@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&family=Kalam:wght@300;400;700&display=swap');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-notebook-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f8f8f8;
+    position: relative;
+    padding-top: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+
+.cm-button-grid br {
+    display: none;
+}
+
+.cm-text-content br,
+.cm-code-block br {
+    display: block !important; 
+}
+
+.cm-spiral-binding {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to bottom, #4a4a4a 0%, #3a3a3a 50%, #2a2a2a 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.cm-spiral-ring {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #6a6a6a, #2a2a2a);
+    border: 2px solid #1a1a1a;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.cm-page-container {
+    background: #fff;
+    min-height: 400px;
+    padding: 40px 35px 35px 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    position: relative;
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        #e8f0fe 31px,
+        #e8f0fe 32px
+    );
+    background-size: 100% 32px;
+}
+
+.cm-page-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 2px;
+    height: 100%;
+    background: #ffc0cb;
+    opacity: 0.4;
+}
+
+.cm-page-header {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #2c3e50;
+}
+
+.cm-main-title {
+    font-family: 'Caveat', cursive;
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 12px 0;
+    letter-spacing: 1px;
+    transform: rotate(-1deg);
+    display: inline-block;
+}
+
+.cm-header-line {
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+}
+
+.cm-section-block {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 4px solid #3498db;
+    border-radius: 0 4px 4px 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cm-section-block:hover {
+    background: rgba(245, 245, 245, 0.8);
+    border-left-width: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.cm-rules-section {
+    border-left-color: #e74c3c;
+}
+
+.cm-links-section {
+    border-left-color: #f39c12;
+}
+
+.cm-form-section {
+    border-left-color: #9b59b6;
+}
+
+.cm-section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cm-section-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #bdc3c7;
+    font-family: 'Courier New', monospace;
+}
+
+.cm-section-title {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #34495e;
+    margin: 0;
+    letter-spacing: 0.5px;
+    transform: rotate(-0.5deg);
+}
+
+.cm-text-content {
+    line-height: 1.7;
+    color: #2c3e50;
+}
+
+.cm-paragraph-text {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.cm-paragraph-text:last-child {
+    margin-bottom: 0;
+}
+
+.cm-rule-number {
+    color: #e74c3c;
+    font-weight: 700;
+    display: inline-block;
+    min-width: 20px;
+}
+
+.cm-button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.cm-link-button {
+    display: block;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.cm-link-button:hover {
+    background: #3498db;
+    color: #fff;
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.cm-code-container {
+    margin-top: 15px;
+    background: #2c3e50;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cm-code-block {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #ecf0f1;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+@media (max-width: 550px) {
+    .cm-notebook-wrapper {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .cm-page-container {
+        padding: 35px 25px 25px 25px;
+    }
+    
+    .cm-section-block {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .cm-button-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cm-main-title {
+        font-size: 36px;
+    }
+    
+    .cm-section-title {
+        font-size: 22px;
+    }
+}

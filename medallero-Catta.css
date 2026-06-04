@@ -1,0 +1,465 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-medallero {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+.cm-medallero-folder {
+  background: #c9b896;
+  padding: 25px 15px 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.cm-medallero-tab {
+  position: absolute;
+  top: 50px;
+  right: -15px;
+  width: 25px;
+  height: 150px;
+  background: #c9b896;
+  border-radius: 0 8px 8px 0;
+}
+
+.cm-medallero-content {
+  background: var(--background-1,);
+  padding: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  border: 1px solid #333;
+}
+
+.cm-medallero-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cm-medallero-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--color-medallas);
+  margin-bottom: 5px;
+}
+
+.cm-medallero-subtitle {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+.cm-medallas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.cm-medalla-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cm-medalla-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--color-medallas);
+  overflow: hidden;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(184, 138, 153, 0.3);
+}
+
+.cm-medalla-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cm-medalla-name {
+  color: var(--color-medallas);
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 100px;
+  border-bottom: 2px dotted var(--color-medallas);
+}
+
+.cm-logros-section {
+  margin-top: 30px;
+}
+
+.cm-logros-title {
+  background: var(--color-medallas);
+  color: var(--color, white);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto 25px;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cm-logro-item {
+  display: grid;
+  grid-template-columns: 70px auto;
+  gap: 15px;
+  align-items: start;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.cm-logro-item::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cm-logro-item::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+}
+
+.cm-logro-item::-webkit-scrollbar-thumb {
+  background: var(--color-medallas);
+  border-radius: 3px;
+}
+
+.cm-logro-item::-webkit-scrollbar-thumb:hover {
+  background: var(--color, white);
+}
+
+.cm-logro-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--color-medallas);
+  overflow: hidden;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 0 10px rgba(184, 138, 153, 0.2);
+  flex-shrink: 0;
+}
+
+.cm-logro-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.cm-logro-details {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.cm-logro-label {
+  background: var(--color-medallas);
+  color: var(--color, white);
+  padding: 3px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.cm-retos-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.cm-retos-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cm-retos-section::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+}
+
+.cm-retos-section::-webkit-scrollbar-thumb {
+  background: var(--color-medallas);
+  border-radius: 4px;
+}
+
+.cm-retos-section::-webkit-scrollbar-thumb:hover {
+  background: var(--color, white);
+}
+
+.cm-retos-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cm-retos-main-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cm-retos-hashtag {
+  color: var(--color-medallas);
+}
+
+.cm-retos-subtitle {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+.cm-retos-category-title {
+  background: var(--color-medallas);
+  color: var(--color, white);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  margin: 20px auto 20px;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cm-reto-item {
+  display: grid;
+  grid-template-columns: 70px auto;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+}
+
+.cm-reto-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--color-medallas);
+  overflow: hidden;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 0 10px rgba(184, 138, 153, 0.2);
+  flex-shrink: 0;
+}
+
+.cm-reto-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cm-reto-info {
+  color: #ccc;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.cm-reto-name {
+  background: var(--color-medallas);
+  color: var(--color, white);
+  padding: 3px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.cm-reto-link {
+  color: var(--color-medallas);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cm-reto-link:hover {
+  text-decoration: underline;
+}
+.cm-hoja-clip {
+    background: #fff;
+    padding: 30px 35px;
+    margin: 20px auto;
+    width: calc(100% - 40px);
+    max-width: 460px;
+    box-shadow: 
+        0 2px 5px rgba(0,0,0,0.1),
+        0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+    transform: rotate(-0.3deg);
+    border-radius: 2px;
+}
+
+/* CLIP metálico arriba */
+.cm-hoja-clip::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 30px;
+    background: linear-gradient(180deg, #666 0%, #888 50%, #666 100%);
+    border-radius: 20px 20px 5px 5px;
+    box-shadow: 
+        inset 0 2px 5px rgba(255,255,255,0.3),
+        inset 0 -2px 5px rgba(0,0,0,0.3),
+        0 3px 8px rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+/* Brillito del clip */
+.cm-hoja-clip::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 8px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.cm-hoja-clip-titulo {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cm-hoja-clip-texto {
+    color: #34495e;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.cm-hoja-clip-texto p {
+    margin-bottom: 12px;
+}
+
+.cm-hoja-clip-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.cm-hoja-clip-texto b,
+.cm-hoja-clip-texto strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Enlaces dentro de la hoja */
+.cm-hoja-clip-texto a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px dotted #3498db;
+    transition: all 0.3s;
+}
+
+.cm-hoja-clip-texto a:hover {
+    color: #2980b9;
+    border-bottom: 1px solid #2980b9;
+}
+
+/* Lista dentro de la hoja */
+.cm-hoja-clip-texto ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.cm-hoja-clip-texto ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.cm-hoja-clip-texto ul li::marker {
+    color: #7f8c8d;
+}
+
+.cm-hoja-imagen-1 {
+  padding: 0;
+  width: 600px !important;
+  max-width: 600px !important;
+  overflow: visible !important;
+}
+
+.cm-hoja-imagen-1 img {
+  display: block;
+  width: 600px;
+  height: auto;
+  border-radius: 2px;
+}
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+
+.cm-activecall-wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cm-activecall-wrapper ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cm-activecall-wrapper ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-activecall-wrapper ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.cm-activecall-wrapper {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cm-activecall-phone {
+    width: 385px;
+    height: 830px;
+    background: #1a1a1a;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 8px #0a0a0a, 0 0 0 10px #333;
+    position: relative;
+    overflow: visible;
+}
+
+.cm-activecall-camera {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #1a1a3e 40%, #0a0a1e 100%);
+    border-radius: 50%;
+    z-index: 105;
+    box-shadow: 0 0 0 2px #1a1a1a;
+}
+
+.cm-activecall-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1e 100%);
+    border-radius: 42px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cm-activecall-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 30px 35px;
+    color: white;
+}
+
+.cm-activecall-top {
+    text-align: center;
+    animation: cm-activecall-fadeIn 0.5s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cm-activecall-status {
+    font-size: 13px !important;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2 !important;
+}
+
+.cm-activecall-avatar-wrapper {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.cm-activecall-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 10px 50px rgba(102, 126, 234, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    animation: cm-activecall-pulse 2s ease-in-out infinite;
+}
+
+.cm-activecall-name {
+    font-size: 30px !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px;
+    line-height: 1.2 !important;
+    color: white !important;
+}
+
+.cm-activecall-number {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px;
+}
+
+.cm-activecall-timer {
+    font-size: 17px !important;
+    color: #4FC3F7 !important;
+    margin-top: 6px;
+    font-weight: 300 !important;
+    letter-spacing: 1px;
+    line-height: 1.2 !important;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.cm-activecall-timer::after {
+    content: "00:00";
+    animation: cm-timer-numbers 60s steps(60) infinite;
+}
+
+@keyframes cm-timer-numbers {
+    0% { content: "00:00"; }
+    1.67% { content: "00:01"; }
+    3.33% { content: "00:02"; }
+    5% { content: "00:03"; }
+    6.67% { content: "00:04"; }
+    8.33% { content: "00:05"; }
+    10% { content: "00:06"; }
+    11.67% { content: "00:07"; }
+    13.33% { content: "00:08"; }
+    15% { content: "00:09"; }
+    16.67% { content: "00:10"; }
+    18.33% { content: "00:11"; }
+    20% { content: "00:12"; }
+    21.67% { content: "00:13"; }
+    23.33% { content: "00:14"; }
+    25% { content: "00:15"; }
+    26.67% { content: "00:16"; }
+    28.33% { content: "00:17"; }
+    30% { content: "00:18"; }
+    31.67% { content: "00:19"; }
+    33.33% { content: "00:20"; }
+    35% { content: "00:21"; }
+    36.67% { content: "00:22"; }
+    38.33% { content: "00:23"; }
+    40% { content: "00:24"; }
+    41.67% { content: "00:25"; }
+    43.33% { content: "00:26"; }
+    45% { content: "00:27"; }
+    46.67% { content: "00:28"; }
+    48.33% { content: "00:29"; }
+    50% { content: "00:30"; }
+    51.67% { content: "00:31"; }
+    53.33% { content: "00:32"; }
+    55% { content: "00:33"; }
+    56.67% { content: "00:34"; }
+    58.33% { content: "00:35"; }
+    60% { content: "00:36"; }
+    61.67% { content: "00:37"; }
+    63.33% { content: "00:38"; }
+    65% { content: "00:39"; }
+    66.67% { content: "00:40"; }
+    68.33% { content: "00:41"; }
+    70% { content: "00:42"; }
+    71.67% { content: "00:43"; }
+    73.33% { content: "00:44"; }
+    75% { content: "00:45"; }
+    76.67% { content: "00:46"; }
+    78.33% { content: "00:47"; }
+    80% { content: "00:48"; }
+    81.67% { content: "00:49"; }
+    83.33% { content: "00:50"; }
+    85% { content: "00:51"; }
+    86.67% { content: "00:52"; }
+    88.33% { content: "00:53"; }
+    90% { content: "00:54"; }
+    91.67% { content: "00:55"; }
+    93.33% { content: "00:56"; }
+    95% { content: "00:57"; }
+    96.67% { content: "00:58"; }
+    98.33% { content: "00:59"; }
+    100% { content: "01:00"; }
+}
+
+/* REPRODUCTOR DE AUDIO ESTILIZADO */
+.cm-activecall-audio-player {
+    width: 100%;
+    max-width: 280px;
+    margin: 25px auto;
+    filter: invert(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.cm-activecall-audio-player audio {
+    width: 100%;
+    height: 36px;
+    outline: none;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.cm-activecall-audio-player audio::-webkit-media-controls-panel {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+}
+
+.cm-activecall-audio-player audio::-webkit-media-controls-play-button,
+.cm-activecall-audio-player audio::-webkit-media-controls-current-time-display,
+.cm-activecall-audio-player audio::-webkit-media-controls-time-remaining-display {
+    filter: brightness(1.5);
+}
+
+.cm-activecall-audio-player audio::-webkit-media-controls-timeline {
+    border-radius: 10px;
+}
+
+.cm-activecall-controls {
+    width: 100%;
+    animation: cm-activecall-slideUp 0.5s ease 0.3s backwards;
+}
+
+.cm-activecall-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+    padding: 0 10px;
+}
+
+.cm-activecall-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cm-activecall-btn:active {
+    transform: scale(0.95);
+}
+
+.cm-activecall-btn-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cm-activecall-btn-circle i {
+    font-size: 24px;
+    color: white;
+}
+
+/* HACK CSS PARA BOTONES INTERACTIVOS */
+.cm-activecall-audio-toggle {
+    display: none;
+}
+
+.cm-activecall-btn-label {
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1 !important;
+}
+
+/* Estados activos con checkbox */
+#cm-speaker-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-speaker .cm-activecall-btn-circle,
+#cm-mute-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-mute .cm-activecall-btn-circle,
+#cm-video-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-video .cm-activecall-btn-circle,
+#cm-hold-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-hold .cm-activecall-btn-circle {
+    background: rgba(79, 195, 247, 0.3);
+    border-color: #4FC3F7;
+}
+
+#cm-speaker-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-speaker .cm-activecall-btn-circle i,
+#cm-mute-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-mute .cm-activecall-btn-circle i,
+#cm-video-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-video .cm-activecall-btn-circle i,
+#cm-hold-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-hold .cm-activecall-btn-circle i {
+    color: #4FC3F7;
+}
+
+#cm-speaker-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-speaker .cm-activecall-btn-label,
+#cm-mute-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-mute .cm-activecall-btn-label,
+#cm-video-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-video .cm-activecall-btn-label,
+#cm-hold-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-hold .cm-activecall-btn-label {
+    color: #4FC3F7;
+}
+
+/* Cambiar ícono de micrófono cuando está muteado */
+#cm-mute-toggle:checked ~ .cm-activecall-container .cm-activecall-btn-mute .fa-microphone::before {
+    content: '\f131'; /* fa-microphone-slash */
+}
+
+.cm-activecall-btn:hover .cm-activecall-btn-circle {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+.cm-activecall-end-call {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.cm-activecall-end-btn {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f44336 0%, #da190b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+    transition: all 0.3s ease;
+}
+
+.cm-activecall-end-btn i {
+    font-size: 28px;
+    color: white;
+}
+
+.cm-activecall-end-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(244, 67, 54, 0.6);
+}
+
+.cm-activecall-end-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes cm-activecall-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cm-activecall-slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cm-activecall-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 50px rgba(102, 126, 234, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 15px 60px rgba(102, 126, 234, 0.6), 0 0 0 6px rgba(255, 255, 255, 0.15);
+    }
+}
+
+@media (max-width: 480px) {
+    .cm-activecall-phone {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 385/830;
+    }
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+  align: center;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

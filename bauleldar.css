@@ -1,0 +1,190 @@
+.cm-bauleldar-idx-wrap {
+    font-family: 'Georgia', serif;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.cm-bauleldar-idx-wrap * {
+    box-sizing: border-box;
+}
+
+.cm-bauleldar-idx-wrap br {
+    display: none !important;
+}
+
+.cm-bauleldar-idx-inner {
+    display: flex;
+    width: 100%;
+}
+
+.cm-bauleldar-idx-photo {
+    width: 220px;
+    min-width: 180px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cm-bauleldar-idx-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cm-bauleldar-idx-right {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0 0 0 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cm-bauleldar-idx-book-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.72em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--eldar-acc1);
+    font-weight: 400;
+    margin: 0 0 4px 0;
+}
+
+.cm-bauleldar-idx-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 2px 0;
+}
+
+.cm-bauleldar-idx-tag {
+    font-size: 0.78em;
+    color: var(--eldar-acc2);
+    letter-spacing: 0.1em;
+    margin: 0 0 10px 0;
+}
+
+.cm-bauleldar-idx-rule-top {
+    border: none;
+    border-top: 2px solid var(--eldar-acc1);
+    margin: 0 0 4px 0;
+}
+
+.cm-bauleldar-idx-rule-thin {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0 0 10px 0;
+}
+
+.cm-bauleldar-idx-indice-label {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.68em;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.cm-bauleldar-idx-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.cm-bauleldar-idx-list a{
+    color: var(--eldar-acc2);
+}
+
+.cm-bauleldar-idx-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    padding: 6px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.cm-bauleldar-idx-item:last-child {
+    border-bottom: none;
+}
+
+.cm-bauleldar-idx-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.72em;
+    color: var(--eldar-acc1);
+    font-style: italic;
+    min-width: 18px;
+    flex-shrink: 0;
+}
+
+.cm-bauleldar-idx-icon {
+    color: var(--eldar-acc1);
+    font-size: 0.75em;
+    min-width: 20px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.cm-bauleldar-idx-dots {
+    flex: 1;
+    border-bottom: 1px dotted #bbb;
+    margin: 0 8px 4px 8px;
+    height: 1em;
+}
+
+.cm-bauleldar-idx-link {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.88em;
+    font-style: italic;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: color 0.15s;
+}
+
+.cm-bauleldar-idx-link:hover {
+    color: var(--eldar-acc1);
+}
+
+.cm-bauleldar-idx-page {
+    font-size: 0.72em;
+    color: var(--eldar-acc2);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    min-width: 20px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.cm-bauleldar-idx-footer {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.7em;
+    color: #bbb;
+    letter-spacing: 0.12em;
+    font-style: italic;
+}
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

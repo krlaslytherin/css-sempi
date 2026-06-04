@@ -1,0 +1,1444 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+/* === BASE RESET === */
+.cm-ip-phone-wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cm-ip-phone-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* === IPHONE 17 PRO MAX FRAME === */
+.cm-ip-phone {
+    width: 430px;
+    height: 932px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-radius: 55px;
+    padding: 3px;
+    box-shadow: 
+        0 50px 100px rgba(0, 0, 0, 0.8),
+        0 0 0 12px #0a0a0a,
+        0 0 0 14px #3a3a3a,
+        inset 0 0 0 2px #1a1a1a;
+    position: relative;
+}
+
+/* Dynamic Island */
+.cm-ip-dynamic-island {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 126px;
+    height: 37px;
+    background: #000;
+    border-radius: 19px;
+    z-index: 999;
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Botones laterales */
+.cm-ip-volume-up,
+.cm-ip-volume-down,
+.cm-ip-mute-switch {
+    position: absolute;
+    left: -3px;
+    width: 3px;
+    background: linear-gradient(90deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 2px 0 0 2px;
+}
+
+.cm-ip-mute-switch {
+    top: 120px;
+    height: 32px;
+}
+
+.cm-ip-volume-up {
+    top: 180px;
+    height: 62px;
+}
+
+.cm-ip-volume-down {
+    top: 260px;
+    height: 62px;
+}
+
+.cm-ip-power-btn {
+    position: absolute;
+    right: -3px;
+    top: 210px;
+    width: 3px;
+    height: 98px;
+    background: linear-gradient(270deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 0 2px 2px 0;
+}
+
+/* === SCREEN === */
+.cm-ip-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 52px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cm-ip-wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cm-ip-unlock-input {
+    display: none;
+}
+
+/* === LOCK SCREEN iOS === */
+.cm-ip-lock-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+    backdrop-filter: blur(30px) brightness(0.9);
+    -webkit-backdrop-filter: blur(30px) brightness(0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 65px 30px 40px;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cm-ip-unlock-input:checked ~ .cm-ip-lock-screen {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+}
+
+.cm-ip-lock-top {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.cm-ip-lock-date {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.cm-ip-lock-time {
+    font-size: 88px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.cm-ip-lock-bottom {
+    margin-bottom: 20px;
+}
+
+.cm-ip-lock-notif {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.cm-ip-notif-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.cm-ip-notif-content {
+    flex: 1;
+}
+
+.cm-ip-notif-app {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.cm-ip-notif-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cm-ip-notif-time {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    flex-shrink: 0;
+}
+
+.cm-ip-lock-unlock {
+    text-align: center;
+}
+
+.cm-ip-unlock-bar {
+    width: 140px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 0 auto 12px;
+}
+
+.cm-ip-unlock-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* === HOME SCREEN iOS === */
+.cm-ip-home-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cm-ip-unlock-input:checked ~ .cm-ip-home-screen {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Status Bar iOS */
+.cm-ip-status-bar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 25px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cm-ip-status-left,
+.cm-ip-status-right {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.cm-ip-status-time {
+    letter-spacing: -0.3px;
+}
+
+/* Search Widget iOS */
+.cm-ip-search-widget {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cm-ip-search-widget:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* App Grid iOS */
+.cm-ip-app-grid {
+    flex: 1;
+    overflow: hidden;
+}
+
+.cm-ip-app-page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px 18px;
+    padding: 0 8px;
+}
+
+.cm-ip-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cm-ip-app:active {
+    transform: scale(0.88);
+}
+
+.cm-ip-app-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.cm-ip-app-name {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    max-width: 75px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Badge */
+.cm-ip-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #FF3B30;
+    color: white;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* === APP ICONS === */
+.cm-ip-icon-weather {
+    background: linear-gradient(135deg, #47BFDF 0%, #1A8FE8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+.cm-ip-icon-weather::before { content: '🌤️'; }
+
+.cm-ip-icon-photos {
+    background: linear-gradient(135deg, #FFE066 0%, #FF9966 50%, #FF66CC 100%);
+    padding: 0;
+    overflow: hidden;
+}
+.cm-ip-photos-icon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    gap: 2px;
+}
+.cm-ip-photos-icon-grid span {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cm-ip-icon-stocks {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+.cm-ip-icon-stocks::before { content: '📈'; }
+
+.cm-ip-icon-safari {
+    background: linear-gradient(135deg, #53B9EA 0%, #3478F6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cm-ip-icon-safari::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cm-ip-icon-safari::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: linear-gradient(90deg, #FF3B30 0%, #FF3B30 50%, white 50%, white 100%);
+    transform: rotate(45deg);
+}
+
+.cm-ip-icon-spotify {
+    background: #1DB954;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-spotify::before {
+    content: '\f1bc';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-instagram::before {
+    content: '\f16d';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-mail {
+    background: linear-gradient(135deg, #1E90FF 0%, #0C5BDE 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-mail::before {
+    content: '\f0e0';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-ip-icon-twitter {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-twitter::before {
+    content: '\f099';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-youtube {
+    background: #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-youtube::before {
+    content: '\f167';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-tiktok {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-tiktok::before {
+    content: '\e07b';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-facebook {
+    background: #1877F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-facebook::before {
+    content: '\f39e';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-telegram {
+    background: linear-gradient(135deg, #0088cc 0%, #229ED9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-telegram::before {
+    content: '\f2c6';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-discord {
+    background: #5865F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-discord::before {
+    content: '\f392';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-twitch {
+    background: #9146FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-twitch::before {
+    content: '\f1e8';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-reddit {
+    background: #FF4500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+
+.cm-ip-icon-reddit::before {
+    content: '\f281';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-snapchat {
+    background: #FFFC00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: #000;
+}
+
+.cm-ip-icon-snapchat::before {
+    content: '\f2ab';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-notes {
+    background: #FFD60A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: #8B6914;
+}
+.cm-ip-icon-notes::before { content: '📝'; font-style: normal; }
+
+/* DOCK ICONS */
+.cm-ip-icon-phone {
+    background: linear-gradient(135deg, #32D74B 0%, #28CD41 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.cm-ip-icon-phone::before {
+    content: '\f095';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-ip-icon-messages {
+    background: linear-gradient(135deg, #32D74B 0%, #28CD41 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.cm-ip-icon-messages::before {
+    content: '\f4ad';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-ip-icon-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.cm-ip-icon-whatsapp::before {
+    content: '\f232';
+    font-family: 'Font Awesome 6 Brands';
+}
+
+.cm-ip-icon-camera {
+    background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.cm-ip-icon-camera::before {
+    content: '\f030';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+/* Page Dots */
+.cm-ip-page-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.cm-ip-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.cm-ip-dot.cm-ip-active {
+    background: white;
+}
+
+/* === DOCK iOS === */
+.cm-ip-dock {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-radius: 28px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cm-ip-dock-app {
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cm-ip-dock-app:active {
+    transform: scale(0.88);
+}
+
+.cm-ip-dock-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.cm-ip-dock-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #FF3B30;
+    color: white;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Home Indicator */
+.cm-ip-home-indicator {
+    width: 140px;
+    height: 5px;
+    background: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    opacity: 0.4;
+}
+
+/* === TAB SYSTEM === */
+.cm-ip-tab-input {
+    display: none;
+}
+
+.cm-ip-app-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+}
+
+#ipMessagesTab:checked ~ .cm-ip-messages-app,
+#ipWhatsappTab:checked ~ .cm-ip-whatsapp-app,
+#ipSafariTab:checked ~ .cm-ip-safari-app,
+#ipPhotosTab:checked ~ .cm-ip-photos-app,
+#ipPhoneTab:checked ~ .cm-ip-phone-app,
+#ipWeatherTab:checked ~ .cm-ip-weather-app,
+#ipStocksTab:checked ~ .cm-ip-stocks-app,
+#ipCameraTab:checked ~ .cm-ip-camera-app,
+#ipSpotifyTab:checked ~ .cm-ip-spotify-app,
+#ipInstagramTab:checked ~ .cm-ip-instagram-app,
+#ipMailTab:checked ~ .cm-ip-mail-app,
+#ipNotesTab:checked ~ .cm-ip-notes-app {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* === APP HEADER iOS === */
+.cm-ip-app-header {
+    background: rgba(242, 242, 247, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 60px 20px 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 0.5px solid rgba(60, 60, 67, 0.12);
+}
+
+.cm-ip-back-btn {
+    color: #007AFF;
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.cm-ip-back-btn i {
+    font-size: 20px;
+}
+
+.cm-ip-app-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    flex: 1;
+}
+
+.cm-ip-app-body {
+    height: calc(100% - 98px);
+    overflow-y: auto;
+    background: #fff;
+}
+
+/* === SCROLLBAR iOS === */
+.cm-ip-app-body::-webkit-scrollbar {
+    width: 3px;
+}
+
+.cm-ip-app-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cm-ip-app-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* === MESSAGES APP === */
+.cm-ip-messages-app .cm-ip-app-body {
+    background: #fff;
+}
+
+.cm-ip-chat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 0.5px solid rgba(60, 60, 67, 0.12);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cm-ip-chat-item:active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.cm-ip-chat-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cm-ip-chat-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-ip-chat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.cm-ip-chat-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.cm-ip-chat-time {
+    font-size: 14px;
+    color: #8E8E93;
+}
+
+.cm-ip-chat-preview {
+    font-size: 15px;
+    color: #8E8E93;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* === WHATSAPP APP === */
+.cm-ip-whatsapp-app .cm-ip-app-header {
+    background: linear-gradient(135deg, #075E54 0%, #128C7E 100%);
+    border-bottom: none;
+}
+
+.cm-ip-whatsapp-app .cm-ip-back-btn,
+.cm-ip-whatsapp-app .cm-ip-app-title {
+    color: white;
+}
+
+.cm-ip-whatsapp-app .cm-ip-app-body {
+    background: #ECE5DD;
+}
+
+.cm-ip-whatsapp-app .cm-ip-chat-item {
+    background: white;
+    border-bottom-color: #E0E0E0;
+}
+
+.cm-ip-chat-unread .cm-ip-chat-preview {
+    color: #000;
+    font-weight: 500;
+}
+
+/* === SAFARI APP === */
+.cm-ip-safari-app .cm-ip-app-body {
+    background: #F2F2F7;
+    padding: 0;
+}
+
+.cm-ip-safari-toolbar {
+    background: rgba(242, 242, 247, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 0.5px solid rgba(60, 60, 67, 0.12);
+}
+
+.cm-ip-safari-url {
+    flex: 1;
+    background: rgba(120, 120, 128, 0.12);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 15px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cm-ip-safari-url i {
+    font-size: 14px;
+    color: #8E8E93;
+}
+
+.cm-ip-safari-content {
+    padding: 20px;
+}
+
+.cm-ip-safari-favorites {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cm-ip-favorite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.cm-ip-favorite-icon {
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cm-ip-favorite-name {
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+}
+
+/* === PHOTOS APP === */
+.cm-ip-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.cm-ip-photo-item {
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cm-ip-photo-item:active {
+    transform: scale(0.95);
+}
+
+/* === PHONE APP === */
+.cm-ip-phone-app .cm-ip-app-body {
+    background: #000;
+    padding: 40px 30px;
+}
+
+.cm-ip-phone-display {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    letter-spacing: -1px;
+}
+
+.cm-ip-phone-keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.cm-ip-phone-key {
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cm-ip-phone-key:active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0.95);
+}
+
+.cm-ip-phone-number {
+    font-size: 36px;
+    font-weight: 300;
+    color: white;
+}
+
+.cm-ip-phone-letters {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    margin-top: -4px;
+}
+
+.cm-ip-phone-call-btn {
+    width: 72px;
+    height: 72px;
+    background: #32D74B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(50, 215, 75, 0.4);
+}
+
+.cm-ip-phone-call-btn i {
+    font-size: 32px;
+    color: white;
+}
+
+/* === WEATHER APP === */
+.cm-ip-weather-app {
+    background: linear-gradient(180deg, #47BFDF 0%, #1A8FE8 100%);
+}
+
+.cm-ip-weather-app .cm-ip-app-header {
+    background: transparent;
+    border-bottom: none;
+}
+
+.cm-ip-weather-app .cm-ip-back-btn,
+.cm-ip-weather-app .cm-ip-app-title {
+    color: white;
+}
+
+.cm-ip-weather-content {
+    padding: 30px 24px;
+    color: white;
+    text-align: center;
+}
+
+.cm-ip-weather-location {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.cm-ip-weather-temp {
+    font-size: 88px;
+    font-weight: 100;
+    letter-spacing: -3px;
+    margin: 20px 0;
+}
+
+.cm-ip-weather-desc {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.cm-ip-weather-minmax {
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.cm-ip-weather-details {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cm-ip-weather-detail {
+    text-align: center;
+}
+
+.cm-ip-weather-label {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+
+.cm-ip-weather-value {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* === STOCKS APP === */
+.cm-ip-stocks-app .cm-ip-app-body {
+    background: #000;
+    padding: 20px;
+}
+
+.cm-ip-stock-item {
+    background: #1C1C1E;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.cm-ip-stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.cm-ip-stock-symbol {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.cm-ip-stock-name {
+    font-size: 14px;
+    color: #8E8E93;
+}
+
+.cm-ip-stock-price {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    text-align: right;
+}
+
+.cm-ip-stock-change {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.cm-ip-stock-change.positive {
+    color: #32D74B;
+}
+
+.cm-ip-stock-change.negative {
+    color: #FF3B30;
+}
+
+.cm-ip-stock-chart {
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.cm-ip-stock-bar {
+    flex: 1;
+    background: #32D74B;
+    opacity: 0.7;
+    border-radius: 2px 2px 0 0;
+}
+
+/* === CAMERA APP === */
+.cm-ip-camera-app {
+    background: #000;
+}
+
+.cm-ip-camera-viewfinder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 24px 40px;
+}
+
+.cm-ip-camera-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cm-ip-camera-close {
+    color: white;
+    font-size: 32px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.cm-ip-camera-mode {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.cm-ip-camera-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cm-ip-camera-thumbnail {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid white;
+    border-radius: 8px;
+}
+
+.cm-ip-camera-shutter {
+    width: 76px;
+    height: 76px;
+    background: white;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cm-ip-camera-shutter:active {
+    transform: scale(0.9);
+}
+
+.cm-ip-camera-flip {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* === NOTES APP iOS === */
+.cm-ip-notes-app .cm-ip-app-header {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.cm-ip-notes-app .cm-ip-app-body {
+    background: #FFEFBF;
+    padding: 20px;
+}
+
+.cm-ip-note-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cm-ip-note-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.cm-ip-note-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.cm-ip-note-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.cm-ip-note-checkbox-icon {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #8E8E93;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.2s ease;
+    position: relative;
+    background: white;
+}
+
+.cm-ip-note-checkbox-icon::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.cm-ip-note-checkbox input[type="checkbox"]:checked + .cm-ip-note-checkbox-icon {
+    background: #007AFF;
+    border-color: #007AFF;
+}
+
+.cm-ip-note-checkbox input[type="checkbox"]:checked + .cm-ip-note-checkbox-icon::after {
+    opacity: 1;
+}
+
+.cm-ip-note-checkbox-text {
+    flex: 1;
+    color: #000;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.cm-ip-note-checkbox input[type="checkbox"]:checked ~ .cm-ip-note-checkbox-text {
+    text-decoration: line-through;
+    color: #8E8E93;
+}
+
+.cm-ip-note-time {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #E5E5EA;
+    font-size: 13px;
+    color: #8E8E93;
+}
+
+/* === Responsive === */
+@media (max-width: 500px) {
+    .cm-ip-phone {
+        width: 100%;
+        max-width: 430px;
+        height: auto;
+        aspect-ratio: 430/932;
+    }
+}
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #666;
+}
+
+.cm-ip-lock-screen {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  border-radius: 42px !important;
+  box-sizing: border-box !important;
+}
+
+.cm-ip-lock-top,
+.cm-ip-lock-bottom {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cm-ip-lock-top {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.cm-ip-lock-bottom {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}

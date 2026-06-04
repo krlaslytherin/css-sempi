@@ -1,0 +1,90 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-baulimg-erl {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--background-1);
+  border: 4px solid #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.9), inset 0 0 20px rgba(0,0,0,0.6);
+}
+
+.cm-baulimg-erl img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cm-erl-led {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-principal, #00ff88);
+  box-shadow: 0 0 10px var(--color-principal, #00ff88), inset 0 0 3px rgba(255,255,255,0.5);
+  z-index: 15;
+  animation: cm-erl-pulse 2s infinite;
+}
+
+@keyframes cm-erl-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px var(--color-principal, #00ff88); }
+  50%       { opacity: 0.3; box-shadow: 0 0 4px var(--color-principal, #00ff88); }
+}
+
+.cm-erl-tornillo {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, #444, #222);
+  border-radius: 50%;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
+  z-index: 15;
+}
+
+.cm-erl-tl { top: 8px;    left: 8px;  }
+.cm-erl-tr { top: 8px;    right: 8px; }
+.cm-erl-bl { bottom: 8px; left: 8px;  }
+.cm-erl-br { bottom: 8px; right: 8px; }
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

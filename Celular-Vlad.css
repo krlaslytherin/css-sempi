@@ -1,0 +1,2197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-phone-wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cm-phone-wrapper ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.cm-phone-wrapper ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.cm-phone-wrapper ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.cm-phone-wrapper ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.cm-app-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.cm-app-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.cm-app-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.cm-phone-wrapper {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+   margin-top: 10px;
+}
+
+.cm-phone-wrapper br {
+display: none !important;
+    }
+
+.cm-phone {
+    width: 385px;
+    height: 830px;
+    background: #1a1a1a;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 8px #0a0a0a, 0 0 0 10px #333;
+    position: relative;
+    overflow: visible;
+    white-space: normal;
+}
+
+.cm-camera {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #1a1a3e 40%, #0a0a1e 100%);
+    border-radius: 50%;
+    z-index: 105;
+    box-shadow: 0 0 0 2px #1a1a1a;
+}
+
+.cm-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 42px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cm-wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.cm-unlock-input {
+    display: none;
+}
+
+/* LOCK SCREEN - FIXED FOR FOROACTIVO */
+.cm-lock-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 30px 50px;
+    z-index: 100;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    border-radius: 42px !important;
+    overflow: hidden;
+}
+
+.cm-unlock-input:checked ~ .cm-lock-screen {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.cm-lock-time {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.cm-time {
+    font-size: 96px !important;
+    font-weight: 100 !important;
+    letter-spacing: -4px !important;
+    margin-bottom: 10px !important;
+    line-height: 1 !important;
+    color: white !important;
+}
+
+.cm-date {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    margin-top: 12px !important;
+    opacity: 0.9;
+    line-height: 1.2 !important;
+    color: white !important;
+}
+
+.cm-lock-bottom {
+    text-align: center;
+}
+
+.cm-lock-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.cm-lock-icon::before {
+    content: '🔒';
+    font-size: 24px;
+    filter: brightness(2);
+}
+
+.cm-unlock-text {
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    opacity: 0.85;
+    line-height: 1.2 !important;
+}
+
+.cm-lock-screen:hover .cm-lock-icon {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.cm-screen:hover .cm-wallpaper {
+    transform: scale(1.03);
+}
+
+.cm-home-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.cm-unlock-input:checked ~ .cm-home-screen {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.cm-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    margin-bottom: 25px;
+}
+
+.cm-status-left,
+.cm-status-right {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.cm-status-icon {
+    font-size: 14px;
+}
+
+.cm-google-search {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
+    padding: 14px 20px;
+    gap: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cm-google-search:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cm-google-icon {
+    font-weight: 700;
+    font-size: 20px;
+    background: linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC04 66%, #34A853 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cm-search-placeholder {
+    flex: 1;
+    color: #5f6368;
+    font-size: 15px;
+}
+
+.cm-mic-icon,
+.cm-lens-icon {
+    font-size: 18px;
+}
+
+.cm-app-row-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.cm-app-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cm-app-main:active {
+    transform: scale(0.95);
+}
+
+.cm-app-main-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.cm-app-main-name {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.cm-icon-weather {
+    background: linear-gradient(135deg, #56CCF2 0%, #2F80ED 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.cm-icon-weather::before {
+    content: '\f740';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-icon-gallery {
+    background: linear-gradient(135deg, #FF6FD8 0%, #FFB5E8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.cm-icon-gallery::before {
+    content: '\f03e';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-icon-bitcoin {
+    background: linear-gradient(135deg, #F7931A 0%, #FF8C00 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.cm-icon-bitcoin::before {
+    content: '\f15a';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+.cm-icon-google {
+    background: white;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.cm-icon-google::before {
+    content: 'G';
+    background: linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC04 66%, #34A853 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cm-google-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #EA4335;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    border: 2px solid #000;
+}
+
+.cm-page-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: auto 0 15px;
+}
+
+.cm-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cm-indicator.cm-active {
+    width: 20px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.cm-dock {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 25px;
+    background: rgba(30, 40, 60, 0.6);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    margin-bottom: 8px;
+}
+
+.cm-dock-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: block;
+    position: relative;
+}
+
+.cm-dock-icon:active {
+    transform: scale(0.9);
+}
+
+.cm-icon-phone {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.cm-icon-phone::before {
+    content: '\f095';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-icon-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.cm-icon-whatsapp::before {
+    content: '\f232';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+.cm-whatsapp-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #25D366;
+    color: white;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    border: 2px solid #000;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cm-icon-messages {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.cm-icon-messages::before {
+    content: '\f4ad';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-icon-camera {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.cm-icon-camera::before {
+    content: '\f030';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.cm-nav-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0 5px;
+}
+
+.cm-nav-btn {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.cm-nav-recent {
+    border-radius: 2px;
+    width: 30px;
+}
+
+.cm-nav-home {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.cm-nav-back {
+    width: 0;
+    height: 0;
+    border-left: 8px solid rgba(255, 255, 255, 0.6);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    background: transparent;
+}
+
+.cm-tab-input {
+    display: none;
+}
+
+.cm-app-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 50;
+}
+
+#messagesTab:checked ~ .cm-messages-app,
+#whatsappTab:checked ~ .cm-whatsapp-app,
+#googleTab:checked ~ .cm-google-app,
+#galleryTab:checked ~ .cm-gallery-app,
+#phoneTab:checked ~ .cm-phone-app,
+#weatherTab:checked ~ .cm-weather-app,
+#bitcoinTab:checked ~ .cm-bitcoin-app,
+#cameraTab:checked ~ .cm-camera-app {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cm-app-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cm-back-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.cm-app-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cm-app-body {
+    height: calc(100% - 52px);
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+
+.cm-chat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cm-chat-item.cm-unread {
+    background: #f0f9f4;
+}
+
+.cm-chat-item:active {
+    background: #f5f5f5;
+}
+
+.cm-chat-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.cm-chat-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-chat-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.cm-chat-preview {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cm-chat-time {
+    font-size: 12px;
+    color: #999;
+    flex-shrink: 0;
+}
+
+.cm-chat-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.cm-notification-badge {
+    background: #25D366;
+    color: white;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 0 6px;
+}
+
+.cm-chat-item.cm-unread .cm-chat-name {
+    font-weight: 600;
+    color: #000;
+}
+
+.cm-chat-item.cm-unread .cm-chat-preview {
+    font-weight: 500;
+    color: #222;
+}
+
+.cm-google-search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f3f4;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.cm-g-icon {
+    font-weight: 700;
+    font-size: 18px;
+    background: linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC04 66%, #34A853 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cm-search-text {
+    color: #5f6368;
+    font-size: 14px;
+}
+
+.cm-search-section {
+    padding: 20px;
+}
+
+.cm-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5f6368;
+    margin-bottom: 15px;
+}
+
+.cm-search-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cm-search-item:active {
+    background: #f1f3f4;
+    transform: scale(0.98);
+}
+
+.cm-search-icon {
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.cm-search-query {
+    font-size: 15px;
+    color: #202124;
+}
+
+.cm-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    padding: 0;
+}
+
+.cm-gallery-item {
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cm-gallery-item:active {
+    transform: scale(0.95);
+}
+
+.cm-dialer {
+    padding: 45px 25px 35px;
+    text-align: center;
+}
+
+.cm-dialer-display {
+    font-size: 36px !important;
+    font-weight: 300 !important;
+    color: #000;
+    margin-bottom: 55px;
+    padding: 25px 20px;
+    line-height: 1.2 !important;
+}
+
+.cm-dialer-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 45px;
+    padding: 0 15px;
+}
+
+.cm-dial-btn {
+    aspect-ratio: 1;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px !important;
+    font-weight: 300 !important;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1 !important;
+}
+
+.cm-dial-btn:active {
+    background: #e0e0e0;
+    transform: scale(0.95);
+}
+
+.cm-dial-letters {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    color: #999;
+    margin-top: 0px;
+    letter-spacing: 1.5px;
+    line-height: 1 !important;
+}
+
+.cm-call-btn {
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(17, 153, 142, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.cm-call-btn:active {
+    transform: scale(0.9);
+}
+
+.cm-weather-app {
+    background: linear-gradient(180deg, #4A90E2 0%, #56CCF2 100%);
+}
+
+.cm-weather-main {
+    width: 100%;
+    height: 100%;
+    padding: 25px 20px;
+    color: white;
+    overflow-y: auto;
+}
+
+.cm-weather-back {
+    font-size: 30px !important;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 1 !important;
+}
+
+.cm-weather-location {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cm-city-name {
+    font-size: 30px !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px;
+    line-height: 1.2 !important;
+}
+
+.cm-weather-date {
+    font-size: 16px !important;
+    opacity: 0.9;
+    line-height: 1.2 !important;
+}
+
+.cm-weather-current {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cm-weather-icon {
+    font-size: 110px !important;
+    margin-bottom: 15px;
+    line-height: 1 !important;
+}
+
+.cm-weather-temp {
+    font-size: 90px !important;
+    font-weight: 100 !important;
+    margin-bottom: 10px;
+    letter-spacing: -3px;
+    line-height: 1 !important;
+}
+
+.cm-weather-desc {
+    font-size: 22px !important;
+    opacity: 0.9;
+    line-height: 1.2 !important;
+}
+
+.cm-weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px 18px;
+    margin-bottom: 25px;
+}
+
+.cm-weather-detail-item {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.cm-detail-label {
+    font-size: 13px !important;
+    opacity: 0.8;
+    margin-bottom: 6px;
+    line-height: 1.2 !important;
+}
+
+.cm-detail-value {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+.cm-weather-forecast {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px 18px;
+}
+
+.cm-forecast-title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-bottom: 15px;
+    line-height: 1.2 !important;
+}
+
+.cm-forecast-days {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.cm-forecast-day {
+    flex-shrink: 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 12px;
+    border-radius: 15px;
+    min-width: 62px;
+}
+
+.cm-forecast-day-name {
+    font-size: 13px !important;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    line-height: 1 !important;
+}
+
+.cm-forecast-icon {
+    font-size: 32px !important;
+    margin-bottom: 10px;
+    line-height: 1 !important;
+}
+
+.cm-forecast-temps {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cm-temp-high {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+.cm-temp-low {
+    font-size: 13px !important;
+    opacity: 0.7;
+    line-height: 1 !important;
+}
+
+.cm-bitcoin-main {
+    padding: 35px 25px;
+    color: white;
+}
+
+.cm-bitcoin-price-section {
+    text-align: center;
+    margin-bottom: 45px;
+    padding-top: 25px;
+}
+
+.cm-bitcoin-symbol {
+    font-size: 85px !important;
+    margin-bottom: 18px;
+    line-height: 1 !important;
+}
+
+.cm-bitcoin-name {
+    font-size: 19px !important;
+    opacity: 0.7;
+    margin-bottom: 22px;
+    line-height: 1.2 !important;
+}
+
+.cm-bitcoin-price {
+    font-size: 52px !important;
+    font-weight: 600 !important;
+    margin-bottom: 18px;
+    line-height: 1.1 !important;
+}
+
+.cm-bitcoin-change {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    padding: 10px 22px;
+    border-radius: 25px;
+    display: inline-block;
+    line-height: 1 !important;
+}
+
+.cm-positive {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+.cm-bitcoin-chart {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+}
+
+.cm-chart-period {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.cm-period-btn {
+    padding: 10px 18px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 14px !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1 !important;
+}
+
+.cm-period-btn.cm-active {
+    background: #F7931A;
+}
+
+.cm-chart-placeholder {
+    height: 160px;
+    margin: 15px 0;
+}
+
+.cm-chart-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cm-bitcoin-stats {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+}
+
+.cm-stat-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.cm-stat-row:last-child {
+    margin-bottom: 0;
+}
+
+.cm-stat-item {
+    text-align: center;
+}
+
+.cm-stat-label {
+    font-size: 13px !important;
+    opacity: 0.6;
+    margin-bottom: 8px;
+    line-height: 1.2 !important;
+}
+
+.cm-stat-value {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+.cm-bitcoin-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.cm-action-btn {
+    padding: 18px 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1 !important;
+}
+
+.cm-buy-btn {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+}
+
+.cm-sell-btn {
+    background: linear-gradient(135deg, #f44336 0%, #da190b 100%);
+}
+
+.cm-action-btn:active {
+    transform: scale(0.95);
+}
+
+.cm-camera-app {
+    background: #000;
+}
+
+.cm-camera-viewfinder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cm-camera-controls-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cm-camera-close {
+    color: white;
+    font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cm-camera-mode {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.cm-camera-controls-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cm-camera-gallery {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cm-camera-shutter {
+    width: 70px;
+    height: 70px;
+    border: 4px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cm-camera-shutter:active {
+    transform: scale(0.9);
+}
+
+.cm-camera-flip {
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .cm-phone {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 385/830;
+    }
+}
+.cm-icon-spotify {
+    background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-spotify::before {
+    content: '\f1bc';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+#spotifyTab:checked ~ .cm-spotify-app {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cm-spotify-cover {
+    padding: 40px 30px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.cm-spotify-album-img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.cm-spotify-song-info {
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.cm-spotify-song-name {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1.2 !important;
+}
+
+.cm-spotify-artist-name {
+    font-size: 16px !important;
+    color: #b3b3b3;
+    line-height: 1.2 !important;
+}
+
+.cm-spotify-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 30px 25px;
+}
+
+.cm-spotify-time {
+    font-size: 12px !important;
+    color: #b3b3b3;
+    min-width: 40px;
+    line-height: 1 !important;
+}
+
+.cm-spotify-bar {
+    flex: 1;
+    height: 4px;
+    background: #4d4d4d;
+    border-radius: 2px;
+    position: relative;
+}
+
+.cm-spotify-bar-fill {
+    height: 100%;
+    background: #1DB954;
+    border-radius: 2px;
+    position: relative;
+}
+
+.cm-spotify-bar-fill::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cm-spotify-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 0 30px 30px;
+}
+
+.cm-spotify-btn {
+    color: #b3b3b3;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cm-spotify-btn:active {
+    transform: scale(0.95);
+    color: white;
+}
+
+.cm-spotify-play {
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: #121212;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.cm-spotify-play:active {
+    background: #e0e0e0;
+}
+
+.cm-spotify-queue {
+    background: #181818;
+    border-radius: 20px 20px 0 0;
+    padding: 25px 20px;
+    margin-top: 20px;
+}
+
+.cm-spotify-queue-title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.2 !important;
+}
+
+.cm-spotify-queue-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.cm-spotify-queue-item:active {
+    opacity: 0.7;
+}
+
+.cm-spotify-queue-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.cm-spotify-queue-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-spotify-queue-name {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: white;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2 !important;
+}
+
+.cm-spotify-queue-artist {
+    font-size: 13px !important;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2 !important;
+}
+
+.cm-spotify-queue-duration {
+    font-size: 13px !important;
+    color: #b3b3b3;
+    flex-shrink: 0;
+    line-height: 1 !important;
+}
+
+/* ========== INSTAGRAM APP ========== */
+.cm-icon-instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-instagram::before {
+    content: '\f16d';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+#instagramTab:checked ~ .cm-instagram-app {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cm-instagram-app .cm-app-body {
+    height: calc(100% - 108px);
+}
+
+.cm-instagram-header {
+    background: #000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #262626;
+}
+
+.cm-instagram-logo {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: white;
+    line-height: 1 !important;
+}
+
+.cm-instagram-actions {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+.cm-instagram-stories {
+    display: flex;
+    gap: 15px;
+    padding: 15px 15px;
+    overflow-x: auto;
+    background: #000;
+    border-bottom: 1px solid #262626;
+}
+
+.cm-instagram-story {
+    flex-shrink: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cm-instagram-story-ring {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.cm-instagram-story-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #000;
+}
+
+.cm-instagram-story-name {
+    font-size: 11px !important;
+    color: white;
+    max-width: 68px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2 !important;
+}
+
+.cm-instagram-feed {
+    background: #000;
+}
+
+.cm-instagram-post {
+    margin-bottom: 20px;
+}
+
+.cm-instagram-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+}
+
+.cm-instagram-post-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cm-instagram-post-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.cm-instagram-post-username {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: white;
+    line-height: 1 !important;
+}
+
+.cm-instagram-post-header i {
+    color: white;
+    font-size: 16px;
+}
+
+.cm-instagram-post-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.cm-instagram-post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px 8px;
+}
+
+.cm-instagram-post-left {
+    display: flex;
+    gap: 15px;
+}
+
+.cm-instagram-post-actions i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.cm-instagram-post-likes {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: white;
+    padding: 0 15px 8px;
+    line-height: 1.2 !important;
+}
+
+.cm-instagram-post-caption {
+    font-size: 14px !important;
+    color: white;
+    padding: 0 15px;
+    line-height: 1.4 !important;
+}
+
+.cm-instagram-username {
+    font-weight: 600 !important;
+    margin-right: 5px;
+}
+
+.cm-instagram-post-time {
+    font-size: 12px !important;
+    color: #8e8e8e;
+    padding: 5px 15px 0;
+    line-height: 1 !important;
+}
+
+.cm-instagram-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    border-top: 1px solid #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    height: 56px;
+    cursor: pointer;
+}
+
+.cm-instagram-nav i {
+    font-size: 24px;
+    color: white;
+}
+
+.cm-instagram-nav-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+}
+
+/* ========== GMAIL APP ========== */
+.cm-icon-gmail {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.cm-icon-gmail::before {
+    content: '\f0e0';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    background: linear-gradient(135deg, #EA4335 0%, #FBBC04 50%, #34A853 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#gmailTab:checked ~ .cm-gmail-app {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cm-gmail-app .cm-app-body {
+    height: 100%;
+}
+
+.cm-gmail-header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.cm-gmail-header-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+}
+
+.cm-gmail-menu {
+    font-size: 24px;
+    color: #5f6368;
+    cursor: pointer;
+}
+
+.cm-gmail-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f3f4;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.cm-gmail-search i {
+    color: #5f6368;
+    font-size: 16px;
+}
+
+.cm-gmail-search span {
+    font-size: 15px !important;
+    color: #5f6368;
+    line-height: 1 !important;
+}
+
+.cm-gmail-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.cm-gmail-tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    background: white;
+}
+
+.cm-gmail-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 10px;
+    font-size: 13px !important;
+    color: #5f6368;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    line-height: 1 !important;
+}
+
+.cm-gmail-tab i {
+    font-size: 16px;
+}
+
+.cm-gmail-tab-active {
+    color: #1a73e8;
+    border-bottom-color: #1a73e8;
+}
+
+.cm-gmail-list {
+    background: white;
+}
+
+.cm-gmail-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cm-gmail-item:active {
+    background: #f5f5f5;
+}
+
+.cm-gmail-item-left {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-gmail-item-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.cm-gmail-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-gmail-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.cm-gmail-sender {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #202124;
+    line-height: 1 !important;
+}
+
+.cm-gmail-unread .cm-gmail-sender {
+    font-weight: 700 !important;
+}
+
+.cm-gmail-time {
+    font-size: 12px !important;
+    color: #5f6368;
+    flex-shrink: 0;
+    margin-left: 10px;
+    line-height: 1 !important;
+}
+
+.cm-gmail-subject {
+    font-size: 14px !important;
+    color: #202124;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3 !important;
+}
+
+.cm-gmail-unread .cm-gmail-subject {
+    font-weight: 600 !important;
+}
+
+.cm-gmail-snippet {
+    font-size: 13px !important;
+    color: #5f6368;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3 !important;
+}
+
+.cm-gmail-item i {
+    font-size: 20px;
+    color: #5f6368;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.cm-gmail-fab {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background: #c2e7ff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cm-gmail-fab:active {
+    transform: scale(0.95);
+}
+
+.cm-gmail-fab i {
+    font-size: 20px;
+    color: #001d35;
+}
+
+/* ========== ÍCONOS ADICIONALES ========== */
+
+/* Twitter/X */
+.cm-icon-twitter {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-twitter::before {
+    content: '\f099';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* YouTube */
+.cm-icon-youtube {
+    background: #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-youtube::before {
+    content: '\f167';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* TikTok */
+.cm-icon-tiktok {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-tiktok::before {
+    content: '\e07b';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* Facebook */
+.cm-icon-facebook {
+    background: #1877F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-facebook::before {
+    content: '\f39e';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* Telegram */
+.cm-icon-telegram {
+    background: linear-gradient(135deg, #0088cc 0%, #229ED9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-telegram::before {
+    content: '\f2c6';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* Disc0rd */
+.cm-icon-disc0rd {
+    background: #5865F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-disc0rd::before {
+    content: '\f392';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* Twitch */
+.cm-icon-twitch {
+    background: #9146FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-twitch::before {
+    content: '\f1e8';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* Reddit */
+.cm-icon-reddit {
+    background: #FF4500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cm-icon-reddit::before {
+    content: '\f281';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+/* Snapchat */
+.cm-icon-snapchat {
+    background: #FFFC00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #000;
+}
+
+.cm-icon-snapchat::before {
+    content: '\f2ab';
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+/* KEEP NOTES APP */
+.cm-keep-app {
+    background: #202124 !important;
+}
+
+.cm-keep-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: #202124 !important;
+    padding: 18px 20px !important;
+    border-bottom: 1px solid #3c4043 !important;
+}
+
+.cm-keep-actions {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.cm-keep-action {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    font-size: 22px !important;
+    transition: background 0.2s !important;
+}
+
+.cm-keep-action:active {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.cm-keep-body {
+    background: #202124 !important;
+    padding: 24px 20px !important;
+    overflow-y: auto !important;
+    height: calc(100% - 68px) !important;
+}
+
+.cm-keep-note {
+    background: #202124 !important;
+    border-radius: 12px !important;
+    padding: 24px 20px !important;
+    border: 1px solid #5f6368 !important;
+}
+
+.cm-keep-note-title {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #fbc02d !important;
+    margin-bottom: 24px !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.2 !important;
+}
+
+.cm-keep-checkbox {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    padding: 14px 0 !important;
+    cursor: pointer !important;
+}
+
+.cm-keep-checkbox input[type="checkbox"] {
+    display: none !important;
+}
+
+.cm-keep-checkbox-icon {
+    width: 24px !important;
+    height: 24px !important;
+    border: 2px solid #9aa0a6 !important;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
+    margin-top: 4px !important;
+    transition: all 0.2s ease !important;
+    position: relative !important;
+    background: transparent !important;
+}
+
+.cm-keep-checkbox-icon::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 7px !important;
+    top: 3px !important;
+    width: 5px !important;
+    height: 10px !important;
+    border: solid white !important;
+    border-width: 0 3px 3px 0 !important;
+    transform: rotate(45deg) !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s ease !important;
+}
+
+.cm-keep-checkbox input[type="checkbox"]:checked + .cm-keep-checkbox-icon {
+    background: #1a73e8 !important;
+    border-color: #1a73e8 !important;
+}
+
+.cm-keep-checkbox input[type="checkbox"]:checked + .cm-keep-checkbox-icon::after {
+    opacity: 1 !important;
+}
+
+.cm-keep-checkbox-text {
+    flex: 1 !important;
+    color: #e8eaed !important;
+    font-size: 16px !important;
+    line-height: 26px !important;
+    user-select: none !important;
+}
+
+.cm-keep-checkbox input[type="checkbox"]:checked ~ .cm-keep-checkbox-text {
+    text-decoration: line-through !important;
+    color: #9aa0a6 !important;
+}
+
+.cm-keep-note-info {
+    margin-top: 24px !important;
+    padding-top: 20px !important;
+    border-top: 1px solid #5f6368 !important;
+    font-size: 13px !important;
+    color: #9aa0a6 !important;
+    line-height: 1.2 !important;
+}
+
+.cm-icon-keep {
+    background: linear-gradient(135deg, #FBC02D 0%, #F57F17 100%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.cm-icon-keep::after {
+    content: '🗒️' !important;
+    font-size: 30px !important;
+}
+
+#keepTab:checked ~ .cm-keep-app {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

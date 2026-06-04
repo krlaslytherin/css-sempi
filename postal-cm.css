@@ -1,0 +1,210 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-contenedor-postal {
+    max-width: 550px;
+    margin: 20px auto;
+    perspective: 1500px;
+    font-family: 'Alex Brush','Brush Script MT', 'Lucida Handwriting', cursive;
+}
+
+.cm-postal {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.cm-contenedor-postal:hover .cm-postal {
+    transform: rotateY(180deg);
+}
+
+.cm-postal-frente,
+.cm-postal-dorso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+}
+
+.cm-postal-frente {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+}
+
+.cm-postal-texto-frente {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
+}
+
+.cm-postal-texto-frente span {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+    font-family: 'Alex Brush','Brush Script MT', 'Lucida Handwriting', cursive;
+
+}
+
+.cm-postal-dorso {
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border: 12px solid #fff;
+    box-shadow: inset 0 0 30px rgba(139, 111, 71, 0.1);
+}
+
+.cm-postal-mensaje {
+    grid-column: 1;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    border-right: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.cm-postal-destinatario {
+    grid-column: 2;
+    padding: 10px;
+    position: relative;
+}
+
+.cm-postal-direccion {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 60px;
+}
+
+.cm-estampilla-zona {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.cm-estampilla-mini {
+    width: 50px;
+    height: 65px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background-color: #fff;
+}
+
+.cm-estampilla-mini::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    background-image: radial-gradient(circle at 2px 2px, transparent 1.5px, #888 1.5px, #888 2px, transparent 2px);
+    background-size: 8px 8px;
+    background-position: -1px -1px;
+    pointer-events: none;
+}
+
+.cm-sello-postal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    border: 3px dashed #c41e3a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transform: rotate(-15deg);
+}
+
+.cm-sello-postal span {
+    font-size: 11px;
+    font-weight: bold;
+    color: #c41e3a;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.cm-postal-lineas {
+    margin-top: 10px;
+}
+
+.cm-postal-lineas div {
+    height: 1px;
+    background: #d4a574;
+    margin: 10px 0;
+    opacity: 0.6;
+}
+
+.cm-mensaje-texto {
+    flex: 1;
+    overflow: hidden;
+}
+
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

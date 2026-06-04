@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&family=Montserrat:wght@400;500;600;700&display=swap');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-scrapbaulbox{
+max-width:700px;
+width:100%;
+height:340px;
+margin:0 auto;
+position:relative;
+overflow:visible;
+font-family:'Montserrat',sans-serif;
+color:var(--color);
+}
+.cm-scrapbaulbox br{display:none!important;}
+
+.cm-scrapbaulbar{
+position:absolute;
+left:0;
+bottom:10px;
+width:330px;
+height:22px;
+background:var(--scrapbaul-acc1);
+opacity:.45;
+z-index:1;
+}
+
+.cm-scrapbaulbigpolaroid{
+position:absolute;
+left:16px;
+top:20px;
+width:252px;
+padding:10px 10px 26px;
+background:#f8f8f8;
+border:1px solid rgba(0,0,0,.12);
+box-shadow:0 4px 14px rgba(0,0,0,.12);
+transform:rotate(-12deg);
+z-index:4;
+overflow:visible;
+}
+.cm-scrapbaulbigpolaroid:before{
+content:"";
+position:absolute;
+top:-16px;
+left:18px;
+width:150px;
+height:22px;
+background:var(--scrapbaul-acc1);
+opacity:.42;
+z-index:8;
+}
+.cm-scrapbaulbigimg{
+display:block;
+width:100%;
+height:212px;
+background:#222 center/cover no-repeat;
+border:1px solid rgba(0,0,0,.18);
+position:relative;
+overflow:hidden;
+}
+.cm-scrapbaulbigimg:before,
+.cm-scrapbaulbigimg:after,
+.cm-scrapbaulbigcorn1,
+.cm-scrapbaulbigcorn2{
+content:"";
+position:absolute;
+width:32px;
+height:32px;
+background:rgba(255,255,255,.10);
+box-shadow:0 1px 5px rgba(0,0,0,.18);
+z-index:4;
+}
+.cm-scrapbaulbigimg:before{
+top:7px;
+left:7px;
+clip-path:polygon(0 0,100% 0,0 100%);
+}
+.cm-scrapbaulbigimg:after{
+top:7px;
+right:7px;
+clip-path:polygon(0 0,100% 0,100% 100%);
+}
+.cm-scrapbaulbigcorn1{
+left:7px;
+bottom:7px;
+clip-path:polygon(0 0,0 100%,100% 100%);
+}
+.cm-scrapbaulbigcorn2{
+right:7px;
+bottom:7px;
+clip-path:polygon(100% 0,0 100%,100% 100%);
+}
+
+.cm-scrapbaulname{
+position:absolute;
+left:250px;
+top:20px;
+width:235px;
+padding:16px 24px;
+background:#ddd9d2;
+color:#111;
+font-family:'Qwigley',cursive;
+font-size:34px;
+line-height:1;
+white-space:nowrap;
+text-align:center;
+box-shadow:0 2px 6px rgba(0,0,0,.05);
+clip-path:polygon(0 8%,100% 0,100% 80%,88% 100%,0 88%);
+z-index:6;
+}
+.cm-scrapbaulnametape1{
+position:absolute;
+left:246px;
+top:28px;
+width:14px;
+height:50px;
+background:var(--scrapbaul-acc2);
+opacity:.55;
+z-index:9;
+}
+.cm-scrapbaulnametape2{
+position:absolute;
+left:472px;
+top:13px;
+width:28px;
+height:28px;
+background:var(--scrapbaul-acc2);
+opacity:.55;
+transform:rotate(-49deg);
+z-index:9;
+}
+
+.cm-scrapbaulmini{
+position:absolute;
+right:24px;
+top:22px;
+width:86px;
+padding:7px 7px 14px;
+background:#f8f8f8;
+border:1px solid rgba(0,0,0,.12);
+box-shadow:0 3px 10px rgba(0,0,0,.10);
+transform:rotate(19deg);
+z-index:4;
+overflow:visible;
+}
+.cm-scrapbaulminiimg{
+display:block;
+width:100%;
+height:66px;
+background:#222 center/cover no-repeat;
+border:1px solid rgba(0,0,0,.16);
+}
+.cm-scrapbaulmini:before{
+content:"";
+position:absolute;
+top:-10px;
+right:10px;
+width:54px;
+height:10px;
+background:var(--scrapbaul-acc2);
+opacity:.45;
+z-index:8;
+}
+
+.cm-scrapbaultext{
+position:absolute;
+left:304px;
+top:92px;
+width:250px;
+font-size:12px;
+line-height:1.45;
+font-weight:500;
+color:var(--color);
+z-index:3;
+}
+
+.cm-scrapbaulquote{
+position:absolute;
+right:56px;
+top:162px;
+width:238px;
+padding:12px 18px 14px;
+background:#ddd9d2;
+font-family:'Qwigley',cursive;
+font-size:22px;
+line-height:1;
+white-space:nowrap;
+color:#111;
+clip-path:polygon(0 8%,100% 0,100% 82%,88% 100%,0 87%);
+z-index:20;
+text-align:center;
+}
+.cm-scrapbaulquotetape{
+position:absolute;
+right:48px;
+top:171px;
+width:24px;
+height:28px;
+background:var(--scrapbaul-acc1);
+opacity:.6;
+transform:rotate(-50deg);
+z-index:21;
+}
+
+.cm-scrapbaulnav{
+position:absolute;
+left:192px;
+bottom:16px;
+display:flex;
+gap:10px;
+z-index:10;
+align-items:flex-start;
+overflow:visible;
+}
+.cm-scrapbaulitem{
+width:54px;
+position:relative;
+text-decoration:none;
+display:block;
+padding-top:14px;
+overflow:visible;
+}
+.cm-scrapbaulpin{
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+width:24px;
+height:24px;
+border-radius:50%;
+background:#8a8a8a;
+z-index:20;
+}
+.cm-scrapbaulblock{
+position:relative;
+width:54px;
+height:60px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
+padding:8px 4px 5px;
+border:5px solid #898787;
+box-shadow:none;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.cm-scrapbaulitem:nth-child(1) .cm-scrapbaulblock{background:var(--scrapbaul-acc2);}
+.cm-scrapbaulitem:nth-child(2) .cm-scrapbaulblock{background:var(--scrapbaul-acc1);}
+.cm-scrapbaulitem:nth-child(3) .cm-scrapbaulblock{background:color-mix(in srgb,var(--scrapbaul-acc1) 72%,var(--scrapbaul-acc2) 28%);}
+.cm-scrapbaulitem:nth-child(4) .cm-scrapbaulblock{background:color-mix(in srgb,var(--scrapbaul-acc1) 42%,var(--scrapbaul-acc2) 58%);}
+.cm-scrapbaulitem:nth-child(5) .cm-scrapbaulblock{background:var(--scrapbaul-acc2);}
+.cm-scrapbaulitem:nth-child(6) .cm-scrapbaulblock{background:var(--scrapbaul-acc1);}
+.cm-scrapbaulitem:nth-child(7) .cm-scrapbaulblock{background:color-mix(in srgb,var(--scrapbaul-acc1) 72%,var(--scrapbaul-acc2) 28%);}
+
+.cm-scrapbaulicon{
+font-size:33px;
+line-height:1;
+color:var(--background-1);
+display:block;
+margin-top:1px;
+}
+
+.cm-scrapbaullabel{
+margin-top:auto;
+color:var(--background-1);
+text-align:center;
+font-size:6.5px;
+line-height:1;
+font-weight:500;
+width:100%;
+padding-top:1px;
+}
+
+
+ 
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

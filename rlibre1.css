@@ -1,0 +1,294 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-rlibre1-rel-ciudadanos   { --rel1-color: #6A93B5; }
+.cm-rlibre1-rel-criminales   { --rel1-color: #5c6aaa; }
+.cm-rlibre1-rel-seguridad    { --rel1-color: #7c3535; }
+.cm-rlibre1-rel-empresarios  { --rel1-color: #873E65; }
+.cm-rlibre1-rel-celebridades { --rel1-color: #6F628A; }
+.cm-rlibre1-rel-sami         { --rel1-color: #B88A99; }
+.cm-rlibre1-rel-refineria    { --rel1-color: #5D7260; }
+.cm-rlibre1-rel-pescadores   { --rel1-color: #4D919F; }
+.cm-rlibre1-rel-salud        { --rel1-color: #7DAE9B; }
+.cm-rlibre1-rel-comercios    { --rel1-color: #BFB069; }
+
+.cm-rlibre1-wrap {
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 550px;
+    margin: 0 auto;
+    background: var(--background-1);
+    border: 1px solid var(--cborder);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cm-rlibre1-wrap br {
+    display: none !important;
+}
+
+.cm-rlibre1-header {
+    padding: 16px 20px 10px;
+    border-bottom: 1px solid var(--cborder);
+}
+
+.cm-rlibre1-title {
+    color: var(--color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: .55;
+    margin: 0;
+}
+
+.cm-rlibre1-count {
+    color: var(--color);
+    font-size: 22px;
+    font-weight: 800;
+    margin: 2px 0 0;
+}
+
+.cm-rlibre1-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--cborder);
+    padding: 0 12px;
+}
+
+.cm-rlibre1-tab {
+    color: var(--color);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 14px;
+    opacity: .4;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all .2s;
+}
+
+.cm-rlibre1-tab.cm-rlibre1-tab-active {
+    opacity: 1;
+    border-bottom-color: var(--color);
+}
+
+.cm-rlibre1-search {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--cborder);
+}
+
+.cm-rlibre1-searchbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: color-mix(in srgb, var(--cborder) 60%, transparent);
+    border: 1px solid var(--cborder);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.cm-rlibre1-searchbox i {
+    color: var(--color);
+    opacity: .4;
+    font-size: 13px;
+}
+
+.cm-rlibre1-searchbox span {
+    color: var(--color);
+    opacity: .35;
+    font-size: 13px;
+}
+
+.cm-rlibre1-sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 4px;
+}
+
+.cm-rlibre1-sort-label {
+    color: var(--color);
+    font-size: 12px;
+    opacity: .45;
+}
+
+.cm-rlibre1-sort-label b {
+    opacity: 1;
+}
+
+.cm-rlibre1-sort-icon {
+    color: var(--color);
+    opacity: .5;
+    font-size: 13px;
+}
+
+.cm-rlibre1-list {
+    max-height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cm-rlibre1-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.cm-rlibre1-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cm-rlibre1-list::-webkit-scrollbar-thumb {
+    background: var(--cborder);
+    border-radius: 4px;
+}
+
+.cm-rlibre1-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--cborder);
+    text-decoration: none;
+    transition: background .18s;
+}
+
+.cm-rlibre1-item:last-child {
+    border-bottom: none;
+}
+
+.cm-rlibre1-item:hover {
+    background: color-mix(in srgb, var(--cborder) 45%, transparent);
+}
+
+.cm-rlibre1-imgwrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+}
+
+.cm-rlibre1-aro {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid var(--rel1-color);
+    box-sizing: border-box;
+    background: var(--background-1);
+}
+
+.cm-rlibre1-photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: opacity .22s;
+}
+
+.cm-rlibre1-imgwrap:hover .cm-rlibre1-photo {
+    opacity: 0;
+}
+
+.cm-rlibre1-hover-overlay {
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .22s;
+    pointer-events: none;
+    background: radial-gradient(circle, color-mix(in srgb, var(--rel1-color) 67%, transparent), color-mix(in srgb, var(--rel1-color) 40%, transparent));
+}
+
+.cm-rlibre1-imgwrap:hover .cm-rlibre1-hover-overlay {
+    opacity: 1;
+}
+
+.cm-rlibre1-hover-overlay i {
+    color: #fff;
+    font-size: 15px;
+}
+
+.cm-rlibre1-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-rlibre1-name {
+    color: var(--color);
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.cm-rlibre1-desc {
+    color: var(--color);
+    font-size: 11px;
+    opacity: .5;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.cm-rlibre1-badge {
+    flex-shrink: 0;
+    width: 90px;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    border: 1px solid var(--rel1-color);
+    color: var(--rel1-color);
+    background: color-mix(in srgb, var(--cborder) 55%, transparent);
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #666;
+}

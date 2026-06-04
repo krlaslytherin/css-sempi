@@ -1,0 +1,113 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-posters-wrapper {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+
+.cm-posters-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.cm-posters-glass {
+  position: relative;
+  padding: 18px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(255,255,255,0.45);
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 100%);
+  box-shadow: 0 8px 32px rgba(80,100,140,0.2), 0 1.5px 0 rgba(255,255,255,0.55) inset;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.cm-posters-glass::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 35%;
+  height: 55%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.03) 100%);
+  border-radius: 4px 4px 60% 10%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cm-posters-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  background: radial-gradient(ellipse at 15% 12%, rgba(255,255,255,0.18) 0%, transparent 55%), radial-gradient(ellipse at 85% 88%, rgba(180,190,210,0.12) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cm-posters-screw {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #e8eaed 0%, #b0b5be 45%, #6e7179 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 0.5px 1px rgba(255,255,255,0.7) inset;
+  z-index: 2;
+}
+
+.cm-posters-screw:nth-child(1) { top: 7px; left: 7px; }
+.cm-posters-screw:nth-child(2) { top: 7px; right: 7px; }
+.cm-posters-screw:nth-child(3) { bottom: 7px; left: 7px; }
+.cm-posters-screw:nth-child(4) { bottom: 7px; right: 7px; }
+
+.cm-posters-wrapper br { display: none !important; }
+
+.cm-posters-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cm-posters-grid .cm-posters-wrapper {
+  margin: 0;
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

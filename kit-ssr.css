@@ -1,0 +1,180 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-kit-container {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.cm-kit-title {
+  color: var(--color);
+  padding: 20px;
+  margin: 0 0 15px 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: left;
+  border-bottom: 3px solid var(--color);
+}
+
+.cm-kit-main {
+  display: flex;
+  gap: 15px;
+  margin-top: 0;
+}
+
+.cm-kit-image-area {
+  flex: 1;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cm-kit-image-area img {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: none;
+}
+
+.cm-kit-placeholder {
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--color);
+  padding: 40px;
+}
+
+.cm-kit-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: stretch;
+}
+
+.cm-kit-tab-input {
+  display: none;
+}
+
+.cm-kit-tab-label {
+  background: var(--cm-kit-primary-color);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.3s;
+  flex: 1;
+}
+
+.cm-kit-tab-label:hover {
+  opacity: 0.85;
+}
+
+.cm-kit-tab-label i {
+  font-size: 18px;
+}
+
+.cm-kit-tab-input:checked + .cm-kit-tab-label {
+  background: var(--color);
+}
+
+.cm-kit-tab-input:checked ~ .cm-kit-placeholder {
+  display: none;
+}
+
+.cm-kit-tab-input:checked + .cm-kit-tab-label + .cm-kit-image-content {
+  display: flex;
+}
+
+.cm-kit-image-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cm-kit-image-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.cm-kit-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 3px solid var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cm-kit-download-btn {
+  background: var(--cm-kit-primary-color);
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+  display: inline-block;
+}
+
+.cm-kit-download-btn:hover {
+  opacity: 0.85;
+}
+.signature-catta {
+    margin-top: 5px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #fff;
+}

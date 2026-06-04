@@ -1,0 +1,181 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-indice-container {
+    --cm-color-fondo: #d4a574;
+    --cm-color-corcho: #c19a6b;
+    --cm-color-texto: #8b4513;
+    --cm-color-hover: #923a3e;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: var(--cm-color-corcho);
+    background-image: 
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(139, 69, 19, 0.03) 2px, rgba(139, 69, 19, 0.03) 4px),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(101, 67, 33, 0.03) 2px, rgba(101, 67, 33, 0.03) 4px),
+        radial-gradient(circle at 15% 25%, rgba(80, 50, 20, 0.15) 2px, transparent 2px),
+        radial-gradient(circle at 85% 15%, rgba(70, 45, 15, 0.12) 3px, transparent 3px),
+        radial-gradient(circle at 45% 65%, rgba(90, 55, 25, 0.1) 2px, transparent 2px),
+        radial-gradient(circle at 75% 85%, rgba(85, 52, 22, 0.13) 2px, transparent 2px),
+        radial-gradient(circle at 25% 75%, rgba(75, 48, 18, 0.11) 3px, transparent 3px),
+        radial-gradient(circle at 55% 35%, rgba(80, 50, 20, 0.14) 2px, transparent 2px),
+        radial-gradient(circle at 90% 60%, rgba(70, 45, 15, 0.1) 2px, transparent 2px),
+        radial-gradient(circle at 10% 90%, rgba(85, 52, 22, 0.12) 3px, transparent 3px),
+        linear-gradient(135deg, var(--cm-color-fondo) 0%, var(--cm-color-corcho) 50%, #b8956a 100%);
+    background-size: 
+        100% 100%,
+        100% 100%,
+        150px 150px,
+        200px 200px,
+        180px 180px,
+        220px 220px,
+        160px 160px,
+        190px 190px,
+        210px 210px,
+        170px 170px,
+        100% 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.cm-indice-container br {
+    display: none;
+}
+
+.cm-indice-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cm-indice-titulo span {
+    color: var(--cm-color-texto);
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cm-indice-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cm-indice-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(245, 222, 179, 0.7);
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transform: rotate(-0.5deg);
+}
+
+.cm-indice-link:nth-child(2) {
+    transform: rotate(0.5deg);
+}
+
+.cm-indice-link:nth-child(3) {
+    transform: rotate(-0.3deg);
+}
+
+.cm-indice-link::before {
+    content: "\f08d";
+    font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif;
+    font-weight: 900;
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    color: #dc3545;
+    font-size: 20px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+}
+
+@supports not (content: "\f08d") {
+    .cm-indice-link::before {
+        content: "📌";
+        font-family: sans-serif;
+    }
+}
+
+.cm-indice-link:hover {
+    background: rgba(245, 222, 179, 0.9);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: scale(1.02) rotate(0deg);
+}
+
+.cm-indice-link:active {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transform: scale(0.98) rotate(0deg);
+}
+
+.cm-link-texto {
+    color: var(--cm-color-texto);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.cm-link-icono {
+    width: 60px;
+    height: 60px;
+    background: var(--cm-color-icono);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+}
+
+.cm-indice-link:hover .cm-link-icono {
+    background: var(--cm-color-hover);
+}
+
+.cm-link-icono i {
+    color: white;
+    font-size: 28px;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

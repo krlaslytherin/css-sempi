@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-call-phone-wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cm-call-phone-wrapper ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cm-call-phone-wrapper ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-call-phone-wrapper ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.cm-call-phone-wrapper ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.cm-call-phone-wrapper {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.cm-call-phone {
+    width: 385px;
+    height: 830px;
+    background: #1a1a1a;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 8px #0a0a0a, 0 0 0 10px #333;
+    position: relative;
+    overflow: visible;
+    white-space: normal;
+}
+
+.cm-call-camera {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #1a1a3e 40%, #0a0a1e 100%);
+    border-radius: 50%;
+    z-index: 105;
+    box-shadow: 0 0 0 2px #1a1a1a;
+}
+
+.cm-call-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1e 100%);
+    border-radius: 42px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cm-call-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: white;
+}
+
+.cm-call-avatar-wrapper {
+    margin-bottom: 30px;
+    animation: cm-call-fadeIn 0.5s ease;
+}
+
+.cm-call-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.cm-call-contact-name {
+    font-size: 32px !important;
+    font-weight: 500 !important;
+    margin-bottom: 15px;
+    text-align: center;
+    animation: cm-call-fadeIn 0.5s ease 0.1s backwards;
+    line-height: 1.2 !important;
+}
+
+.cm-call-status {
+    font-size: 18px !important;
+    color: #ff4444;
+    margin-bottom: 20px;
+    font-weight: 500 !important;
+    animation: cm-call-fadeIn 0.5s ease 0.2s backwards;
+    line-height: 1.2 !important;
+}
+
+.cm-call-missed-icon {
+    font-size: 50px;
+    color: #ff4444;
+    margin-bottom: 15px;
+    animation: cm-call-bounce 0.6s ease 0.3s backwards;
+}
+
+.cm-call-time-info {
+    font-size: 15px !important;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+    animation: cm-call-fadeIn 0.5s ease 0.4s backwards;
+    line-height: 1.2 !important;
+}
+
+.cm-call-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 300px;
+    animation: cm-call-fadeIn 0.5s ease 0.5s backwards;
+}
+
+.cm-call-action-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 5px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 90px;
+}
+
+.cm-call-action-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.cm-call-action-btn:active {
+    transform: translateY(0);
+}
+
+.cm-call-action-btn i {
+    font-size: 20px;
+}
+
+.cm-call-btn-label {
+    font-size: 9px !important;
+    text-align: center;
+    line-height: 1.1 !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.cm-call-btn-message {
+    color: #4FC3F7;
+}
+
+.cm-call-btn-callback {
+    color: #66BB6A;
+}
+
+.cm-call-btn-video {
+    color: #FFA726;
+}
+
+.cm-call-history-section {
+    width: 100%;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px 15px;
+    animation: cm-call-slideUp 0.5s ease 0.6s backwards;
+}
+
+.cm-call-history-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    opacity: 0.7;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2 !important;
+}
+
+.cm-call-history-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cm-call-history-item:last-child {
+    border-bottom: none;
+}
+
+.cm-call-history-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.cm-call-missed {
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+}
+
+.cm-call-outgoing {
+    background: rgba(102, 187, 106, 0.2);
+    color: #66BB6A;
+}
+
+.cm-call-incoming {
+    background: rgba(79, 195, 247, 0.2);
+    color: #4FC3F7;
+}
+
+.cm-call-history-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-call-history-name {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    margin-bottom: 3px;
+    line-height: 1.2 !important;
+}
+
+.cm-call-history-details {
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.2 !important;
+}
+
+.cm-call-history-action {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.cm-call-history-action:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cm-call-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cm-call-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.cm-call-close-btn:active {
+    transform: rotate(90deg) scale(0.9);
+}
+
+@keyframes cm-call-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cm-call-bounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes cm-call-slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .cm-call-phone {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 385/830;
+    }
+}
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

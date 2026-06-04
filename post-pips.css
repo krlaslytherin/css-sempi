@@ -1,0 +1,195 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+word-break: auto-phrase;
+}
+
+.cm-postpips-wrap {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--pips-acc1) 0%, var(--pips-acc2) 100%);
+  font-family: Arial, sans-serif;
+  color: #d6d0d2;
+  box-sizing: border-box;
+}
+
+.cm-postpips-wrap,
+.cm-postpips-wrap * {
+  box-sizing: border-box;
+}
+
+/* HEADER MÁS COMPACTO + GRID */
+.cm-postpips-top {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: start;
+  column-gap: 16px;
+  min-height: 110px;
+  padding: 20px 24px 30px;
+}
+
+/* ICONO */
+.cm-postpips-topicon {
+  font-size: 54px;
+  line-height: 1;
+  color: var(--background-1);
+  justify-self: center;
+  margin-top: 4px;
+}
+
+/* TÍTULO ARREGLADO (NO SE CORTA) */
+.cm-postpips-title {
+  width: 100%;
+  text-align: left;
+  color: var(--background-1);
+  font-size: 50px;
+  line-height: .95;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+/* BLOQUE NEGRO MÁS ARRIBA */
+.cm-postpips-body {
+  background: var(--background-1);
+  border-radius: 160px 160px 0 0 / 70px 70px 0 0;
+  padding: 34px 28px 30px;
+  margin-top: -20px;
+}
+
+/* META */
+.cm-postpips-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.cm-postpips-metaitem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 130px;
+  color: var(--color);
+  font-size: 12px;
+}
+
+/* CÍRCULOS ICONOS */
+.cm-postpips-metacircle {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--pips-acc1) 0%, var(--pips-acc2) 100%);
+  color: var(--background-1);
+  font-size: 14px;
+}
+
+/* TEXTO AUTO EXPANDIBLE */
+.cm-postpips-text {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  padding-top: 6px;
+  color: var(--color);
+  line-height: 1.65;
+  text-align: justify;
+}
+
+/* NEGRITA Y CURSIVA FORZADAS */
+.cm-postpips-text b,
+.cm-postpips-text strong {
+  color: var(--pips-acc1) !important;
+  font-weight: 700 !important;
+}
+
+.cm-postpips-text i,
+.cm-postpips-text em {
+  color: var(--pips-acc2) !important;
+  font-style: italic !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 580px) {
+  .cm-postpips-top {
+    grid-template-columns: 55px 1fr;
+    column-gap: 12px;
+    padding: 18px 18px 24px;
+    min-height: 90px;
+  }
+
+  .cm-postpips-topicon {
+    font-size: 38px;
+  }
+
+  .cm-postpips-title {
+    font-size: 35px;
+    line-height: .98;
+  }
+
+  .cm-postpips-body {
+    padding: 28px 20px 24px;
+    border-radius: 120px 120px 0 0 / 55px 55px 0 0;
+  }
+
+  .cm-postpips-meta {
+    gap: 14px;
+  }
+
+  .cm-postpips-metaitem {
+    min-width: 100%;
+  }
+}
+
+.cm-postpips-wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 14px;
+  background: linear-gradient(90deg, var(--pips-acc1) 0%, var(--pips-acc2) 100%);
+}
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

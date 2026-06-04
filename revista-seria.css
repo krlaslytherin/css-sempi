@@ -1,0 +1,255 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-outer-frame {
+    max-width: 650px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--cm-cor-1) 0%, var(--cm-cor-2) 100%);
+    padding: 14px;
+    border-radius: 22px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    border: 2px solid #000;
+}
+
+.cm-magazine-body {
+    background: #154545;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.cm-full-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.cm-header-strip {
+    position: relative;
+    z-index: 10;
+    background: white;
+    padding: 8px 15px;
+    border-bottom: 3px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cm-left-tiny {
+    font-size: 7px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.cm-center-big {
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #000;
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+    font-family: Impact, sans-serif;
+}
+
+.cm-right-tiny {
+    font-size: 7px;
+    line-height: 1.2;
+    color: #000;
+    text-align: right;
+    max-width: 105px;
+}
+
+.cm-logo-zone {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 5px 10px 15px 10px;
+    margin: -5px 0 0 0;
+    overflow: visible;
+}
+
+.cm-logo-text {
+    font-size: 95px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: Georgia, serif;
+    line-height: 1.1;
+    letter-spacing: -3px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: var(--cm-cor-2);
+    -webkit-text-stroke: 3px #000;
+    paint-order: stroke fill;
+    background: repeating-linear-gradient(135deg, transparent 0px, transparent 4px, #000 4px, #000 6px);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.4));
+    white-space: nowrap;
+    width: 100%;
+}
+
+.cm-body-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    min-height: 700px;
+    padding: 15px;
+}
+
+.cm-sidebar-left {
+    width: 190px;
+    padding: 15px 10px;
+}
+
+.cm-story-group {
+    margin-bottom: 30px;
+}
+
+.cm-story-title {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 0.95;
+    margin: 0 0 4px 0;
+    font-family: Impact, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+}
+
+.cm-story-desc {
+    font-size: 12px;
+    color: #fff;
+    font-style: italic;
+    line-height: 1.25;
+    margin: 0;
+    font-family: Georgia, serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+.cm-white-divider {
+    width: 55px;
+    height: 2px;
+    background: #fff;
+    margin: 18px 0;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.cm-artist-list {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+.cm-bold-artist {
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+}
+
+.cm-main-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 20px 30px 20px;
+}
+
+.cm-center-bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.cm-future-line {
+    font-size: 44px;
+    font-style: italic;
+    color: #000;
+    margin: 0 0 5px 0;
+    font-family: Georgia, serif;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.6), 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.cm-giant-name {
+    font-size: 72px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 4px;
+    line-height: 0.92;
+    font-family: Impact, sans-serif;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 5px 5px 10px rgba(0,0,0,0.8);
+}
+
+.cm-tagline-bottom {
+    font-size: 21px;
+    font-style: italic;
+    color: #000;
+    margin: 6px 0 0 0;
+    font-family: Georgia, serif;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.6), 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.cm-circle-info {
+    position: absolute;
+    top: 240px;
+    right: 18px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 8.5px;
+    font-weight: bold;
+    line-height: 1.15;
+    z-index: 8;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

@@ -1,0 +1,298 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-periodico-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f5f1e8;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.cm-periodico-container br {
+  display: none;
+}
+
+.cm-cabecera-principal {
+  padding-top: 10px;
+  text-align: center;
+  border-bottom: 4px double #000000;
+  padding-bottom: 18px;
+  margin-bottom: 25px;
+  color: #000000;
+}
+
+.cm-titulo-periodico,
+.cm-subtitulo-periodico,
+.cm-fecha-publicacion {
+  display: block;
+}
+
+.cm-subtitulo-periodico span,
+.cm-fecha-publicacion span,
+.cm-pie-periodico span {
+  display: block;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.cm-titulo-periodico {
+  font-size: 48px !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 12px 0 6px 0;
+  text-transform: uppercase;
+  font-family: 'Georgia', serif;
+  line-height: 1.1;
+  color: #000000;
+}
+
+.cm-subtitulo-periodico {
+  font-size: 14px !important;
+  font-style: italic;
+  margin: 6px 0 4px 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.cm-fecha-publicacion {
+  font-size: 12px !important;
+  margin-top: 10px;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+
+.cm-seccion-titulo {
+  background: #000;
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 25px 0 15px 0;
+  letter-spacing: 1px;
+}
+
+.cm-grid-anuncios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.cm-anuncio-item {
+  background: #fff;
+  border: 2px solid #000;
+  padding: 15px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.cm-anuncio-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
+}
+
+.cm-anuncio-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.cm-anuncio-numero {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.cm-logo-empresa {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  background: #fff;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #999;
+  overflow: hidden;
+}
+
+.cm-logo-empresa img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cm-anuncio-titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.cm-anuncio-empresa {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c00;
+  margin-bottom: 6px;
+}
+
+.cm-anuncio-ubicacion {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.cm-anuncio-descripcion {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cm-anuncio-descripcion br {
+  display: block !important;
+}
+
+.cm-anuncio-requisitos {
+  font-size: 12px;
+  border-top: 1px dashed #999;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.cm-requisitos-titulo {
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.cm-requisitos-lista {
+  margin: 0;
+  padding-left: 18px;
+  color: #555;
+}
+
+.cm-anuncio-contacto {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.cm-contacto-metodo {
+  font-weight: bold;
+  color: #000;
+}
+
+.cm-anuncio-salario {
+  background: #ffe;
+  border: 1px solid #cc9;
+  padding: 5px 8px;
+  margin: 8px 0;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cm-anuncio-tipo {
+  display: inline-block;
+  background: #eee;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-right: 5px;
+  border: 1px solid #999;
+}
+
+.cm-pie-periodico {
+  display: block;
+  border-top: 3px double #000;
+  padding-top: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 11px !important;
+  color: #666;
+  line-height: 1.5;
+}
+
+.cm-pie-periodico span,
+.cm-pie-periodico a,
+.cm-pie-periodico small {
+  font-size: inherit !important;
+  color: inherit;
+}
+
+.cm-pie-periodico,
+.cm-pie-periodico * {
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+  transform: none !important;
+}
+
+.cm-ornamento-decorativo {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .cm-grid-anuncios {
+    grid-template-columns: 1fr;
+  }
+  }
+  
+  .cm-titulo-periodico {
+    font-size: 32px;
+  }
+
+  .signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

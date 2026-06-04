@@ -1,0 +1,397 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.tomarcolor .content.clearfix ul > li:before, .txt-sempi ul > li:before { display: none !important;}
+
+.cm-artist-profile {
+    max-width: 750px;
+    height: 750px;
+    margin: 20px auto;
+    background: var(--background-1);
+    display: flex;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.cm-artist-profile br{
+    display: none !important;
+}
+
+.cm-profile-left {
+    flex: 0 0 55%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cm-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cm-profile-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, var(--background-1) 100%);
+    pointer-events: none;
+}
+
+.cm-profile-right {
+    flex: 1;
+    padding: 40px 30px;
+    background: var(--background-1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+}
+
+.cm-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.cm-left-info {
+    flex: 1;
+}
+
+.cm-icon-space {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cm-icon-space img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.cm-artist-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.cm-artist-name {
+    font-size: 36px;
+    color: var(--g3) !important;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    font-weight: bold !important;
+}
+
+.cm-stats-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.cm-stat-box {
+    flex: 1;
+}
+
+.cm-stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.cm-stat-number {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+}
+
+.cm-stat-box:first-child .cm-stat-label {
+    color: #b8945f;
+}
+
+.cm-stat-box:first-child .cm-stat-number {
+    color: #b8945f;
+}
+
+.cm-stat-box:last-child .cm-stat-label {
+    color: #666;
+}
+
+.cm-stat-box:last-child .cm-stat-number {
+    color: #666;
+}
+
+.cm-audio-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--background-1);
+}
+
+.cm-audio-wrap {
+  max-width: 320px;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.cm-audio-player {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  filter: invert(1) hue-rotate(180deg) contrast(1.1);
+}
+
+body.day .cm-audio-player {
+  filter: none;
+}
+
+.cm-tab-nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cm-tab-input {
+    display: none;
+}
+
+.cm-tab-label {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background: var(--cborder);
+    border-radius: 8px 8px 0 0;
+    color: #999;
+}
+
+.cm-tab-label:hover {
+    background: var(--background-2);
+    color: var(--g3);
+}
+
+.cm-tab-input:checked + .cm-tab-label {
+    background: var(--background-3);
+    color: var(--color1);
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+.cm-tab-input:checked + .cm-tab-label::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--g3);
+}
+
+.cm-tab-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(750px - 300px);
+}
+
+.cm-tab-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cm-tab-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.cm-tab-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.cm-tab-content::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.cm-content-panel {
+    display: none;
+    animation: cm-fadeIn 0.3s ease;
+}
+
+.cm-profile-right:has(#cm-tab1:checked) #cm-general,
+.cm-profile-right:has(#cm-tab2:checked) #cm-descripcion,
+.cm-profile-right:has(#cm-tab3:checked) #cm-discografia,
+.cm-profile-right:has(#cm-tab4:checked) #cm-misc {
+    display: block;
+}
+
+@keyframes cm-fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cm-quote-text {
+    font-size: 15px;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cm-info-row {
+    margin-bottom: 18px;
+}
+
+.cm-info-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.cm-info-value {
+    font-size: 15px;
+    color: var(--color1);
+    font-weight: 400;
+}
+
+.cm-description-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+    padding-right: 10px;
+}
+
+.cm-album-list {
+    list-style: none;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.cm-album-item {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    gap: 15px;
+}
+
+.cm-album-year {
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+    min-width: 40px;
+}
+
+.cm-album-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.cm-misc-block {
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.cm-misc-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.cm-misc-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cm-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.cm-tag {
+    background: var(--background-2);
+    color: #555;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    border: 1px solid var(--cborder);
+    display: inline-block;
+}
+
+.cm-tag:hover {
+   background: var(--g3);
+   color: #fff;
+  }
+
+@media (max-width: 750px) {
+    .cm-artist-profile {
+        flex-direction: column;
+    }
+    .cm-profile-left {
+        flex: 0 0 300px;
+    }
+    .cm-profile-right {
+        padding: 30px 20px;
+    }
+    .cm-artist-name {
+        font-size: 28px;
+    }
+}
+.signature-catta {
+  margin-top: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

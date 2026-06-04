@@ -1,0 +1,158 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-closet-wrap * {
+  box-sizing: border-box;
+}
+ 
+.cm-closet-wrap br {
+  display: none !important;
+}
+ 
+.cm-closet-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #e8e4df;
+  border-radius: 6px;
+  padding: 14px;
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,0.18),
+    0 6px 30px rgba(0,0,0,0.25);
+  border-top: 14px solid #ddd8d2;
+  border-left: 14px solid #ddd8d2;
+  border-bottom: 12px solid #bdb8b2;
+  border-right: 12px solid #bdb8b2;
+}
+ 
+.cm-closet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+ 
+.cm-closet-cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #f5f2ee 60%, #ede9e3 100%);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow:
+    inset 3px 3px 8px rgba(0,0,0,0.12),
+    inset -1px -1px 4px rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+ 
+.cm-closet-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+ 
+.cm-closet-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.84);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+ 
+.cm-closet-cell:hover .cm-closet-overlay {
+  opacity: 1;
+}
+ 
+.cm-closet-cell:hover .cm-closet-img {
+  transform: scale(1.04);
+  filter: brightness(0.55);
+}
+ 
+.cm-closet-overlay-bar {
+  width: 28px;
+  height: 2px;
+  background: var(--cmcl-acc1);
+  margin-bottom: 7px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+ 
+.cm-closet-info-title {
+  font-size: 9px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+ 
+.cm-closet-info-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 2px;
+  width: 100%;
+}
+ 
+.cm-closet-info-label {
+  font-size: 6.5px;
+  font-weight: 700;
+  color: var(--cmcl-acc1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+ 
+.cm-closet-info-value {
+  font-size: 7.5px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

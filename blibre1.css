@@ -1,0 +1,373 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-blibre1-wrap {
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 550px;
+    margin: 0 auto;
+    background: var(--background-1);
+    border: 1px solid var(--cborder);
+    border-radius: 14px;
+    overflow: hidden;
+}
+ 
+.cm-blibre1-wrap br {
+    display: none !important;
+}
+ 
+/* ── HEADER ── */
+.cm-blibre1-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--cborder);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 52px;
+}
+ 
+.cm-blibre1-header-left {
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+ 
+.cm-blibre1-header-plus {
+    color: var(--color);
+    font-size: 22px;
+    line-height: 1;
+}
+ 
+.cm-blibre1-nick {
+    color: var(--color);
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+ 
+.cm-blibre1-nick-arrow {
+    font-size: 13px;
+    opacity: .6;
+}
+ 
+.cm-blibre1-header-right {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    color: var(--color);
+    font-size: 18px;
+    opacity: .85;
+}
+ 
+/* ── PERFIL ── */
+.cm-blibre1-perfil {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 32px 18px 12px;
+}
+ 
+.cm-blibre1-fotowrap {
+    position: relative;
+    flex-shrink: 0;
+    overflow: visible;
+}
+ 
+/* ── BURBUJA ── */
+.cm-blibre1-burbuja {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: color-mix(in srgb, var(--color) 12%, var(--background-1));
+    border: 1px solid var(--cborder);
+    border-radius: 10px 10px 10px 3px;
+    padding: 5px 9px;
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 2;
+}
+ 
+.cm-blibre1-burbuja-texto {
+    color: var(--color);
+    font-size: 10px;
+    opacity: .75;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+ 
+.cm-blibre1-foto {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid var(--cborder);
+}
+ 
+.cm-blibre1-foto-add {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--blibre1-acc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 11px;
+    border: 2px solid var(--background-1);
+}
+ 
+/* ── STATS ── */
+.cm-blibre1-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    flex: 1;
+}
+ 
+.cm-blibre1-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+ 
+.cm-blibre1-stat-num {
+    color: var(--color);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+}
+ 
+.cm-blibre1-stat-label {
+    color: var(--color);
+    font-size: 11px;
+    opacity: .5;
+}
+ 
+/* ── BIO ── */
+.cm-blibre1-bio {
+    padding: 0 18px 14px;
+}
+ 
+.cm-blibre1-nombre {
+    color: var(--color);
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+}
+ 
+.cm-blibre1-desc {
+    color: var(--color);
+    font-size: 13px;
+    opacity: .7;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 4px;
+}
+ 
+.cm-blibre1-link {
+    color: var(--blibre1-acc);
+    font-size: 13px;
+    text-decoration: none;
+}
+ 
+/* ── BOTONES ── */
+.cm-blibre1-btns {
+    display: flex;
+    gap: 10px;
+    padding: 0 18px 16px;
+}
+ 
+.cm-blibre1-btn {
+    flex: 1;
+    padding: 8px 0;
+    border-radius: 9px;
+    border: 1px solid var(--cborder);
+    background: color-mix(in srgb, var(--cborder) 50%, transparent);
+    color: var(--color);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+ 
+/* ── BAÚL ── */
+.cm-blibre1-baul {
+    display: flex;
+    gap: 14px;
+    padding: 10px 18px 16px;
+    overflow-x: auto;
+}
+ 
+.cm-blibre1-baul::-webkit-scrollbar {
+    display: none;
+}
+ 
+.cm-blibre1-destacado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+ 
+.cm-blibre1-dest-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 2px solid var(--blibre1-acc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--blibre1-acc);
+    background: color-mix(in srgb, var(--blibre1-acc) 10%, transparent);
+    box-sizing: border-box;
+}
+ 
+.cm-blibre1-dest-label {
+    color: var(--color);
+    font-size: 11px;
+    opacity: .65;
+    text-align: center;
+    max-width: 62px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ 
+/* ── DIVISOR ── */
+.cm-blibre1-divider {
+    height: 1px;
+    background: var(--cborder);
+    margin: 0 18px;
+}
+ 
+/* ── TAG ── */
+.cm-blibre1-tag {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    background: var(--blibre1-acc);
+    color: #fff;
+    flex-shrink: 0;
+}
+ 
+/* ── SHEET ── */
+.cm-blibre1-sheet {
+    background: color-mix(in srgb, var(--cborder) 40%, var(--background-1));
+    border-top: 1px solid var(--cborder);
+    border-radius: 18px 18px 0 0;
+    padding: 10px 0 0;
+    margin-top: 6px;
+}
+ 
+.cm-blibre1-sheet-handle {
+    width: 36px;
+    height: 4px;
+    background: color-mix(in srgb, var(--color) 25%, transparent);
+    border-radius: 2px;
+    margin: 0 auto 14px;
+}
+ 
+.cm-blibre1-sheet-title {
+    color: var(--color);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin-bottom: 8px;
+}
+ 
+.cm-blibre1-sheet-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 22px;
+    border-bottom: 1px solid var(--cborder);
+    text-decoration: none;
+    transition: background .15s;
+}
+ 
+.cm-blibre1-sheet-item:last-child {
+    border-bottom: none;
+}
+ 
+.cm-blibre1-sheet-item:hover {
+    background: color-mix(in srgb, var(--cborder) 40%, transparent);
+}
+ 
+.cm-blibre1-sheet-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--cborder);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+ 
+.cm-blibre1-sheet-texto {
+    flex: 1;
+    color: var(--color);
+    font-size: 15px;
+    font-weight: 500;
+}
+ 
+/* ── FIRMA ── */
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

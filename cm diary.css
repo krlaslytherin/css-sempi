@@ -1,0 +1,357 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-diary-container {
+  width: 650px;
+  height: 800px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.cm-diary-container br {
+  display: none;
+}
+
+.cm-sheet-content br {
+  display: inline;
+}
+
+.cm-diary-cover {
+  width: 650px;
+  height: 800px;
+  background: #8B4513;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  border-radius: 15px;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+.cm-cover-main {
+  z-index: 2;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.cm-cover-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.cm-cover-line {
+  width: 1px;
+  height: 700px;
+  background: #c6c6c6;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+.cm-corner-top,
+.cm-corner-bottom {
+  background: #5a3825;
+  position: absolute;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+}
+
+.cm-corner-top {
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  top: 0px;
+  border-radius: 0px 15px 0px 0px;
+}
+
+.cm-corner-bottom {
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  bottom: 0px;
+  border-radius: 0px 0px 15px 0px;
+}
+
+.cm-cover-clasp {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 80px;
+  background: linear-gradient(145deg, #c9a86a, #8b6f47);
+  border: 3px solid #5a3825;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.cm-cover-clasp:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #2c1810;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cm-cover-nameplate {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: 20px;
+  background: linear-gradient(145deg, #d4af6a, #aa8c5c);
+  border: 3px solid #5a3825;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  z-index: 2;
+}
+
+.cm-nameplate-label {
+  display: block;
+  font: 16px 'Georgia', serif;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.cm-nameplate-name {
+  display: block;
+  font: 22px 'Georgia', serif;
+  font-weight: bold;
+}
+
+.cm-diary-open {
+  width: 650px;
+  height: 800px;
+  background: #8B4513;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 1.5s;
+  opacity: 0;
+  border-radius: 15px;
+}
+
+.cm-diary-sheet {
+  width: 310px;
+  background: #fdfbf7;
+  height: 780px;
+  float: left;
+  margin-top: 10px;
+  position: relative;
+  background-image: repeating-linear-gradient(transparent, transparent 30px, #e8dcc8 30px, #e8dcc8 31px);
+  background-size: 100% 31px;
+  background-position: 0 50px;
+}
+
+.cm-sheet-left {
+  margin-right: 0px !important;
+  margin-left: 10px;
+  border-radius: 0px 25px 25px 0px;
+  border: 2px solid #d4c4b0;
+}
+
+.cm-sheet-right {
+  border-radius: 25px 0px 0px 25px;
+  border: 2px solid #d4c4b0;
+  margin-right: 10px;
+}
+
+.cm-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 2px solid #d4c4b0;
+}
+
+.cm-entry-num {
+  font: 18px 'Georgia', serif;
+  font-weight: bold;
+}
+
+.cm-entry-date {
+  font: 14px 'Georgia', serif;
+  font-style: italic;
+}
+
+.cm-sheet-content {
+  margin: 15px auto;
+  width: 280px;
+  height: 690px;
+  padding-right: 5px;
+  overflow: auto;
+}
+
+.cm-sheet-content::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+.cm-sheet-content::-webkit-scrollbar-thumb {
+  background: #d4c4b0;
+  border-radius: 2px;
+}
+
+.cm-text-content {
+  font: 14px 'Courier New', Courier, monospace;
+  text-align: justify;
+  line-height: 31px;
+  display: block;
+}
+
+.cm-polaroid-wrap {
+  width: 180px;
+  background: #ffffff;
+  padding: 12px 12px 35px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: rotate(-3deg);
+  margin: 15px auto;
+  transition: transform 0.3s ease;
+}
+
+.cm-polaroid-wrap:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.cm-polaroid-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.cm-polaroid-text {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font: 13px 'Courier New', Courier, monospace;
+  font-style: italic;
+}
+
+.cm-corner-top-left {
+  left: 0;
+  top: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  border-radius: 15px 0px 0px 0px;
+}
+
+.cm-corner-bottom-left {
+  left: 0px;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  bottom: 0px;
+  border-radius: 0px 0px 0px 15px;
+}
+
+.cm-corner-top-left,
+.cm-corner-bottom-left {
+  background: #5a3825;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.cm-diary-container:hover .cm-cover-main {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.cm-diary-container:hover .cm-diary-open {
+  opacity: 1;
+  z-index: 3;
+}
+
+.cm-page-checkbox {
+  display: none;
+}
+
+.cm-page-set {
+  display: none;
+}
+
+.cm-page-checkbox:checked + .cm-page-set {
+  display: flex;
+}
+
+.cm-page-nav {
+  display: none;
+}
+
+.cm-page-turn {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.cm-turn-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 0 50px 50px;
+  border-color: transparent transparent #d4c4b0 transparent;
+}
+
+.cm-turn-right:hover {
+  border-color: transparent transparent #aa8c5c transparent;
+  transform: scale(1.1);
+}
+
+.cm-turn-left {
+  bottom: 0;
+  left: 0;
+  border-width: 0 50px 50px 0;
+  border-color: transparent transparent #d4c4b0 transparent;
+}
+
+.cm-turn-left:hover {
+  border-color: transparent transparent #aa8c5c transparent;
+  transform: scale(1.1);
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

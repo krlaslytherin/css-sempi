@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&family=Montserrat:wght@400;500;600;700&display=swap');
+
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-scrapcrono1box{
+max-width:700px;
+width:100%;
+margin:0 auto;
+position:relative;
+padding:18px 18px 26px;
+overflow:visible;
+font-family:'Montserrat',sans-serif;
+color:var(--color);
+}
+.cm-scrapcrono1box br{display:none!important;}
+
+.cm-scrapcrono1head{
+position:relative;
+width:100%;
+height:110px;
+margin-bottom:8px;
+}
+.cm-scrapcrono1headpaper{
+position:relative;
+width:430px;
+margin:0 auto;
+padding:24px 36px 26px;
+background:#ddd9d2;
+color:#111;
+font-family:'Qwigley',cursive;
+font-size:46px;
+line-height:.95;
+text-align:center;
+clip-path:polygon(0 7%,8% 2%,20% 0,34% 4%,46% 1%,58% 5%,70% 2%,83% 0,93% 6%,100% 3%,100% 85%,94% 100%,80% 95%,68% 98%,56% 93%,42% 98%,28% 95%,14% 99%,0 92%);
+box-shadow:0 2px 8px rgba(0,0,0,.06);
+z-index:3;
+}
+.cm-scrapcrono1headtape1,
+.cm-scrapcrono1headtape2{
+position:absolute;
+background:var(--scrapcrono1-acc2);
+opacity:.55;
+z-index:4;
+}
+.cm-scrapcrono1headtape1{
+left:80px;
+top:22px;
+width:44px;
+height:60px;
+}
+.cm-scrapcrono1headtape2{
+right:84px;
+top:8px;
+width:48px;
+height:46px;
+transform:rotate(-49deg);
+}
+
+.cm-scrapcrono1months{
+position:relative;
+display:flex;
+flex-direction:column;
+gap:34px;
+}
+
+.cm-scrapcrono1month{
+position:relative;
+min-height: unset;
+padding-top:8px;
+}
+.cm-scrapcrono1monthbody{
+position:relative;
+min-height: unset;
+padding-bottom: 20px;
+}
+.cm-scrapcrono1month:nth-child(odd) .cm-scrapcrono1monthbody{
+padding-left:126px;
+padding-right:10px;
+}
+.cm-scrapcrono1month:nth-child(even) .cm-scrapcrono1monthbody{
+padding-left:10px;
+padding-right:126px;
+}
+
+.cm-scrapcrono1datecard{
+position:absolute;
+top:26px;
+width:86px;
+padding:7px 7px 12px;
+background:#f8f8f8;
+border:1px solid rgba(0,0,0,.12);
+box-shadow:0 3px 10px rgba(0,0,0,.10);
+z-index:5;
+}
+.cm-scrapcrono1month:nth-child(odd) .cm-scrapcrono1datecard{
+left:12px;
+transform:rotate(-1deg);
+}
+.cm-scrapcrono1month:nth-child(even) .cm-scrapcrono1datecard{
+right:12px;
+transform:rotate(1deg);
+}
+.cm-scrapcrono1datecard:before{
+content:"";
+position:absolute;
+top:-10px;
+left:18px;
+width:38px;
+height:10px;
+background:var(--scrapcrono1-acc2);
+opacity:.5;
+}
+.cm-scrapcrono1dateinner{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:94px;
+background:var(--scrapcrono1-acc1);
+color:var(--background-1);
+font-size:28px;
+line-height:1;
+letter-spacing:.5px;
+}
+
+.cm-scrapcrono1monthtitle{
+position:relative;
+margin:18px auto 14px;
+width:440px;
+height:44px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Qwigley',cursive;
+font-size:52px;
+line-height:1;
+color:#111;
+z-index:2;
+}
+.cm-scrapcrono1monthtitle:before{
+content:"";
+position:absolute;
+inset:auto 0 8px 0;
+height:28px;
+background:var(--scrapcrono1-acc1);
+opacity:.52;
+z-index:-1;
+}
+
+.cm-scrapcrono1monthrows{
+display:flex;
+flex-direction:column;
+gap:12px;
+padding-top:2px;
+}
+
+.cm-scrapcrono1row{
+display:grid;
+grid-template-columns:minmax(170px,1.55fr) minmax(150px,1fr) minmax(110px,.9fr) minmax(90px,.8fr);
+column-gap:14px;
+align-items:center;
+text-decoration:none;
+color:inherit;
+}
+
+.cm-scrapcrono1dato{
+display:flex;
+align-items:center;
+gap:10px;
+min-width:0;
+color:var(--color);
+font-size:16px;
+line-height:1.15;
+}
+
+.cm-scrapcrono1datoicon{
+width:28px;
+min-width:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+line-height:1;
+color:var(--color);
+}
+
+.cm-scrapcrono1dato-text,
+.cm-scrapcrono1dato-link{
+display:block;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+color:inherit;
+text-decoration:none;
+}
+
+.cm-scrapcrono1dato-link:hover{
+text-decoration:none;
+opacity:.85;
+}
+
+.cm-scrapcrono1dato-quien{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:32px;
+padding:0 10px;
+white-space:nowrap;
+text-decoration:none;
+color:#111;
+background:var(--quien-color);
+}
+
+.cm-scrapcrono1dato-quien:hover{
+opacity:.92;
+text-decoration:none;
+}
+
+/* cada clase solo cambia la variable */
+.cm-scrapcrono1row.quien-ciudadanos { --quien-color:#6A93B5; }
+.cm-scrapcrono1row.quien-criminales { --quien-color:#323A5F; }
+.cm-scrapcrono1row.quien-seguridad { --quien-color:#7c3535; }
+.cm-scrapcrono1row.quien-empresarios { --quien-color:#873E65; }
+.cm-scrapcrono1row.quien-celebridades { --quien-color:#6F628A; }
+.cm-scrapcrono1row.quien-sami { --quien-color:#B88A99; }
+.cm-scrapcrono1row.quien-refineria { --quien-color:#5D7260; }
+.cm-scrapcrono1row.quien-pescadores { --quien-color:#4D919F; }
+.cm-scrapcrono1row.quien-salud { --quien-color:#7DAE9B; }
+.cm-scrapcrono1row.quien-comercios { --quien-color:#BFB069; }
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

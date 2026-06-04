@@ -1,0 +1,223 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-revista-final * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cm-revista-final {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cm-contenedor-revista {
+  background: var(--cm-blanco-portada);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  position: relative;
+}
+
+.cm-header-revista {
+  background: var(--cm-rojo-portada);
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.cm-titulo-semana {
+  font-size: 35px;
+  font-weight: 900;
+  color: var(--cm-blanco-portada);
+  letter-spacing: 6px;
+  font-family: Impact, 'Arial Black', sans-serif;
+  line-height: 0.9;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+}
+
+.cm-caja-precio {
+  background: var(--cm-amarillo-portada);
+  color: var(--cm-negro-portada);
+  padding: 12px 18px;
+  font-weight: 900;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+.cm-cuerpo-portada {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  background: var(--cm-negro-portada);
+}
+
+.cm-imagen-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cm-etiqueta-esquina {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: var(--cm-rojo-portada);
+  color: var(--cm-blanco-portada);
+  padding: 12px 30px;
+  font-weight: 900;
+  font-size: 18px;
+  transform: rotate(4deg);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  border: 4px solid var(--cm-blanco-portada);
+  letter-spacing: 2px;
+  z-index: 5;
+}
+
+.cm-caja-tamara {
+  position: absolute;
+  top: 150px;
+  left: 25px;
+  width: 210px;
+  background: var(--cm-blanco-portada);
+  border: 5px solid var(--cm-blanco-portada);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  z-index: 3;
+}
+
+.cm-foto-tamara {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #ccc;
+}
+
+.cm-thumb-tamara {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cm-info-tamara {
+  background: var(--cm-amarillo-portada);
+  padding: 14px;
+}
+
+.cm-nombre-tamara {
+  font-weight: 900;
+  color: var(--cm-azul-portada);
+  font-size: 15px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.cm-texto-tamara {
+  font-weight: bold;
+  color: var(--cm-negro-portada);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.cm-zona-titular {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, 
+    rgba(0,0,0,0.98) 0%, 
+    rgba(0,0,0,0.95) 50%, 
+    rgba(0,0,0,0.85) 70%, 
+    rgba(0,0,0,0.5) 90%, 
+    transparent 100%);
+  padding: 120px 30px 30px 30px;
+  text-align: center;
+  z-index: 2;
+}
+
+.cm-tag-exclusiva {
+  background: var(--cm-rojo-portada);
+  color: var(--cm-blanco-portada);
+  display: inline-block;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.cm-nombre-olga {
+  color: var(--cm-amarillo-portada);
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.9);
+  line-height: 1;
+}
+
+.cm-cita-grande {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--cm-blanco-portada);
+  line-height: 1.15;
+  margin-bottom: 18px;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.9);
+}
+
+.cm-subtexto {
+  font-size: 16px;
+  color: var(--cm-blanco-portada);
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

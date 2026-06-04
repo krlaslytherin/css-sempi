@@ -1,0 +1,244 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.vinyl-main-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.vinyl-grid {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+}
+
+.vinyl-container {
+    perspective: 1000px;
+    width: 250px !important;
+    display: inline-block !important;
+    vertical-align: top;
+    margin: 30px;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.vinyl-card {
+    position: relative;
+    width: 100%;
+    height: 215px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.vinyl-container:hover .vinyl-card {
+    transform: rotateY(180deg);
+}
+
+.vinyl-front,
+.vinyl-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.vinyl-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vinyl-wrapper {
+    position: relative;
+    width: 250px;
+    height: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.album-cover {
+    width: 185px;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.vinyl-disc {
+    position: absolute;
+    right: -26px;
+    width: 155px;
+    height: 155px;
+    background-color: var(--vinyl-color, #000);
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.vinyl-disc::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 37px;
+    height: 37px;
+    background-image: var(--vinyl-center-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    -webkit-mask-image: radial-gradient(circle, black 100%, transparent 100%);
+    mask-image: radial-gradient(circle, black 100%, transparent 100%);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.vinyl-disc::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.vinyl-info {
+    margin-top: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.album-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--acentotrack)
+}
+
+.artist-name {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.vinyl-back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+    background-color: #2a2a2a;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden !important;
+  z-index: 2;
+}
+
+.setlist-container {
+    flex: 1;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.setlist-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.setlist-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.setlist-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.setlist-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.track {
+    margin-bottom: 8px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.track-number {
+    font-weight: bold;
+    color: var(--acentotrack);
+}
+
+.signature-catta {
+    margin-top: 5px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .vinyl-container {
+        width: 100% !important;
+        display: block !important;
+        margin: 0 0 20px 0;
+    }
+}

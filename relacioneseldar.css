@@ -1,0 +1,221 @@
+.cm-relaseldar-rel-wrap {
+    font-family: 'Georgia', serif;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.cm-relaseldar-rel-wrap * {
+    box-sizing: border-box;
+}
+
+.cm-relaseldar-rel-wrap br {
+    display: none !important;
+}
+
+.cm-relaseldar-rel-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    margin-bottom: 6px;
+}
+
+.cm-relaseldar-rel-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cm-relaseldar-rel-headinfo {
+    flex: 1;
+}
+
+.cm-relaseldar-rel-booklabel {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.68em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--eldar-acc1);
+    margin: 0 0 2px 0;
+}
+
+.cm-relaseldar-rel-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 2px 0;
+}
+
+.cm-relaseldar-rel-tag {
+    font-size: 0.78em;
+    color: var(--eldar-acc2);
+    letter-spacing: 0.08em;
+}
+
+.cm-relaseldar-rel-rule-top {
+    border: none;
+    border-top: 2px solid var(--eldar-acc1);
+    margin: 6px 0 2px 0;
+}
+
+.cm-relaseldar-rel-rule-thin {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0 0 16px 0;
+}
+
+.cm-relaseldar-rel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cm-relaseldar-rel-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: default;
+    aspect-ratio: 3/4;
+}
+
+.cm-relaseldar-rel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.cm-relaseldar-rel-card:hover img {
+    transform: scale(1.06);
+}
+
+.cm-relaseldar-rel-card-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 6px 8px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 100%);
+}
+
+.cm-relaseldar-rel-card-pill {
+    display: inline-block;
+    font-size: 0.58em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-bottom: 2px;
+}
+
+.cm-relaseldar-rel-card-pill.ciudadanos {
+    background: #6A93B5;
+}
+
+.cm-relaseldar-rel-card-pill.criminales {
+    background: #323A5F;
+}
+
+.cm-relaseldar-rel-card-pill.seguridad {
+    background: #7c3535;
+}
+
+.cm-relaseldar-rel-card-pill.empresarios {
+    background: #873E65;
+}
+
+.cm-relaseldar-rel-card-pill.celebridades {
+    background: #6F628A;
+}
+
+.cm-relaseldar-rel-card-pill.sami {
+    background: #B88A99;
+}
+
+.cm-relaseldar-rel-card-pill.refineria {
+    background: #5D7260;
+}
+
+.cm-relaseldar-rel-card-pill.pescadores {
+    background: #4D919F;
+}
+
+.cm-relaseldar-rel-card-pill.salud {
+    background: #7DAE9B;
+}
+
+.cm-relaseldar-rel-card-pill.comercios {
+    background: #BFB069;
+}
+
+.cm-relaseldar-rel-card-nombre {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.88em;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.cm-relaseldar-rel-card-tipo {
+    font-size: 0.7em;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.04em;
+}
+
+.cm-relaseldar-rel-card-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 1.6em;
+    opacity: 0;
+    transition: opacity 0.25s, background 0.25s;
+}
+
+.cm-relaseldar-rel-card:hover .cm-relaseldar-rel-card-hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.cm-relaseldar-rel-footer {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.7em;
+    color: #bbb;
+    letter-spacing: 0.12em;
+    font-style: italic;
+}
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

@@ -1,0 +1,133 @@
+.ch2-info { 
+--mm-uno: #66999b; 
+--mm-dos: #E8E8E8; 
+--mm-tre: #D6D6D6; 
+--mm-cua: #c95f5f; 
+--mm-qui: #252525; 
+} 
+.ch2-info, .ch2-info * { 
+box-sizing: border-box; 
+scrollbar-color: #0006 #0003; 
+scrollbar-width: thin; 
+} 
+.ch2-info > br { 
+display: none !important; 
+} .ch2-info *::-webkit-scrollbar { 
+width: 5px !important; 
+height: 5px !important; 
+background: #0006 !important; 
+} 
+.ch2-info *::-webkit-scrollbar-thumb { 
+background: #0003 !important; 
+} 
+.ch2-info { 
+width: 450px; 
+margin: auto; 
+font: 12px calibri; 
+text-align: center; 
+background-image: linear-gradient(to bottom, var(--mm-tre) -20%, var(--mm-uno)); 
+padding: 20px; 
+color: var(--mm-qui); 
+border: 5px solid var(--mm-tre); 
+box-shadow: inset 0 0 0 1px var(--mm-uno), 0 0 0 1px var(--mm-uno); 
+} 
+.ch2-info > * { 
+background-color: var(--mm-dos); 
+border: 5px solid var(--mm-tre); 
+box-shadow: inset 0 0 0 1px var(--mm-uno); 
+outline: 1px solid var(--mm-uno); 
+} 
+.ch2-info > div { 
+margin-left: -48px; 
+} 
+.ch2-info > div ~ div { 
+margin-top: 10px; 
+} 
+.ch2-info-img { 
+height: 110px; 
+background-position: center; 
+background-size: cover; 
+font-size: 14px; 
+letter-spacing: 2px; 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+text-shadow: 1px 1px var(--mm-dos), -1px 1px var(--mm-dos), 1px -1px var(--mm-dos), -1px -1px var(--mm-dos); 
+} 
+.ch2-info-txt > strong { 
+display: block; 
+padding: 8px; 
+background: var(--mm-uno); 
+color: var(--mm-dos); 
+font-size: 10px; 
+text-transform: uppercase; 
+letter-spacing: 1px; 
+position: sticky; 
+top: 0px; 
+} 
+.ch2-info-txt > div { 
+margin: 30px; 
+text-align: justify;
+}
+.ch-reg-ii-gr:nth-last-of-type(2n+1) { 
+padding-left: 170px; 
+} 
+.ch-reg-ii-gr .ch-reg-ii-txt, .ch-reg-ii > div ~ div { 
+margin-top: 10px; 
+} 
+.ch-reg-ii-gr { 
+position: relative; 
+} 
+.ch-reg-ii-gr:nth-last-of-type(odd) .ch-reg-ii-img { 
+left: 0; 
+} 
+.ch-reg-ii-gr:nth-last-of-type(even) .ch-reg-ii-img { 
+right: 0; 
+} .ch-reg-ii-img { 
+position: absolute; 
+top: 0; 
+bottom: 0; 
+width: 160px; 
+background-position: center; 
+background-size: cover; 
+} 
+.ch-reg-ii-img, .ch-reg-ii-sub, .ch-reg-ii-txt, .ch-reg-ii-tt > * { 
+background-color: var(--mm-dos); 
+border: 5px solid var(--mm-tre); 
+box-shadow: inset 0 0 0 1px var(--mm-uno); 
+outline: 1px solid var(--mm-uno); 
+} 
+.ch-reg-ii-gr .ch-reg-ii-sub { 
+color: inherit; 
+box-shadow: inset 0 0 0 1px var(--mm-uno), inset 0 0 0 50px; 
+-webkit-text-fill-color: var(--mm-dos); 
+} 
+.ch-reg-ii-sub { 
+padding: 8px; font: bold 10px calibri; 
+text-transform: uppercase; 
+letter-spacing: 2px; 
+color: var(--mm-dos); 
+background: var(--mm-uno); 
+} 
+.ch-reg-ii-gr .ch-reg-ii-txt, .ch-reg-ii > div ~ div { 
+margin-top: 10px; 
+} 
+.ch-reg-ii-txt { 
+padding: 20px; 
+text-align: justify; 
+} 
+.ch-reg-ii-txt > div { 
+height: 150px; 
+overflow: auto; 
+padding-right: 3px; 
+color: #444; 
+} 
+.ch-reg-ii-gr:nth-last-of-type(2n) { 
+padding-right: 170px; 
+} 
+.ch2-info.ns .ch-reg-ii-gr { 
+border: none; 
+box-shadow: none; 
+outline: none;
+background: none; 
+}

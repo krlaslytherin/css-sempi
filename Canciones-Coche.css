@@ -1,0 +1,449 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-car-display br {
+  display: none;
+}
+
+.cm-car-display {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background: linear-gradient(180deg, #4a5a6a 0%, #2a3a4a 50%, #3a4a5a 100%);
+  border-radius: 50px 50px 20px 20px;
+  padding: 35px 30px 25px 30px;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  border: 2px solid #5a6a7a;
+  line-height: 1;
+}
+
+.cm-car-display::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 20%, 
+    rgba(255, 255, 255, 0.15) 50%, 
+    rgba(255, 255, 255, 0.1) 80%, 
+    transparent 100%);
+}
+
+.cm-display-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.cm-time {
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.cm-bluetooth {
+  color: var(--colorcancm);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.cm-main-screen {
+  background: #000;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 3px solid #1a1a1a;
+  min-height: 140px;
+  display: flex;
+  position: relative;
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.8),
+    0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cm-menu-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, var(--colorcancm) 0%, #2d7fd4 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(74, 158, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.cm-menu-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(74, 158, 255, 0.8);
+}
+
+.cm-menu-icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.cm-menu-icon::before,
+.cm-menu-icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  border-radius: 1px;
+}
+
+.cm-menu-icon::before {
+  width: 12px;
+  height: 2px;
+}
+
+.cm-menu-icon::after {
+  width: 2px;
+  height: 12px;
+}
+
+.cm-screen-content {
+  flex: 1;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cm-track-info {
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.cm-song-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+}
+
+.cm-artist-name {
+  font-size: 14px;
+  color: var(--colorcancm);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.cm-album-name {
+  font-size: 12px;
+  color: #888;
+  line-height: 1;
+}
+
+.cm-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #222;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 15px 0 8px 0;
+  position: relative;
+}
+
+.cm-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--colorcancm) 0%, #2d7fd4 100%);
+  border-radius: 3px;
+  width: 45%;
+  transition: width 0.3s ease;
+}
+
+.cm-time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #666;
+  line-height: 1;
+}
+
+.cm-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  line-height: 1;
+}
+
+.cm-control-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.cm-equalizer {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 20px;
+}
+
+.cm-eq-bar {
+  width: 3px;
+  background: var(--colorcancm);
+  border-radius: 2px;
+  animation: cm-eq-pulse 0.8s ease-in-out infinite;
+}
+
+.cm-eq-bar:nth-child(1) {
+  height: 12px;
+  animation-delay: 0s;
+}
+
+.cm-eq-bar:nth-child(2) {
+  height: 18px;
+  animation-delay: 0.1s;
+}
+
+.cm-eq-bar:nth-child(3) {
+  height: 15px;
+  animation-delay: 0.2s;
+}
+
+.cm-eq-bar:nth-child(4) {
+  height: 20px;
+  animation-delay: 0.3s;
+}
+
+.cm-eq-bar:nth-child(5) {
+  height: 10px;
+  animation-delay: 0.4s;
+}
+
+@keyframes cm-eq-pulse {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scaleY(0.5);
+    opacity: 1;
+  }
+}
+
+.cm-playing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.cm-play-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent var(--colorcancm);
+  line-height: 1;
+}
+
+.cm-now-playing {
+  font-size: 11px;
+  color: var(--colorcancm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.cm-ports {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  padding: 25px 30px;
+  background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+}
+
+.cm-port {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.cm-port-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.cm-usb-port {
+  width: 45px;
+  height: 20px;
+  background: #2a2a2a;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3a3a3a;
+  position: relative;
+}
+
+.cm-usb-port::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 4px;
+  background: #3a3a3a;
+  border-radius: 2px 2px 0 0;
+}
+
+.cm-usb-inner {
+  width: 28px;
+  height: 10px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  position: relative;
+}
+
+.cm-usb-inner::before,
+.cm-usb-inner::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background: var(--colorcancm);
+  border-radius: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cm-usb-inner::before {
+  left: 3px;
+}
+
+.cm-usb-inner::after {
+  right: 3px;
+}
+
+.cm-aux-port {
+  width: 35px;
+  height: 35px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #3a3a3a;
+  position: relative;
+}
+
+.cm-aux-ring {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #1a1a1a;
+  position: relative;
+}
+
+.cm-aux-ring::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: var(--colorcancm);
+  border-radius: 50%;
+}
+
+.cm-aux-tip {
+  position: absolute;
+  width: 3px;
+  height: 10px;
+  background: var(--colorcancm);
+  border-radius: 2px;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signature-catta {
+    margin-top: 30px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #fff;
+}

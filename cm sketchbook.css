@@ -1,0 +1,365 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-sketchbook-container {
+  width: 650px;
+  height: 800px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.cm-sketchbook-container br {
+  display: none;
+}
+
+.cm-sketch-content br {
+  display: inline;
+}
+
+.cm-sketchbook-cover {
+  width: 650px;
+  height: 800px;
+  background: #2c2c2c;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  border-radius: 15px;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+.cm-sketch-cover-main {
+  z-index: 2;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.cm-sketch-cover-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.cm-sketch-cover-line {
+  width: 1px;
+  height: 700px;
+  background: #666;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+.cm-sketch-corner-top,
+.cm-sketch-corner-bottom {
+  background: #1a1a1a;
+  position: absolute;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+}
+
+.cm-sketch-corner-top {
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  top: 0px;
+  border-radius: 0px 15px 0px 0px;
+}
+
+.cm-sketch-corner-bottom {
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  bottom: 0px;
+  border-radius: 0px 0px 15px 0px;
+}
+
+.cm-sketch-elastic {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 80px;
+  background: linear-gradient(145deg, #444, #222);
+  border: 2px solid #1a1a1a;
+  border-radius: 25px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.cm-sketch-elastic:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: #1a1a1a;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
+.cm-sketch-nameplate {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: 20px;
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+  border: 3px solid #1a1a1a;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 2;
+}
+
+.cm-sketch-label {
+  display: block;
+  font: 16px 'Georgia', serif;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.cm-sketch-name {
+  display: block;
+  font: 22px 'Georgia', serif;
+  font-weight: bold;
+}
+
+.cm-sketchbook-open {
+  width: 650px;
+  height: 800px;
+  background: #2c2c2c;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 1.5s;
+  opacity: 0;
+  border-radius: 15px;
+}
+
+.cm-sketch-sheet {
+  width: 310px;
+  background: #fefefe;
+  height: 780px;
+  float: left;
+  margin-top: 10px;
+  position: relative;
+  background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.cm-sketch-sheet-left {
+  margin-right: 0px !important;
+  margin-left: 10px;
+  border-radius: 0px 25px 25px 0px;
+  border: 2px solid #e0e0e0;
+}
+
+.cm-sketch-sheet-right {
+  border-radius: 25px 0px 0px 25px;
+  border: 2px solid #e0e0e0;
+  margin-right: 10px;
+}
+
+.cm-sketch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.cm-sketch-num {
+  font: 16px 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.cm-sketch-date {
+  font: 13px 'Courier New', monospace;
+  font-style: italic;
+}
+
+.cm-sketch-content {
+  margin: 15px auto;
+  width: 280px;
+  height: 690px;
+  padding-right: 5px;
+  overflow: auto;
+}
+
+.cm-sketch-content::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+.cm-sketch-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+.cm-sketch-text {
+  font: 13px 'Courier New', monospace;
+  text-align: justify;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.cm-sketch-image-wrap {
+  width: 100%;
+  margin: 15px auto;
+  position: relative;
+}
+
+.cm-sketch-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cm-sketch-image-caption {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font: 11px 'Courier New', monospace;
+  font-style: italic;
+  color: #666;
+}
+
+.cm-sketch-image-large {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.cm-sketch-image-small {
+  width: 48%;
+  height: 150px;
+  object-fit: cover;
+  display: inline-block;
+  margin: 2px;
+}
+
+.cm-sketch-corner-top-left {
+  left: 0;
+  top: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  border-radius: 15px 0px 0px 0px;
+}
+
+.cm-sketch-corner-bottom-left {
+  left: 0px;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  bottom: 0px;
+  border-radius: 0px 0px 0px 15px;
+}
+
+.cm-sketch-corner-top-left,
+.cm-sketch-corner-bottom-left {
+  background: #1a1a1a;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.cm-sketchbook-container:hover .cm-sketch-cover-main {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.cm-sketchbook-container:hover .cm-sketchbook-open {
+  opacity: 1;
+  z-index: 3;
+}
+
+.cm-sketch-checkbox {
+  display: none;
+}
+
+.cm-sketch-set {
+  display: none;
+}
+
+.cm-sketch-checkbox:checked + .cm-sketch-set {
+  display: flex;
+}
+
+.cm-sketch-nav {
+  display: none;
+}
+
+.cm-sketch-turn {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.cm-sketch-turn-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 0 50px 50px;
+  border-color: transparent transparent #e0e0e0 transparent;
+}
+
+.cm-sketch-turn-right:hover {
+  border-color: transparent transparent #ccc transparent;
+  transform: scale(1.1);
+}
+
+.cm-sketch-turn-left {
+  bottom: 0;
+  left: 0;
+  border-width: 0 50px 50px 0;
+  border-color: transparent transparent #e0e0e0 transparent;
+}
+
+.cm-sketch-turn-left:hover {
+  border-color: transparent transparent #ccc transparent;
+  transform: scale(1.1);
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

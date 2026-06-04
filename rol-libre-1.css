@@ -1,0 +1,341 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+word-break: auto-phrase;
+}
+
+.cm-tabla-tarot {
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: 'Georgia', 'Garamond', serif;
+  padding: 20px;
+}
+
+.cm-tabla-card {
+  background: var(--background-1);
+  border: 8px solid var(--var-1);
+  border-radius: 12px;
+  padding: 0px 30px 40px 30px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cm-tabla-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--var-1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--background-1),
+              0 0 0 5px var(--var-1);
+}
+
+.cm-tabla-tl {
+  top: -8px;
+  left: -8px;
+}
+
+.cm-tabla-tr {
+  top: -8px;
+  right: -8px;
+}
+
+.cm-tabla-bl {
+  bottom: -8px;
+  left: -8px;
+}
+
+.cm-tabla-br {
+  bottom: -8px;
+  right: -8px;
+}
+
+.cm-tabla-border-ornament {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 6px;
+  background: var(--var-1);
+  border-radius: 3px;
+}
+
+.cm-tabla-border-ornament::before,
+.cm-tabla-border-ornament::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--var-1);
+  border-radius: 50%;
+  top: -1px;
+}
+
+.cm-tabla-border-ornament::before {
+  left: -12px;
+}
+
+.cm-tabla-border-ornament::after {
+  right: -12px;
+}
+
+.cm-tabla-top {
+  top: -11px;
+}
+
+.cm-tabla-bottom {
+  bottom: -11px;
+}
+
+.cm-tabla-header {
+  text-align: center;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.cm-tabla-icon-top {
+  font-size: 32px;
+  color: var(--var-1);
+  background: var(--var-1);
+  color: var(--background-1);
+  width: 60px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0 auto 0px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cm-tabla-icon-top i {
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.cm-tabla-clouds {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  opacity: 0.4;
+  font-size: 24px;
+  color: var(--var-1);
+  margin: 15px 0;
+}
+
+.cm-tabla-clouds-top {
+  margin-bottom: 20px;
+}
+
+.cm-tabla-clouds-bottom {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cm-tabla-meta {
+  border-top: 2px solid var(--var-1);
+  border-bottom: 2px solid var(--var-1);
+  padding: 18px 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(200, 150, 142, 0.1) 50%, transparent 100%);
+}
+
+.cm-tabla-info-item {
+  font-size: 13px;
+  color: var(--color);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.cm-tabla-info-item i {
+  color: var(--var-1);
+  font-size: 14px;
+}
+
+.cm-tabla-separator {
+  color: var(--var-1);
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.cm-tabla-content {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color);
+  text-align: justify;
+  padding: 25px 15px;
+  position: relative;
+  min-height: 150px;
+}
+
+.cm-tabla-star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--var-1);
+  opacity: 0.5;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.cm-tabla-star-1 {
+  top: 30px;
+  left: 25%;
+  width: 20px;
+  height: 20px;
+}
+
+.cm-tabla-star-2 {
+  top: 50%;
+  right: 20%;
+  width: 15px;
+  height: 15px;
+}
+
+.cm-tabla-star-3 {
+  bottom: 40px;
+  left: 15%;
+  width: 18px;
+  height: 18px;
+}
+
+.cm-tabla-star-4 {
+  top: 35%;
+  right: 25%;
+  width: 12px;
+  height: 12px;
+}
+
+.cm-tabla-content b,
+.cm-tabla-content strong,
+.cm-tabla-content b i,
+.cm-tabla-content strong i,
+.cm-tabla-content i b,
+.cm-tabla-content i strong {
+  color: var(--var-1) !important;
+  font-weight: bold !important;
+  letter-spacing: 0.5px;
+}
+
+.cm-tabla-content i,
+.cm-tabla-content em {
+  color: var(--var-2) !important;
+  font-style: italic !important;
+}
+
+.cm-tabla-content a,
+.cm-tabla-content a strong,
+.cm-tabla-content strong a,
+.cm-tabla-content a i,
+.cm-tabla-content i a {
+  text-decoration: underline !important;
+  color: var(--var-1) !important;
+  font-weight: normal !important;
+}
+
+.cm-tabla-footer {
+  margin-top: 20px;
+}
+
+.cm-tabla-banner {
+  background: var(--var-1);
+  padding: 15px 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  margin: 0 -10px;
+}
+
+.cm-tabla-ribbon-left,
+.cm-tabla-ribbon-right {
+  position: absolute;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.cm-tabla-ribbon-left {
+  left: 0;
+  border-width: 8px 0 0 15px;
+  border-color: transparent transparent transparent var(--var-2);
+}
+
+.cm-tabla-ribbon-right {
+  right: 0;
+  border-width: 8px 15px 0 0;
+  border-color: transparent var(--var-2) transparent transparent;
+}
+
+.cm-tabla-title-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--background-1);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+}
+
+.cm-tabla-title-text::before,
+.cm-tabla-title-text::after {
+  content: '◆';
+  margin: 0 15px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+@media (max-width: 550px) {
+  .cm-tabla-tarot {
+    max-width: 95%;
+    padding: 10px;
+  }
+  
+  .cm-tabla-card {
+    padding: 30px 20px;
+  }
+  
+  .cm-tabla-title-text {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

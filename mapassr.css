@@ -1,0 +1,395 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-mapassr-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--background-1);
+    overflow: hidden;
+}
+
+/* INPUTS OCULTOS PARA CONTROLAR PESTAÑAS */
+.cm-mapassr-tab-input {
+    display: none;
+}
+
+/* PORTADA BASE */
+.cm-mapassr-cover {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    background: #000000;
+}
+
+.cm-mapassr-cover-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.cm-mapassr-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0.75);
+  background: white;
+}
+
+.cm-mapassr-cover-image-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.75);
+}
+
+.cm-mapassr-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 280px;
+    max-height: 180px;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
+    z-index: 2;
+}
+
+.cm-mapassr-title-overlay {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 2;
+}
+
+.cm-mapassr-title-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    margin: 0;
+}
+
+/* MOSTRAR CAPA ACTIVA */
+#cm-mapassr-tab1:checked ~ .cm-mapassr-cover .cm-mapassr-layer-1,
+#cm-mapassr-tab2:checked ~ .cm-mapassr-cover .cm-mapassr-layer-2,
+#cm-mapassr-tab3:checked ~ .cm-mapassr-cover .cm-mapassr-layer-3,
+#cm-mapassr-tab4:checked ~ .cm-mapassr-cover .cm-mapassr-layer-4,
+#cm-mapassr-tab5:checked ~ .cm-mapassr-cover .cm-mapassr-layer-5,
+#cm-mapassr-tab6:checked ~ .cm-mapassr-cover .cm-mapassr-layer-6,
+#cm-mapassr-tab7:checked ~ .cm-mapassr-cover .cm-mapassr-layer-7 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* NAVEGACIÓN DE PESTAÑAS */
+.cm-mapassr-tabs-nav {
+    display: flex;
+    background: var(--cm-primary);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.cm-mapassr-tab-label {
+    flex: 1;
+    padding: 16px 8px;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.cm-mapassr-tab-label:hover {
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.03);
+}
+
+#cm-mapassr-tab1:checked ~ .cm-mapassr-tabs-nav .cm-mapassr-label-1,
+#cm-mapassr-tab2:checked ~ .cm-mapassr-tabs-nav .cm-mapassr-label-2,
+#cm-mapassr-tab3:checked ~ .cm-mapassr-tabs-nav .cm-mapassr-label-3,
+#cm-mapassr-tab4:checked ~ .cm-mapassr-tabs-nav .cm-mapassr-label-4,
+#cm-mapassr-tab5:checked ~ .cm-mapassr-tabs-nav .cm-mapassr-label-5,
+#cm-mapassr-tab6:checked ~ .cm-mapassr-tabs-nav .cm-mapassr-label-6,
+#cm-mapassr-tab7:checked ~ .cm-mapassr-tabs-nav .cm-mapassr-label-7 {
+    color: var(--cm-accent);
+    border-bottom-color: var(--cm-accent);
+    background: rgba(255,255,255,0.05);
+}
+
+/* CONTENIDO DE PESTAÑAS */
+.cm-mapassr-tabs-content {
+    background: var(--background-1);
+    transition: min-height 0.3s ease;
+}
+
+.cm-mapassr-tab-pane {
+    display: none;
+    padding: 35px 30px;
+    animation: cm-fadeIn 0.5s ease-out;
+}
+
+#cm-mapassr-tab1:checked ~ .cm-mapassr-tabs-content .cm-mapassr-pane-1,
+#cm-mapassr-tab2:checked ~ .cm-mapassr-tabs-content .cm-mapassr-pane-2,
+#cm-mapassr-tab3:checked ~ .cm-mapassr-tabs-content .cm-mapassr-pane-3,
+#cm-mapassr-tab4:checked ~ .cm-mapassr-tabs-content .cm-mapassr-pane-4,
+#cm-mapassr-tab5:checked ~ .cm-mapassr-tabs-content .cm-mapassr-pane-5,
+#cm-mapassr-tab6:checked ~ .cm-mapassr-tabs-content .cm-mapassr-pane-6,
+#cm-mapassr-tab7:checked ~ .cm-mapassr-tabs-content .cm-mapassr-pane-7 {
+    display: block;
+}
+
+.cm-mapassr-pane-1 {
+    padding: 0;
+}
+
+@keyframes cm-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HIGHLIGHTS */
+.cm-mapassr-highlights {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.cm-mapassr-highlight-item {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 100px;
+    max-width: 180px;
+    aspect-ratio: 1;
+    background: var(--color);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cm-mapassr-highlight-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.cm-mapassr-highlight-item:hover::before {
+    opacity: 0.5;
+}
+
+.cm-mapassr-highlight-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.cm-mapassr-highlight-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 16px 8px;
+    text-align: center;
+}
+
+.cm-mapassr-highlight-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+    display: block;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+
+.cm-mapassr-highlight-text {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* POPUPS - SISTEMA CON CHECKBOXES */
+.cm-mapassr-popup-input {
+    display: none;
+}
+
+.cm-mapassr-popup-overlay {
+    display: none;
+}
+
+.cm-mapassr-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 90%;
+    max-height: 85vh;
+    background: var(--background-1);
+    border-radius: 2px;
+    z-index: 9999;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.cm-mapassr-popup-header {
+    position: relative;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 22px 55px 22px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.cm-mapassr-popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    background: transparent;
+}
+
+.cm-mapassr-popup-close:hover {
+    color: #ffffff;
+    background: rgba(255,255,255,0.08);
+}
+
+.cm-mapassr-popup-body {
+    padding: 0;
+    max-height: calc(85vh - 66px);
+    overflow-y: auto;
+    background: var(--background-1);
+}
+
+.cm-mapassr-popup-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.cm-mapassr-popup-description {
+    padding: 28px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ffffff;
+    background: #1a1a1a;
+}
+
+/* MOSTRAR POPUPS CUANDO CHECKBOX ESTÁ CHECKED */
+.cm-mapassr-popup-close-fixed {
+    display: none;
+    position: fixed;
+    top: calc(50% - 43vh);
+    right: calc(5% - 10px);
+    width: 36px;
+    height: 36px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 10000;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.cm-mapassr-popup-close-fixed:hover {
+    background: #333333;
+}
+
+.cm-mapassr-popup-input:checked + .cm-mapassr-popup-close-fixed + .cm-mapassr-popup {
+    display: block;
+}
+
+.cm-mapassr-popup-input:checked + .cm-mapassr-popup-close-fixed {
+    display: block;
+}
+
+.signature-catta {
+    margin-top: 5px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #fff;
+}

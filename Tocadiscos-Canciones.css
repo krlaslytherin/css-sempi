@@ -1,0 +1,322 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cmon-hidden-checkbox {
+            display: none;
+        }
+
+        .cmon-vinyl-player {
+         width: 100%;
+            max-width: 450px;
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            margin: 20px auto;
+        }
+
+        .cmon-player-body {
+            background: #2c2c2c;
+            border-radius: 8px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .cmon-power-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 12px;
+            height: 12px;
+            background: #ff0000;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            opacity: 1;
+            animation: cmon-pulse 2s infinite;
+        }
+
+        @keyframes cmon-pulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.9); }
+        }
+
+        .cmon-turntable {
+            width: 280px;
+            height: 280px;
+            background: #1a1a1a;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            position: relative;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+        }
+
+        .cmon-vinyl-disc {
+            width: 240px;
+            height: 240px;
+            background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation: cmon-rotate 2s linear infinite;
+        }
+
+        @keyframes cmon-rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        #cmon-speed-45:checked ~ .cmon-vinyl-player .cmon-player-body .cmon-turntable .cmon-vinyl-disc {
+            animation: cmon-rotate-fast 1.47s linear infinite;
+        }
+
+        @keyframes cmon-rotate-fast {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .cmon-vinyl-center {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cmon-vinyl-center::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #0a0a0a;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cmon-vinyl-groove {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            background: repeating-radial-gradient(circle, transparent 0px, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+        }
+
+        .cmon-tonearm {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            width: 140px;
+            height: 180px;
+            z-index: 10;
+        }
+
+        .cmon-tonearm-base {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #c0c0c0, #808080);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .cmon-tonearm-arm {
+            width: 4px;
+            height: 130px;
+            background: linear-gradient(to bottom, #c0c0c0, #a0a0a0);
+            position: absolute;
+            top: 25px;
+            right: 13px;
+            border-radius: 2px;
+            transform-origin: top center;
+            transform: rotate(25deg);
+        }
+
+        .cmon-tonearm-head {
+            width: 8px;
+            height: 15px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            position: absolute;
+            bottom: -15px;
+            left: -2px;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .cmon-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cmon-btn {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #555;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .cmon-btn i {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .cmon-btn-power {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            border-color: #ff6b6b;
+        }
+
+        .cmon-btn-play {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            border-color: #4caf50;
+        }
+
+        .cmon-btn-stop {
+            background: linear-gradient(135deg, #4a4a4a, #2c2c2c);
+        }
+
+        .cmon-speed-control {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cmon-speed-btn {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #3a3a3a, #1c1c1c);
+            border: 2px solid #555;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cmon-speed-btn:hover {
+            background: linear-gradient(135deg, #4a4a4a, #2c2c2c);
+            border-color: #666;
+        }
+
+        #cmon-speed-33:checked ~ .cmon-vinyl-player .cmon-player-body .cmon-controls .cmon-speed-33,
+        #cmon-speed-45:checked ~ .cmon-vinyl-player .cmon-player-body .cmon-controls .cmon-speed-45 {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            border-color: #ff6b6b;
+        }
+
+        .cmon-tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            z-index: 100;
+        }
+
+        .cmon-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .cmon-turntable:hover .cmon-tooltip {
+            opacity: 1;
+        }
+
+        .cmon-tooltip-song {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .cmon-tooltip-album {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .cmon-tooltip-artist {
+            font-size: 12px;
+            color: #888;
+            font-style: italic;
+        }
+
+        .cmon-vinyl-player {
+    margin-top: 150px;
+}
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

@@ -1,0 +1,373 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-eopen-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #f0f4f9 0%, #e8edf5 100%);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.cm-eopen-wrap * {
+    box-sizing: border-box;
+}
+
+/* ── Barra de navegación ── */
+.cm-eopen-nav {
+    background: #fff;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 8px 8px 0 0;
+}
+
+.cm-eopen-nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #444746;
+    font-size: 14px;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.cm-eopen-nav-btn:hover {
+    background: #f2f6fc;
+}
+
+.cm-eopen-nav-sep {
+    width: 1px;
+    height: 18px;
+    background: #e0e0e0;
+    margin: 0 2px;
+}
+
+.cm-eopen-nav-spacer {
+    flex: 1;
+}
+
+.cm-eopen-nav-counter {
+    font-size: 12px;
+    color: #5f6368;
+    flex-shrink: 0;
+}
+
+/* ── Contenedor ── */
+.cm-eopen-container {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 24px;
+}
+
+/* ── Asunto ── */
+.cm-eopen-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.cm-eopen-subject {
+    font-size: 20px;
+    color: #202124;
+    font-weight: 400;
+    flex: 1;
+}
+
+.cm-eopen-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #e8f0fe;
+    color: #1a73e8;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.cm-eopen-label-close {
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+/* ── Cabecera del remitente ── */
+.cm-eopen-sender-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.cm-eopen-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #5b4fcf;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+    text-transform: uppercase;
+}
+
+.cm-eopen-sender-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-eopen-sender-name {
+    font-size: 14px;
+    color: #202124;
+    font-weight: 600;
+}
+
+.cm-eopen-sender-email {
+    font-size: 12px;
+    color: #5f6368;
+    font-weight: 400;
+    margin-top: 1px;
+}
+
+.cm-eopen-sender-name-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.cm-eopen-recipient {
+    font-size: 12px;
+    color: #5f6368;
+    margin-top: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cm-eopen-recipient-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.cm-eopen-date {
+    font-size: 12px;
+    color: #5f6368;
+    flex-shrink: 0;
+    margin-right: 4px;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.cm-eopen-sender-actions {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.cm-eopen-action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #444746;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.cm-eopen-action-btn:hover {
+    background: #f2f6fc;
+}
+
+/* ── Mensaje reenviado ── */
+.cm-eopen-forwarded {
+    border-left: 3px solid #e0e0e0;
+    padding-left: 14px;
+    margin-bottom: 20px;
+    color: #5f6368;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.cm-eopen-forwarded a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+/* ── Cuerpo ── */
+.cm-eopen-body {
+    font-size: 14px;
+    color: #202124;
+    line-height: 1.7;
+}
+
+.cm-eopen-body p {
+    margin: 0 0 14px 0;
+}
+
+/* ── Adjuntos ── */
+.cm-eopen-attachments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.cm-eopen-attach-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background: #f8f9fa;
+    min-width: 180px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cm-eopen-attach-item:hover {
+    background: #f0f4f9;
+}
+
+.cm-eopen-attach-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.cm-eopen-attach-info {
+    min-width: 0;
+}
+
+.cm-eopen-attach-name {
+    font-size: 12px;
+    color: #202124;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 130px;
+}
+
+.cm-eopen-attach-size {
+    font-size: 11px;
+    color: #5f6368;
+    margin-top: 1px;
+}
+
+/* ── Botones de respuesta ── */
+.cm-eopen-reply-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.cm-eopen-reply-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #dadce0;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 13px;
+    color: #444746;
+    cursor: pointer;
+    background: #fff;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.cm-eopen-reply-btn:hover {
+    background: #f2f6fc;
+}
+
+.cm-eopen-reply-btn i {
+    font-size: 13px;
+}
+
+.cm-eopen-emoji-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #dadce0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.cm-eopen-emoji-btn:hover {
+    background: #f2f6fc;
+}
+.signature-catta {
+    margin-top: 5px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #fff;
+}

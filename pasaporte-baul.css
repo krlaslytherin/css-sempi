@@ -1,0 +1,325 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-passport {
+  width: 600px;
+  background: linear-gradient(135deg, var(--passport-bg) 0%, var(--link-color) 100%);
+  border: 3px solid var(--passport-color);
+  border-radius: 5px;
+  padding: 25px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.cm-passport br {
+ display: none !important;
+}
+
+.cm-passport::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(26,84,144,0.08) 8px, rgba(26,84,144,0.08) 16px),
+    repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(26,84,144,0.05) 8px, rgba(26,84,144,0.05) 16px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.3) 0px, rgba(255,255,255,0.3) 1px, transparent 1px, transparent 40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cm-passport-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cm-passport-header {
+  text-align: center;
+  border-bottom: 3px solid var(--passport-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.5);
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.cm-passport-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--passport-color);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cm-passport-label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 3px;
+}
+
+.cm-passport-main {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.6);
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.cm-passport-left-section {
+  display: flex;
+  gap: 0;
+}
+
+.cm-passport-country-vertical {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--passport-color);
+  letter-spacing: 5px;
+  background: rgba(255,255,255,0.8);
+  padding: 15px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid var(--passport-color);
+  white-space: nowrap;
+}
+
+.cm-passport-photo-container {
+  width: 140px;
+  height: 180px;
+  border: 2px solid var(--passport-color);
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 11px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.cm-passport-photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cm-passport-data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 15px;
+}
+
+.cm-passport-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.cm-passport-country-code {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--passport-color);
+  letter-spacing: 3px;
+}
+
+.cm-passport-number {
+  text-align: center;
+  flex: 1;
+}
+
+.cm-passport-number-label {
+  font-size: 9px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.cm-passport-number-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.cm-passport-flag-container {
+  width: 60px;
+  height: 40px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #ccc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.cm-passport-flag-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cm-passport-fields-container {
+  display: flex;
+  gap: 15px;
+}
+
+.cm-passport-fields-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cm-passport-fields-right {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cm-passport-field {
+  font-size: 11px;
+}
+
+.cm-passport-fingerprint {
+  width: 70px;
+  height: 100px;
+  border: 2px solid #999;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #ccc;
+  margin-bottom: 8px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  background-image: 
+    radial-gradient(circle at 30% 30%, transparent 20%, rgba(0,0,0,0.03) 20%, rgba(0,0,0,0.03) 22%, transparent 22%),
+    radial-gradient(circle at 70% 60%, transparent 25%, rgba(0,0,0,0.03) 25%, rgba(0,0,0,0.03) 27%, transparent 27%);
+}
+
+.cm-passport-fingerprint img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cm-field-label {
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 9px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.cm-field-value {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cm-passport-footer {
+  background: rgba(255,255,255,0.8);
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.cm-passport-mrz {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  background: #fff;
+  padding: 10px;
+  border: 2px solid var(--passport-color);
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: bold;
+}
+.cm-passport-mrz br {
+ display: block !important;
+}
+
+.cm-passport-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 10px;
+  border-top: 2px dashed var(--passport-color);
+}
+
+.cm-passport-link {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border: 2px solid var(--link-color);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cm-passport-link:hover {
+  background: var(--link-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.signature-catta {
+  margin-top: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

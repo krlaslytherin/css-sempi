@@ -1,0 +1,309 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-mesa-tarot br,
+.cm-mesa-tarot * br {
+  display: none !important;
+}
+
+/* === RESET === */
+.cm-mesa-tarot * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === MESA PRINCIPAL === */
+.cm-mesa-tarot {
+  max-width: 650px;
+  margin: 100px auto 40px;
+  background: 
+    linear-gradient(180deg, #4a3728 0%, #3a2920 100%),
+    repeating-linear-gradient(90deg,
+      transparent 0px,
+      rgba(0,0,0,0.03) 1px,
+      transparent 2px,
+      transparent 60px
+    );
+  border: 4px solid #2d1f18;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 
+    inset 0 0 30px rgba(0,0,0,0.3),
+    0 10px 30px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.cm-mesa-tarot::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid rgba(139,115,85,0.3);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* === CONTENEDOR DE RUEDA === */
+.cm-contenedor-rueda {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 0 20px rgba(0,0,0,0.4),
+    0 4px 15px rgba(0,0,0,0.5);
+  border: 3px solid rgba(61,41,24,0.6);
+  background: rgba(0,0,0,0.1);
+}
+
+.cm-imagen-rueda {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* === CONTENEDOR DE CARTAS === */
+.cm-contenedor-cartas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* === CARTA DE TAROT === */
+.cm-carta-tarot {
+  width: 100px;
+  height: 170px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.cm-carta-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.cm-carta-tarot:hover .cm-carta-inner {
+  transform: rotateY(180deg);
+}
+
+/* === FRENTE Y REVERSO === */
+.cm-carta-frente,
+.cm-carta-reverso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* === FRENTE DE LA CARTA === */
+.cm-carta-frente {
+  background: linear-gradient(135deg, #2c2416 0%, #1a1510 100%);
+  border: 3px solid #8b7355;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cm-imagen-carta {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* === REVERSO DE LA CARTA === */
+.cm-carta-reverso {
+  background: linear-gradient(135deg, #3a2920 0%, #2d1f18 100%);
+  border: 3px solid #8b7355;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 1px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cm-carta-reverso::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cm-carta-reverso::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.3);
+  border-radius: 2px;
+}
+
+.cm-carta-reverso::-webkit-scrollbar-thumb {
+  background: #8b7355;
+  border-radius: 2px;
+}
+
+.cm-carta-reverso::-webkit-scrollbar-thumb:hover {
+  background: #a0876a;
+}
+
+.cm-icono-carta {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  background: linear-gradient(135deg, #e8dcc8 0%, #d4c4aa 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  flex-shrink: 0;
+}
+
+.cm-icono-carta i {
+  font-size: 18px;
+  color: #3d2918;
+}
+
+.cm-nombre-tema {
+  color: #f8f4e8;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  margin-bottom: 10px;
+  line-height: 0.95;
+  display: block;
+}
+
+.cm-info-con,
+.cm-info-fecha,
+.cm-info-lugar {
+  color: #d4c4aa;
+  font-size: 9px !important;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  display: inline;
+ margin: -2px 0;
+  line-height: 1;
+}
+
+.cm-info-con {
+  font-style: italic;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cm-mesa-tarot {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+  
+  .cm-contenedor-rueda {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 30px;
+  }
+  
+  .cm-carta-tarot {
+    width: 90px;
+    height: 150px;
+  }
+  
+  .cm-contenedor-cartas {
+    gap: 12px;
+  }
+  
+  .cm-nombre-tema {
+    font-size: 11px;
+  }
+  
+  .cm-info-con,
+  .cm-info-fecha,
+  .cm-info-lugar {
+    font-size: 8px !important;
+font-size: inherit !important;
+  color: inherit;
+  }
+}
+
+@media (max-width: 480px) {
+  .cm-contenedor-rueda {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .cm-carta-tarot {
+    width: 85px;
+    height: 140px;
+  }
+  
+  .cm-icono-carta {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .cm-icono-carta i {
+    font-size: 16px;
+  }
+  
+  .cm-nombre-tema {
+    font-size: 10px;
+  }
+  
+  .cm-info-con,
+  .cm-info-fecha,
+  .cm-info-lugar {
+    font-size: 7px;
+  }
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

@@ -1,0 +1,219 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-rhoffmann-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+  }
+ 
+  .cm-rhoffmann-header {
+    background: linear-gradient(110deg, var(--bh-acc2) 0%, var(--bh-acc1) 100%);
+    border-radius: 14px 14px 0 0;
+    padding: 22px 30px 60px;
+    position: relative;
+  }
+ 
+  .cm-rhoffmann-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: var(--background-1);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  }
+ 
+  .cm-rhoffmann-header h2 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--background-1);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    position: relative;
+    z-index: 1;
+  }
+ 
+  /* ===== GRUPO ===== */
+  .cm-rhoffmann-group {
+    margin: 28px 16px 0;
+  }
+ 
+  .cm-rhoffmann-group-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cborder);
+  }
+ 
+  .cm-rhoffmann-group-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+
+.cm-rhoffmann-group-icon i {
+  color: var(--background-1);
+ }
+  .cm-rhoffmann-group-title h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: var(--color);
+  }
+ 
+  /* ===== GRID ===== */
+  .cm-rhoffmann-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+ 
+  /* ===== TARJETA ===== */
+  .cm-rhoffmann-card {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+    background: var(--background-2);
+  }
+ 
+  .cm-rhoffmann-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+ 
+  .cm-rhoffmann-card:hover img {
+    transform: scale(1.06);
+  }
+ 
+  .cm-rhoffmann-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+ 
+  .cm-rhoffmann-card:hover .cm-rhoffmann-card-overlay {
+    opacity: 1;
+  }
+ 
+  .cm-rhoffmann-card-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.35);
+  }
+ 
+  .cm-rhoffmann-card-info-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+ 
+  .cm-rhoffmann-card-info-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+ 
+  .cm-rhoffmann-card-name {
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--background-1);
+  }
+ 
+  .cm-rhoffmann-card-rel {
+    font-size: 0.72rem;
+    color: var(--background-1);
+    font-style: italic;
+    opacity: 0.75;
+  }
+ 
+  /* ===== CLASES DE COLOR ===== */
+  .cm-rhoffmann-ciudadanos   { background: #6A93B5; color: #000000; }
+  .cm-rhoffmann-criminales   { background: #323A5F; color: var(--color); }
+  .cm-rhoffmann-seguridad    { background: #7c3535; color: var(--color); }
+  .cm-rhoffmann-empresarios  { background: #873E65; color: var(--color); }
+  .cm-rhoffmann-celebridades { background: #6F628A; color: var(--color); }
+  .cm-rhoffmann-sami         { background: #B88A99; color: #000000; }
+  .cm-rhoffmann-refineria    { background: #5D7260; color: var(--color); }
+  .cm-rhoffmann-pescadores   { background: #4D919F; color: #000000; }
+  .cm-rhoffmann-salud        { background: #7DAE9B; color: #000000; }
+  .cm-rhoffmann-comercios    { background: #BFB069; color: #000000; }
+ 
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-ciudadanos   { background: rgba(106,147,181,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-criminales   { background: rgba(50,58,95,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-seguridad    { background: rgba(124,53,53,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-empresarios  { background: rgba(135,62,101,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-celebridades { background: rgba(111,98,138,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-sami         { background: rgba(184,138,153,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-refineria    { background: rgba(93,114,96,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-pescadores   { background: rgba(77,145,159,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-salud        { background: rgba(125,174,155,0.82); }
+  .cm-rhoffmann-card-overlay.cm-rhoffmann-comercios    { background: rgba(191, 176, 105,0.82); }
+  
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

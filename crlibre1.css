@@ -1,0 +1,258 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-crlibre1-rel-ciudadanos   { --cro1-color: #6A93B5; }
+.cm-crlibre1-rel-criminales   { --cro1-color: #5c6aaa; }
+.cm-crlibre1-rel-seguridad    { --cro1-color: #7c3535; }
+.cm-crlibre1-rel-empresarios  { --cro1-color: #873E65; }
+.cm-crlibre1-rel-celebridades { --cro1-color: #6F628A; }
+.cm-crlibre1-rel-sami         { --cro1-color: #B88A99; }
+.cm-crlibre1-rel-refineria    { --cro1-color: #5D7260; }
+.cm-crlibre1-rel-pescadores   { --cro1-color: #4D919F; }
+.cm-crlibre1-rel-salud        { --cro1-color: #7DAE9B; }
+.cm-crlibre1-rel-comercios       { --cro1-color: #BFB069; }
+
+.cm-crlibre1-badge-abierto    { --c1est-color: var(--accent); }
+.cm-crlibre1-badge-finalizado { --c1est-color: #c06060; }
+.cm-crlibre1-badge-abandonado { --c1est-color: #888; }
+ 
+.cm-crlibre1-wrap {
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 550px;
+    margin: 0 auto;
+    background: var(--background-1);
+    border: 1px solid var(--cborder);
+    border-radius: 14px;
+    overflow: hidden;
+}
+ 
+.cm-crlibre1-wrap br {
+    display: none !important;
+}
+ 
+.cm-crlibre1-header {
+    padding: 18px 18px 18px;
+    border-bottom: 1px solid var(--cborder);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.cm-crlibre1-back {
+    color: var(--color);
+    font-size: 18px;
+    opacity: .8;
+    flex-shrink: 0;
+    line-height: 1;
+}
+ 
+.cm-crlibre1-title {
+    color: var(--color);
+    font-size: 35px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 0;
+    opacity: 1;
+    text-transform: none;
+}
+ 
+.cm-crlibre1-list {
+    max-height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+ 
+.cm-crlibre1-list::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+.cm-crlibre1-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+ 
+.cm-crlibre1-list::-webkit-scrollbar-thumb {
+    background: var(--cborder);
+    border-radius: 4px;
+}
+ 
+.cm-crlibre1-section {
+    padding: 14px 16px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.cm-crlibre1-mes {
+    color: var(--color);
+    font-size: 13px;
+    font-weight: 700;
+    opacity: .5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.cm-crlibre1-ver {
+    color: var(--color);
+    font-size: 12px;
+    opacity: .4;
+}
+ 
+.cm-crlibre1-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--cborder);
+    text-decoration: none;
+    transition: background .18s;
+}
+ 
+.cm-crlibre1-item:last-child {
+    border-bottom: none;
+}
+ 
+.cm-crlibre1-item:hover {
+    background: color-mix(in srgb, var(--cborder) 45%, transparent);
+}
+ 
+.cm-crlibre1-imgwrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+}
+ 
+.cm-crlibre1-aro {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid var(--cro1-color);
+    box-sizing: border-box;
+    background: var(--background-1);
+}
+ 
+.cm-crlibre1-photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+ 
+.cm-crlibre1-info {
+    flex: 1;
+    min-width: 0;
+}
+ 
+.cm-crlibre1-tema {
+    color: var(--color);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    margin-bottom: 3px;
+}
+ 
+.cm-crlibre1-nombre {
+    color: var(--color);
+    font-size: 12px;
+    opacity: .6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    margin-bottom: 5px;
+}
+ 
+.cm-crlibre1-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.cm-crlibre1-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color);
+    font-size: 11px;
+    opacity: .45;
+}
+ 
+.cm-crlibre1-meta-item i {
+    font-size: 10px;
+}
+ 
+.cm-crlibre1-badge {
+    flex-shrink: 0;
+    width: 100px;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    border: 1px solid var(--c1est-color);
+    color: var(--c1est-color);
+    background: color-mix(in srgb, var(--c1est-color) 10%, transparent);
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+ 
+.cm-crlibre1-close {
+    flex-shrink: 0;
+    color: var(--color);
+    opacity: .3;
+    font-size: 13px;
+    margin-left: 6px;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+ 
+.cm-crlibre1-item:hover .cm-crlibre1-close {
+    opacity: .6;
+}
+ 
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

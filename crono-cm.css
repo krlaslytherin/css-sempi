@@ -1,0 +1,241 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-cronologia-tabs br {
+  display: none;
+}
+
+.cm-cronologia-tabs {
+  max-width: 550px;
+  margin: 20px auto;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+.cm-cronologia-tabs u {
+  background: black;
+  color: black;
+  text-decoration: none;
+  padding: 2px 4px;
+}
+
+.cm-crono-folder-back {
+  background: #c9b896;
+  padding: 25px 15px 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.cm-crono-folder-tab {
+  position: absolute;
+  top: 50px;
+  right: -15px;
+  width: 25px;
+  height: 150px;
+  background: #c9b896;
+  border-radius: 0 8px 8px 0;
+}
+
+.cm-crono-paper {
+  background: var(--background-1);
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.cm-crono-main-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color);
+  text-align: center;
+}
+
+.cm-year-tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+/* Ocultar los radio buttons */
+.cm-year-radio {
+  display: none;
+}
+
+/* Estilo de las etiquetas que funcionan como botones */
+.cm-year-tab-btn {
+  background: #c9b896;
+  color: #000000;
+  padding: 8px 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  user-select: none;
+}
+
+.cm-year-tab-btn:hover {
+  opacity: 0.9;
+}
+
+/* Cuando el radio está checked, la etiqueta se activa */
+.cm-year-radio:checked + .cm-year-tab-btn {
+  opacity: 1;
+  background: #857659;
+  transform: translateY(-2px);
+}
+
+/* Ocultar todos los contenidos por defecto */
+.cm-year-content {
+  display: none;
+  animation: fadeInCrono 0.3s;
+  max-height: 800px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.cm-year-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cm-year-content::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.cm-year-content::-webkit-scrollbar-thumb {
+  background: var(--color-grcm);
+  border-radius: 4px;
+}
+
+.cm-year-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-iccm);
+}
+
+/* Mostrar contenido cuando su radio correspondiente está checked */
+#cmradio2025:checked ~ .cm-year-content-wrapper #cmyear2025,
+#cmradio2026:checked ~ .cm-year-content-wrapper #cmyear2026,
+#cmradio2027:checked ~ .cm-year-content-wrapper #cmyear2027,
+#cmradio2028:checked ~ .cm-year-content-wrapper #cmyear2028,
+#cmradio2029:checked ~ .cm-year-content-wrapper #cmyear2029 {
+  display: block;
+}
+
+@keyframes fadeInCrono {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cm-crono-month {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color);
+}
+
+.cm-crono-month-title {
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: underline;
+  color: var(--color);
+  margin-bottom: 8px;
+}
+
+.cm-crono-thread {
+  display: grid;
+  grid-template-columns: 30px 1fr auto 100px;
+  gap: 10px;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-size: 11px;
+  background: rgba(0,0,0,0.02);
+  border-radius: 3px;
+}
+
+.cm-crono-icon {
+  font-size: 16px;
+  color: var(--color-grcm);
+  text-decoration: none;
+  text-align: center;
+}
+
+.cm-crono-info {
+  color: var(--color);
+}
+
+.cm-crono-location {
+  font-size: 10px;
+  color: var(--color);
+  opacity: 0.7;
+  text-align: right;
+}
+
+.cm-crono-date {
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--color);
+  text-align: right;
+}
+
+.cm-crono-partner {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cm-crono-ciudadanos { background: #6A93B5; color: #000000; }
+.cm-crono-criminales { background: #323A5F; color: var(--color); }
+.cm-crono-seguridad { background: #7c3535; color: var(--color); }
+.cm-crono-empresarios { background: #873E65; color: var(--color); }
+.cm-crono-celebridades { background: #6F628A; color: var(--color); }
+.cm-crono-sami { background: #B88A99; color: #000000; }
+.cm-crono-refineria { background: #5D7260; color: var(--color); }
+.cm-crono-pescadores { background: #4D919F; color: #000000; }
+.cm-crono-salud { background: #7DAE9B; color: #000000; }
+.cm-crono-comercios { background: #BFB069; color: #000000; }
+
+.signature-catta {
+  margin-top: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

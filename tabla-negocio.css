@@ -1,0 +1,396 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-negocio-root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── RADIO BUTTONS OCULTOS ── */
+
+.cm-negocio-radio {
+  display: none;
+}
+
+/* ── CONTENEDOR GENERAL ── */
+
+.cm-negocio-root {
+  font-family: 'Georgia', serif;
+  max-width: 650px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cm-negocio-root br{
+  display: none !important;
+}
+
+/* ── NAVEGACIÓN ── */
+
+.cm-negocio-nav {
+  background: var(--cm-color-acento1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cm-negocio-nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 22px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Georgia', serif;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cm-negocio-nav-link:hover {
+  border-bottom: 3px solid var(--cm-color-acento2);
+  color: #fff;
+  opacity: 0.85;
+}
+
+/* ── TAB ACTIVO EN MENÚ ── */
+
+#cm-tab-home:checked ~ .cm-negocio-nav label[for="cm-tab-home"],
+#cm-tab-sobre:checked ~ .cm-negocio-nav label[for="cm-tab-sobre"],
+#cm-tab-conoce:checked ~ .cm-negocio-nav label[for="cm-tab-conoce"] {
+  border-bottom: 3px solid var(--cm-color-acento2);
+  color: #fff;
+  opacity: 1;
+}
+
+/* ── SECCIONES ── */
+
+.cm-negocio-section {
+  display: none;
+  background: transparent;
+  animation: cm-fadein 0.35s;
+}
+
+#cm-tab-home:checked ~ .cm-negocio-section-home {
+  display: block;
+}
+
+#cm-tab-sobre:checked ~ .cm-negocio-section-sobre {
+  display: block;
+}
+
+#cm-tab-conoce:checked ~ .cm-negocio-section-conoce {
+  display: block;
+}
+
+@keyframes cm-fadein {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── HERO ── */
+
+.cm-negocio-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cm-negocio-hero-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.7);
+}
+
+.cm-negocio-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.cm-negocio-hero-title {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+  margin-bottom: 10px;
+}
+
+.cm-negocio-hero-desc {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 480px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.22);
+  border-radius: 4px;
+  padding: 10px 18px;
+}
+
+/* ── PRODUCTOS ── */
+
+.cm-negocio-productos {
+  padding: 28px 22px 20px 22px;
+}
+
+.cm-negocio-productos-titulo {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cm-color-acento1);
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1.5px solid var(--cm-color-acento1);
+  padding-bottom: 8px;
+}
+
+.cm-negocio-productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cm-negocio-producto-card {
+  background: transparent;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+  width: 140px;
+  text-align: center;
+  padding: 14px 10px 12px 10px;
+  transition: box-shadow 0.2s;
+}
+
+.cm-negocio-producto-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+}
+
+.cm-negocio-producto-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.cm-negocio-producto-nombre {
+  font-size: 13px;
+  color: inherit;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.cm-negocio-producto-costo {
+  font-size: 15px;
+  color: var(--cm-color-acento2);
+  font-weight: bold;
+}
+
+/* ── SOBRE NOSOTROS ── */
+
+.cm-negocio-sobre {
+  padding: 30px 28px;
+}
+
+.cm-negocio-sobre-titulo {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cm-color-acento1);
+  margin-bottom: 22px;
+  border-bottom: 1.5px solid var(--cm-color-acento1);
+  padding-bottom: 8px;
+}
+
+.cm-negocio-sobre-fila {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.cm-negocio-sobre-fila:last-child {
+  border-bottom: none;
+}
+
+.cm-negocio-sobre-icono {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--cm-color-acento1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.cm-negocio-sobre-foto {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cm-color-acento1);
+  flex-shrink: 0;
+  display: block;
+}
+
+.cm-negocio-sobre-label {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--cm-color-acento2);
+  margin-bottom: 3px;
+}
+
+.cm-negocio-sobre-valor {
+  font-size: 14px;
+  color: inherit;
+}
+
+/* ── CONOCE MÁS ── */
+
+.cm-negocio-conoce {
+  padding: 26px 22px 20px 22px;
+}
+
+.cm-negocio-conoce-titulo {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cm-color-acento1);
+  margin-bottom: 20px;
+  border-bottom: 1.5px solid var(--cm-color-acento1);
+  padding-bottom: 8px;
+}
+
+.cm-negocio-estancias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cm-negocio-estancia-item {
+  width: 130px;
+  text-align: center;
+}
+
+.cm-negocio-estancia-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+
+.cm-negocio-estancia-nombre {
+  font-size: 12px;
+  color: inherit;
+  margin-top: 7px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.cm-negocio-estancia-icono {
+  color: var(--cm-color-acento2);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+/* ── BARRA CONTACTO ── */
+
+.cm-negocio-contacto-bar {
+  background: var(--cm-color-acento1);
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cm-negocio-contacto-label {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+
+.cm-negocio-contacto-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cm-color-acento1);
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cm-negocio-contacto-link:hover {
+  background: var(--cm-color-acento2);
+  transform: scale(1.12);
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #666;
+}

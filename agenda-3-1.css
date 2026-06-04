@@ -1,0 +1,170 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+
+.cm-agenda3-1-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+}
+.cm-agenda3-1-wrap br{
+  display: none !important;
+}
+.cm-agenda3-1-page {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 18px 20px 14px 20px;
+  box-sizing: border-box;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.cm-agenda3-1-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.cm-agenda3-1-topleft {
+  flex: 1;
+}
+.cm-agenda3-1-mes {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 22px;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.cm-agenda3-1-metasub {
+  font-size: 8px;
+  color: #aaa;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #f0f0f0;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.cm-agenda3-1-topcal {
+  flex-shrink: 0;
+}
+.cm-agenda3-1-caltable {
+  border-collapse: collapse;
+  font-size: 7.5px;
+  color: #888;
+}
+.cm-agenda3-1-caltable th {
+  font-weight: 700;
+  color: #bbb;
+  text-align: center;
+  padding: 1px 4px;
+}
+.cm-agenda3-1-caltable td {
+  text-align: center;
+  padding: 1px 4px;
+  color: #888;
+}
+.cm-agenda3-1-dayhead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.cm-agenda3-1-daynum {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--pipsag-acc1);
+  line-height: 1;
+}
+.cm-agenda3-1-dayname {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  color: #333;
+  line-height: 1;
+}
+.cm-agenda3-1-daybar {
+  flex: 1;
+  height: 8px;
+  background: #e8e8e8;
+  border-radius: 1px;
+}
+.cm-agenda3-1-daynote {
+  font-size: 9px;
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+.cm-agenda3-1-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.cm-agenda3-1-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #efefef;
+  min-height: 26px;
+  padding: 2px 0;
+}
+.cm-agenda3-1-bullet {
+  font-size: 9px;
+  color: #ccc;
+  width: 14px;
+  flex-shrink: 0;
+  text-align: center;
+}
+.cm-agenda3-1-linetext {
+  flex: 1;
+  font-size: 10px;
+  color: #444;
+}
+.cm-agenda3-1-quote {
+  margin-top: 10px;
+  font-size: 8px;
+  color: #bbb;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

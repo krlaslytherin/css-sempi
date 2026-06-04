@@ -1,0 +1,220 @@
+.cm-cronoeldar-hil-wrap {
+    font-family: 'Georgia', serif;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.cm-cronoeldar-hil-wrap * {
+    box-sizing: border-box;
+}
+
+.cm-cronoeldar-hil-wrap br {
+    display: none !important;
+}
+
+.cm-cronoeldar-hil-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    margin-bottom: 6px;
+}
+
+.cm-cronoeldar-hil-headinfo {
+    flex: 1;
+}
+
+.cm-cronoeldar-hil-booklabel {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.68em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--eldar-acc1);
+    margin: 0 0 2px 0;
+}
+
+.cm-cronoeldar-hil-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 2px 0;
+}
+
+.cm-cronoeldar-hil-tag {
+    font-size: 0.78em;
+    color: var(--eldar-acc2);
+    letter-spacing: 0.08em;
+}
+
+.cm-cronoeldar-hil-rule-top {
+    border: none;
+    border-top: 2px solid var(--eldar-acc1);
+    margin: 6px 0 2px 0;
+}
+
+.cm-cronoeldar-hil-rule-thin {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0 0 16px 0;
+}
+
+.cm-cronoeldar-hil-month {
+    margin-bottom: 14px;
+}
+
+.cm-cronoeldar-hil-month-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.cm-cronoeldar-hil-month-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.82em;
+    font-style: italic;
+    color: var(--eldar-acc1);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.cm-cronoeldar-hil-month-line {
+    flex: 1;
+    border-top: 1px dashed #ccc;
+}
+
+.cm-cronoeldar-hil-month-count {
+    font-size: 0.65em;
+    color: #bbb;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.cm-cronoeldar-hil-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    padding: 5px 0 5px 10px;
+    border-bottom: 1px dotted #e8e8e8;
+}
+
+.cm-cronoeldar-hil-item:last-child {
+    border-bottom: none;
+}
+
+.cm-cronoeldar-hil-link {
+    text-decoration: none;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.85em;
+    font-style: italic;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.15s;
+    padding-right: 6px;
+}
+
+.cm-cronoeldar-hil-link:hover {
+    color: var(--eldar-acc1);
+}
+
+.cm-cronoeldar-hil-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.cm-cronoeldar-hil-with {
+    font-size: 0.7em;
+    font-style: italic;
+    white-space: nowrap;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cm-cronoeldar-hil-with.ciudadanos { background: #6A93B5; color: #000000; }
+.cm-cronoeldar-hil-with.criminales { background: #323A5F; }
+.cm-cronoeldar-hil-with.seguridad { background: #7c3535; }
+.cm-cronoeldar-hil-with.empresarios { background: #873E65; }
+.cm-cronoeldar-hil-with.celebridades { background: #6F628A; }
+.cm-cronoeldar-hil-with.sami { background: #B88A99; color: #000000; }
+.cm-cronoeldar-hil-with.refineria { background: #5D7260; }
+.cm-cronoeldar-hil-with.pescadores { background: #4D919F; color: #000000; }
+.cm-cronoeldar-hil-with.salud { background: #7DAE9B; color: #000000; }
+.cm-cronoeldar-hil-with.comercios { background: #BFB069; color: #000000; }
+
+.cm-cronoeldar-hil-where {
+    font-size: 0.7em;
+    color: #aaa;
+    white-space: nowrap;
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cm-cronoeldar-hil-sep {
+    color: #ddd;
+    font-size: 0.7em;
+}
+
+.cm-cronoeldar-hil-date {
+    font-size: 0.68em;
+    color: var(--eldar-acc2);
+    font-style: italic;
+    white-space: nowrap;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.cm-cronoeldar-hil-status {
+    font-size: 0.78em;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.cm-cronoeldar-hil-status.abierto {
+    color: #6F628A;
+}
+
+.cm-cronoeldar-hil-status.cerrado {
+    color: #7c3535;
+}
+
+.cm-cronoeldar-hil-status.abandonado {
+    color: #bbb;
+}
+
+.cm-cronoeldar-hil-footer {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.7em;
+    color: #bbb;
+    letter-spacing: 0.12em;
+    font-style: italic;
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

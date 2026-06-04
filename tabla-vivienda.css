@@ -1,0 +1,244 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-inmueble-root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  hyphens: none;
+}
+
+/* ── CONTENEDOR GENERAL ── */
+
+.cm-inmueble-root {
+  font-family: 'Georgia', serif;
+  max-width: 650px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ── GALERÍA ── */
+
+.cm-inmueble-galeria {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  gap: 3px;
+  background: var(--cm-color-borde);
+  width: 100%;
+}
+
+.cm-inmueble-galeria-principal {
+  grid-row: span 2;
+}
+
+.cm-inmueble-galeria-secundarias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+
+.cm-inmueble-galeria-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.cm-inmueble-galeria-principal {
+  height: 363px;
+}
+
+/* ── BARRA DE STATS ── */
+
+.cm-inmueble-stats-bar {
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px 10px;
+  border-bottom: 1.5px solid rgba(0,0,0,0.1);
+}
+
+.cm-inmueble-stat {
+  text-align: center;
+  flex: 1;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  padding: 0 8px;
+}
+
+.cm-inmueble-stat:last-child {
+  border-right: none;
+}
+
+.cm-inmueble-stat-num {
+  font-size: 20px;
+  font-weight: bold;
+  color: inherit;
+  line-height: 1.1;
+}
+
+.cm-inmueble-stat-icon {
+  font-size: 13px;
+  color: var(--cm-color-acento1);
+  margin: 3px 0 2px 0;
+}
+
+.cm-inmueble-stat-label {
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--cm-color-acento2);
+}
+
+/* ── SECCIONES ── */
+
+.cm-inmueble-seccion {
+  padding: 26px 28px 20px 28px;
+  background: transparent;
+  border-bottom: 1.5px solid rgba(0,0,0,0.1);
+}
+
+.cm-inmueble-seccion:last-of-type {
+  border-bottom: none;
+}
+
+.cm-inmueble-seccion-titulo {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cm-color-acento1);
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid rgba(0,0,0,0.1);
+}
+
+/* ── DATOS BÁSICOS ── */
+
+.cm-inmueble-datos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cm-inmueble-dato {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: calc(50% - 8px);
+}
+
+.cm-inmueble-dato-icono {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--cm-color-acento1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cm-inmueble-dato-label {
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--cm-color-acento2);
+  margin-bottom: 2px;
+}
+
+.cm-inmueble-dato-valor {
+  font-size: 14px;
+  color: inherit;
+}
+
+/* ── DESCRIPCIÓN ── */
+
+.cm-inmueble-descripcion {
+  font-size: 14px;
+  color: inherit;
+  line-height: 1.8;
+}
+
+/* ── ESTANCIAS ── */
+
+.cm-inmueble-estancias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cm-inmueble-estancias-grid br{
+  display: none !important;
+}
+
+.cm-inmueble-estancia-item {
+  width: 130px;
+  text-align: center;
+}
+
+.cm-inmueble-estancia-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+
+.cm-inmueble-estancia-nombre {
+  font-size: 12px;
+  color: inherit;
+  margin-top: 7px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.cm-inmueble-estancia-icono {
+  color: var(--cm-color-acento2);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #666;
+}

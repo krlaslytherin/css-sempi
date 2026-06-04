@@ -1,0 +1,330 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-relaciones-container {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+.cm-relaciones-container br {
+  display: none;
+}
+
+.cm-rel-folder-back {
+  background: #c9b896;
+  padding: 25px 15px 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.cm-rel-folder-tab {
+  position: absolute;
+  top: 50px;
+  right: -15px;
+  width: 25px;
+  height: 150px;
+  background: #c9b896;
+  border-radius: 0 8px 8px 0;
+}
+
+.cm-rel-paper {
+  background: var(--background-1);
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.cm-rel-main-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color);
+  text-align: center;
+}
+
+.cm-rel-wrapper {
+  max-height: 1000px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.cm-rel-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cm-rel-wrapper::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.cm-rel-wrapper::-webkit-scrollbar-thumb {
+  background: #c9b896;
+  border-radius: 4px;
+}
+
+.cm-rel-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #857659;
+}
+
+.cm-rel-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  align-items: start;
+  width: 100%;
+}
+
+.cm-rel-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cm-rel-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.cm-rel-img-container {
+  flex-shrink: 0;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-right:15px;
+}
+
+.cm-rel-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid;
+  border-radius: 8px;
+  display: block;
+}
+
+.cm-rel-img.rel-ciudadanos { border-color: #6A93B5; }
+.cm-rel-img.rel-criminales { border-color: #323A5F; }
+.cm-rel-img.rel-seguridad { border-color: #7c3535; }
+.cm-rel-img.rel-empresarios { border-color: #873E65; }
+.cm-rel-img.rel-celebridades { border-color: #6F628A; }
+.cm-rel-img.rel-sami { border-color: #B88A99; }
+.cm-rel-img.rel-refineria { border-color: #5D7260; }
+.cm-rel-img.rel-pescadores { border-color: #4D919F; }
+.cm-rel-img.rel-salud { border-color: #7DAE9B; }
+.cm-rel-img.rel-comercios { border-color: #BFB069; }
+
+/* Hover sobre la imagen */
+.cm-rel-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 155px;
+  height: 155px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+.cm-rel-img-container:hover .cm-rel-img-hover {
+  opacity: 0.85;
+}
+
+.cm-rel-img-hover.rel-ciudadanos { background: #6A93B5; color: #000; }
+.cm-rel-img-hover.rel-criminales { background: #323A5F; }
+.cm-rel-img-hover.rel-seguridad { background: #7c3535; }
+.cm-rel-img-hover.rel-empresarios { background: #873E65; }
+.cm-rel-img-hover.rel-celebridades { background: #6F628A; }
+.cm-rel-img-hover.rel-sami { background: #B88A99; color: #000; }
+.cm-rel-img-hover.rel-refineria { background: #5D7260; }
+.cm-rel-img-hover.rel-pescadores { background: #4D919F; color: #000; }
+.cm-rel-img-hover.rel-salud { background: #7DAE9B; color: #000; }
+.cm-rel-img-hover.rel-comercios { background: #BFB069; color: #000; }
+
+.cm-rel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cm-rel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cm-rel-item:nth-child(even) .cm-rel-header {
+  flex-direction: row-reverse;
+}
+
+.cm-rel-icon {
+  font-size: 24px;
+}
+
+/* Iconos con color según grupo */
+.cm-rel-icon.rel-ciudadanos { color: #6A93B5; }
+.cm-rel-icon.rel-criminales { color: #323A5F; }
+.cm-rel-icon.rel-seguridad { color: #7c3535; }
+.cm-rel-icon.rel-empresarios { color: #873E65; }
+.cm-rel-icon.rel-celebridades { color: #6F628A; }
+.cm-rel-icon.rel-sami { color: #B88A99; }
+.cm-rel-icon.rel-refineria { color: #5D7260; }
+.cm-rel-icon.rel-pescadores { color: #4D919F; }
+.cm-rel-icon.rel-salud { color: #7DAE9B; }
+.cm-rel-icon.rel-comercios { color: #BFB069; }
+
+.cm-rel-name {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.cm-rel-name.rel-ciudadanos { background: #6A93B5; color: #000000; }
+.cm-rel-name.rel-criminales { background: #323A5F; }
+.cm-rel-name.rel-seguridad { background: #7c3535; }
+.cm-rel-name.rel-empresarios { background: #873E65; }
+.cm-rel-name.rel-celebridades { background: #6F628A; }
+.cm-rel-name.rel-sami { background: #B88A99; color: #000000; }
+.cm-rel-name.rel-refineria { background: #5D7260; }
+.cm-rel-name.rel-pescadores { background: #4D919F; color: #000000; }
+.cm-rel-name.rel-salud { background: #7DAE9B; color: #000000; }
+.cm-rel-name.rel-comercios { background: #BFB069; color: #000000; }
+
+.cm-rel-description {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color);
+  text-align: justify;
+  max-height: 110px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.cm-rel-description::-webkit-scrollbar {
+  width: 5px;
+}
+
+.cm-rel-description::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+.cm-rel-description::-webkit-scrollbar-thumb {
+  background: #c9b896;
+  border-radius: 3px;
+}
+
+.cm-rel-description::-webkit-scrollbar-thumb:hover {
+  background: #857659;
+}
+
+.signature-catta {
+  margin-top: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}
+
+.cm-rel-paper {
+  overflow: visible;
+}
+ 
+.cm-rel-wrapper {
+  overflow-x: visible;
+  padding-top: 20px;
+}
+ 
+.cm-rel-item {
+  padding-top: 20px;
+}
+ 
+/* ── Clip en todos los cm-rel-item ── */
+.cm-rel-item .cm-rel-img-container {
+  overflow: visible;
+}
+ 
+.cm-rel-item .cm-rel-img-container::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 30px;
+  border: 3px solid #aaa;
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+  box-sizing: border-box;
+  z-index: 10;
+}
+ 
+.cm-rel-item .cm-rel-img-container::after {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
+  box-sizing: border-box;
+  z-index: 11;
+}
+ 

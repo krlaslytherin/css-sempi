@@ -1,0 +1,263 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-crono {
+  max-width: 750px;
+  margin: 20px auto 0;
+ z-index: 1;
+  }
+
+.cm-crono br{
+  display: none !important;
+}
+
+.cm-crono-header {
+  margin: 20px auto 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--sello-bg) 0%, var(--sello-bg-1) 100%);
+  padding: 20px;
+  border: 3px solid var(--cborder);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.cm-crono-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--sello-tit);
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cm-crono-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color);
+  margin: 5px 0 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.cm-stamps-wrapper {
+  max-height: 1000px;
+  overflow-y: auto;
+  margin: 0 auto;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.06) 8px,
+      rgba(255,255,255,0.06) 16px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.04) 8px,
+      rgba(255,255,255,0.04) 16px
+    ),
+    linear-gradient(
+      135deg,
+      var(--sello-bg) 0%,
+      var(--sello-bg-1) 100%
+    );
+
+  border: 3px solid var(--cborder);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  padding: 20px 20px 40px;
+  min-height: 1000px;
+}
+
+
+
+.cm-month-divider {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.cm-month-year {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--sello-tit-1);
+  line-height: 1;
+  margin: 0;
+}
+
+.cm-month-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 5px 0 0;
+  background: var(--sello-tit);
+}
+
+.cm-stamps-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.cm-stamp {
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--stamp-color);
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ justify-content: flex-start;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cm-stamp:hover {
+  transform: rotate(-5deg) scale(1.05);
+  background: rgba(255, 255, 255, 1);
+}
+
+.cm-stamp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2px dashed var(--stamp-color);
+  opacity: 0.3;
+}
+
+.cm-stamp-top-text {
+  font-size: 8px;
+  font-weight: bold;
+  color: var(--stamp-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  max-width: 120px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.cm-stamp-top-text br {
+  display: none !important;
+}
+
+.cm-stamp-top-text i {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.cm-stamp-date {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--stamp-color);
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.cm-stamp-quien {
+  font-size: 9px;
+  color: var(--stamp-color);
+  text-align: center;
+  line-height: 1.2;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+
+.cm-stamp-status {
+  position: absolute;
+  bottom: 15px;
+  font-size: 8px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--stamp-color);
+  padding: 3px 6px;
+  border-radius: 2px;
+}
+
+.cm-stamp-status b{
+  color: #FFF;
+}
+
+/* Color variants */
+.cm-stamp.color-ciudadanos { --stamp-color: #6A93B5; }
+.cm-stamp.color-criminales { --stamp-color: #323A5F; }
+.cm-stamp.color-seguridad { --stamp-color: #7c3535; }
+.cm-stamp.color-empresarios { --stamp-color: #873E65; }
+.cm-stamp.color-celebridades { --stamp-color: #6F628A; }
+.cm-stamp.color-sami { --stamp-color: #B88A99; }
+.cm-stamp.color-refineria { --stamp-color: #5D7260; }
+.cm-stamp.color-pescadores { --stamp-color: #4D919F; }
+.cm-stamp.color-salud { --stamp-color: #7DAE9B; }
+
+.signature-catta {
+  margin-top: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

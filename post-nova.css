@@ -1,0 +1,251 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+word-break: auto-phrase;
+}
+
+.cm-nova-contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    color: var(--background-1);
+    background: transparent;
+}
+
+.cm-nova-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.cm-nova-titulo-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  text-align: center;
+  padding: 10px;
+  min-height: 60px;
+  max-width: 100%;
+  overflow: hidden;
+  flex: 1;        
+  min-width: 0; 
+  }
+
+.cm-nova-titulo {
+font-size: 24px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--cm-nova-accent1);
+  display: block;
+  width: 100%;
+  max-width: 100%;  
+  white-space: normal;  
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.cm-nova-separador {
+    width: 2px;
+    background: var(--cm-nova-accent1);
+    min-height: 80px;
+    align-self: stretch;
+}
+
+.cm-nova-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 0 0 140px;
+}
+
+.cm-nova-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--cm-nova-accent1);
+    font-weight: 600;
+}
+
+.cm-nova-meta-item i {
+    font-size: 16px;
+}
+
+.cm-nova-post-header {
+    background: var(--cm-nova-accent1);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    border-radius: 4px;
+}
+
+.cm-nova-post-img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.cm-nova-post-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cm-nova-post-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cm-nova-post-titulo {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--background-1);
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cm-nova-post-meta {
+    font-size: 14px;
+    color: var(--cborder);
+}
+
+.cm-nova-post-acciones {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cm-nova-post-acciones i {
+    font-size: 24px;
+    color: var(--background-2);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cm-nova-post-acciones i:hover {
+    color: var(--background-2);
+}
+
+.cm-nova-contenido {
+    padding: 20px;
+    background: transparent;
+    line-height: 1.8;
+    font-size: 14px;
+    color: var(--color);
+    overflow: visible;
+    height: auto;
+}
+
+.cm-nova-contenido i {
+    color: var(--cm-nova-accent1);
+    font-style: italic;
+}
+
+.cm-nova-contenido img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.cm-nova-player {
+    background: var(--cm-nova-accent1);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.cm-nova-player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+.cm-nova-player-controls i {
+    font-size: 20px;
+    color: var(--background-1);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cm-nova-player-controls i:hover {
+    color: var(--cborder);
+}
+
+.cm-nova-player-controls .fa-play {
+    font-size: 32px;
+    color: var(--cborder);
+}
+
+.cm-nova-player-progress {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cm-nova-time {
+    font-size: 12px;
+    color: var(--background-1);
+    min-width: 35px;
+}
+
+.cm-nova-progress-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--cborder);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cm-nova-progress-fill {
+    height: 100%;
+    width: 2%;
+    background: var(--background-1);
+    border-radius: 2px;
+}
+.signature-catta {
+    margin-top: 5px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #fff;
+}

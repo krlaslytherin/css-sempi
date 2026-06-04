@@ -1,0 +1,297 @@
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.cm-kirste-base{
+  max-width:600px;
+  margin:0 auto;
+  position:relative;
+  padding:30px;  
+  background:url("https://imgur.com/ZkMsnhT.jpg") center/1000px auto fixed no-repeat;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+.cm-kirste-base:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right,var(--kirste-var1),var(--kirste-var2) 80%);
+  mix-blend-mode:color;
+  opacity:1;
+  pointer-events:none;
+  z-index:0;
+}
+
+.cm-kirste-base br{
+  display: none !important;
+}
+
+.cm-kirste-caja,
+.cm-kirste-datos{
+  position:relative;
+  z-index:1;
+}
+
+/* caja principal */
+.cm-kirste-caja{
+  background:var(--bckg-1);
+  padding:44px 38px 28px;
+  box-sizing:border-box;
+  border:10px solid var(--bckg-1);
+  position:relative;
+}
+
+.cm-kirste-caja:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:3px;
+  background:linear-gradient(135deg,var(--kirste-var1),var(--kirste-var2));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+}
+
+/* cabecera */
+.cm-kirste-cabecera{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  margin-bottom:30px;
+}
+
+.cm-kirste-cabecera:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-14px;
+  height:3px;
+  background:var(--kirste-var1);
+}
+
+/* icono */
+.cm-kirste-icono{
+  width:105px;
+  height:105px;
+  border-radius:50%;
+  background:linear-gradient(100deg,var(--kirste-var1),var(--kirste-var2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.cm-kirste-icono i{
+  color:var(--bckg-1);
+  font-size:38px;
+}
+
+/* títulos */
+.cm-kirste-titulo{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size:39px;
+  line-height:1;
+  color:var(--kirste-var1);
+}
+
+.cm-kirste-subtitulo{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size:15px;
+  color:var(--kirste-var2);
+  margin-top:6px;
+}
+
+/* texto */
+.cm-kirste-texto{
+  line-height:1.35;
+  text-align:justify;
+  overflow-wrap:break-word;
+
+  hyphens:none!important;
+  -webkit-hyphens:none!important;
+}
+
+.cm-kirste-texto br{
+  display: block !important;
+}
+
+/* estilos internos */
+.cm-kirste-texto b,
+.cm-kirste-texto strong{
+  color:var(--kirste-var1)!important;
+  font-weight:bold!important;
+}
+
+.cm-kirste-texto i,
+.cm-kirste-texto em{
+  color:var(--kirste-var1)!important;
+  font-style:italic!important;
+}
+
+/* datos */
+.cm-kirste-datos{
+  display:flex;
+  justify-content:space-between;
+  gap:28px;
+  margin-top:24px;
+}
+
+.cm-kirste-dato{
+  flex:1;
+  height:31px;
+  background:var(--kirste-var1);
+  color:var(--bckg-1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size:14px;
+  box-sizing:border-box;
+}
+
+.cm-kirste-dato i{
+  color:var(--bckg-1);
+  font-size:12px;
+}
+
+.cm-kirste-dato a{
+  color:var(--bckg-1);
+  font-size:12px;
+}
+
+
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

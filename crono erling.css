@@ -1,0 +1,384 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+
+.cm-cronologia-container {
+max-width: 650px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+  border: 4px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.9);
+  font-family: 'Courier New', monospace;
+}
+
+.cm-cronologia-container br {
+  display: none;
+}
+
+.cm-header-board {
+  background: linear-gradient(180deg, #1a1a1a, #0a0a0a);
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 2px solid #333;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.cm-icono-departures {
+  font-size: 32px;
+  color: var(--color-principal);
+  filter: drop-shadow(0 0 10px var(--color-principal));
+}
+
+.cm-titulo-board {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-principal);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px var(--color-principal);
+}
+
+.cm-tabla-cronologia {
+  background: #000;
+  border: 3px solid #2a2a2a;
+  border-radius: 6px;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.9);
+  max-height: 800px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cm-cabecera-tabla {
+  display: grid;
+  grid-template-columns: 85px 120px 1fr 120px 70px 60px;
+  gap: 8px;
+  padding: 12px 15px;
+  background: linear-gradient(180deg, #1a1a1a, #0a0a0a);
+  border-bottom: 2px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+.cm-contenido-scroll {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.cm-contenido-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.cm-contenido-scroll::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-left: 1px solid #1a1a1a;
+}
+
+.cm-contenido-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #333, #1a1a1a);
+  border-radius: 5px;
+  border: 1px solid #2a2a2a;
+}
+
+.cm-contenido-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #444, #2a2a2a);
+}
+
+.cm-columna-titulo {
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.cm-linea-vuelo {
+  display: grid;
+ grid-template-columns: 85px 120px 1fr 120px 70px 60px;
+  gap: 8px; 
+  padding: 12px 15px;
+  background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  border-bottom: 1px solid #1a1a1a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cm-linea-vuelo::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-principal);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cm-linea-vuelo:hover {
+  background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  border-left: 3px solid var(--color-principal);
+  padding-left: 12px;
+  box-shadow: inset 0 0 20px rgba(var(--color-r), var(--color-g), var(--color-b), 0.2);
+}
+
+.cm-linea-vuelo:hover::before {
+  opacity: 1;
+}
+
+.cm-dato-hora {
+  color: var(--color-principal);
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--color-principal);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.cm-dato-lugar {
+  color: var(--color-principal);
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--color-principal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.cm-dato-tema {
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cm-dato-quien {
+  color: #aaa;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.cm-dato-quien.quien-ciudadanos { color: #6A93B5; text-shadow: 0 0 5px #6A93B5; }
+.cm-dato-quien.quien-criminales { color: #323A5F; text-shadow: 0 0 5px #323A5F; }
+.cm-dato-quien.quien-seguridad { color: #7c3535; text-shadow: 0 0 5px #7c3535; }
+.cm-dato-quien.quien-empresarios { color: #873E65; text-shadow: 0 0 5px #873E65; }
+.cm-dato-quien.quien-celebridades { color: #6F628A; text-shadow: 0 0 5px #6F628A; }
+.cm-dato-quien.quien-sami { color: #B88A99; text-shadow: 0 0 5px #B88A99; }
+.cm-dato-quien.quien-refineria { color: #5D7260; text-shadow: 0 0 5px #5D7260; }
+.cm-dato-quien.quien-pescadores { color: #4D919F; text-shadow: 0 0 5px #4D919F; }
+.cm-dato-quien.quien-salud { color: #7DAE9B; text-shadow: 0 0 5px #7DAE9B; }
+.cm-dato-quien.quien-comercios { color: #BFB069; text-shadow: 0 0 5px #BFB069; }
+
+
+.cm-dato-estado {
+  color: #888;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cm-icono-candado {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cm-candado-abierto {
+  color: #4caf50;
+  filter: drop-shadow(0 0 6px #4caf50);
+}
+
+.cm-candado-cerrado {
+  color: #f44336;
+  filter: drop-shadow(0 0 6px #f44336);
+}
+
+.cm-estado-activo {
+  color: #4caf50;
+  text-shadow: 0 0 6px #4caf50;
+}
+
+.cm-estado-finalizado {
+  color: #888;
+}
+
+.cm-estado-pausado {
+  color: #ff9800;
+  text-shadow: 0 0 6px #ff9800;
+}
+
+.cm-linea-vuelo:hover .cm-dato-tema {
+  color: var(--color-principal);
+  text-shadow: 0 0 8px var(--color-principal);
+}
+
+.cm-separador-tabla {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #333 50%, transparent 100%);
+  margin: 5px 0;
+}
+
+.cm-separador-mes {
+  padding: 15px 20px;
+  background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.9);
+}
+
+.cm-icono-calendario {
+  font-size: 20px;
+  color: var(--color-principal);
+  filter: drop-shadow(0 0 8px var(--color-principal));
+}
+
+.cm-texto-mes {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-principal);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--color-principal);
+}
+
+.cm-footer-board {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+  border-radius: 6px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 10px;
+}
+
+.cm-leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #888;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cm-leyenda-icon {
+  font-size: 12px;
+}
+
+@media (max-width: 650px) {
+  .cm-cabecera-tabla,
+  .cm-linea-vuelo {
+    grid-template-columns: 80px 1fr 60px;
+    gap: 8px;
+    font-size: 11px;
+  }
+  
+  .cm-columna-titulo:nth-child(3),
+  .cm-columna-titulo:nth-child(4),
+  .cm-columna-titulo:nth-child(5),
+  .cm-dato-lugar,
+  .cm-dato-quien,
+  .cm-dato-estado {
+    display: none;
+  }
+  
+  .cm-dato-hora {
+    font-size: 13px;
+  }
+  
+  .cm-dato-tema {
+    font-size: 12px;
+  }
+  
+  .cm-titulo-board {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cm-cronologia-container {
+    padding: 15px;
+  }
+  
+  .cm-header-board {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .cm-footer-board {
+    flex-direction: column;
+    gap: 10px;
+  }
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}
+}

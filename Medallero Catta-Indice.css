@@ -1,0 +1,152 @@
+body{
+--background-2: var(--bckg-2);
+--background-1: var(--bckg-1);
+--background-3: var(--bckg-3);
+--accent: var(--acc-1);
+--cborder: var(--brd-c);
+--color-icon: var(--cicon);
+--color: var(--color-text);
+--g1: var(--staff);
+--g2: var(--ciudadanos);
+--g3: var(--celebridades);
+--g4: var(--sanidad);
+--g5: var(--seguridad);
+--g6: var(--empresarios);
+--g7: var(--criminales);
+--g8: var(--pesca);
+--g9: var(--refineria);
+--g10: var(--sami);
+--g11: var(--pnj);
+--g12: var(--inactivos);
+}
+
+.cm-indice {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+.cm-indice-folder {
+  background: #c9b896;
+  padding: 25px 15px 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.cm-indice-tab {
+  position: absolute;
+  top: 50px;
+  right: -15px;
+  width: 25px;
+  height: 150px;
+  background: #c9b896;
+  border-radius: 0 8px 8px 0;
+}
+
+.cm-indice-content {
+  background: var(--background-1, #1a1a1a);
+  padding: 40px 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  border: 1px solid #333;
+}
+
+.cm-indice-header {
+  text-align: center;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #333;
+}
+
+.cm-indice-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.cm-indice-hashtag {
+  color: var(--color-indice);
+}
+
+.cm-indice-subtitle {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.6;
+}
+
+.cm-indice-highlight {
+  color: var(--color-indice);
+  font-style: italic;
+}
+
+.cm-indice-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cm-link-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #2a2a2a;
+  border-radius: 15px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cm-link-item:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--color-indice);
+  transform: translateX(5px);
+}
+
+.cm-link-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-indice);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cm-link-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-indice) 0%, var(--color-indice-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  box-shadow: 0 0 15px rgba(184, 138, 153, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cm-link-item:hover .cm-link-icon {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(184, 138, 153, 0.5);
+}
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}
