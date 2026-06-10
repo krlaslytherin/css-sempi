@@ -1,0 +1,193 @@
+.cm-wiki-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.cm-wiki-wrap * {
+    box-sizing: border-box
+}
+
+.cm-wiki-wrap br {
+    display: none !important;
+}
+
+.cm-wiki-header {
+    border-bottom: 1px solid var(--brd-c);
+    margin-bottom: 12px
+}
+
+.cm-wiki-title {
+    font-family: Linux Libertine, Georgia, Times, serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0
+}
+
+.cm-wiki-infobox {
+    float: right;
+    clear: right;
+    margin: 0 0 16px 20px;
+    padding: 6px;
+    background: var(--bckg-2);
+    border: 1px solid var(--brd-c);
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 260px;
+    width: 100%
+}
+
+.cm-wiki-infobox table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.cm-wiki-infobox-title {
+    background: var(--bckg-2);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 8px
+}
+
+.cm-wiki-infobox-subtitle {
+    text-align: center;
+    font-size: 12px;
+    color: var(--wiki-acc1);
+    padding: 2px 6px 4px
+}
+
+.cm-wiki-infobox-img {
+    text-align: center;
+    padding: 6px 0
+}
+
+.cm-wiki-infobox-img img {
+    max-width: 100%;
+    height: auto
+}
+
+.cm-wiki-infobox-imgcap {
+    text-align: center;
+    font-size: 11px;
+    color: var(--wiki-acc1);
+    padding: 2px 4px 6px
+}
+
+.cm-wiki-infobox-label {
+    color: var(--color-text);
+    font-weight: normal;
+    white-space: nowrap;
+    width: 40%;
+    padding: 3px 6px;
+    vertical-align: top;
+    border-top: 1px solid var(--brd-c)
+}
+
+.cm-wiki-infobox-value {
+    color: var(--color-text);
+    padding: 3px 6px;
+    vertical-align: top;
+    border-top: 1px solid var(--brd-c)
+}
+
+.cm-wiki-infobox-value a,
+.cm-wiki-infobox-value a:visited {
+    color: var(--wiki-acc1);
+    text-decoration: none
+}
+
+.cm-wiki-infobox-value b {
+    color: var(--wiki-acc1);
+}
+
+
+.cm-wiki-infobox-value a:hover {
+    text-decoration: underline
+}
+
+.cm-wiki-infobox-section {
+    background: var(--bckg-1);
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 4px 6px
+}
+
+.cm-wiki-body {
+    overflow: hidden
+}
+
+.cm-wiki-body a,
+.cm-wiki-body a:visited {
+    color: var(--wiki-acc1);
+    text-decoration: none
+}
+
+.cm-wiki-body a:hover {
+    text-decoration: underline
+}
+
+.cm-wiki-lead {
+    margin-bottom: 12px
+}
+
+.cm-wiki-section-title {
+    font-family: Linux Libertine, Georgia, Times, serif;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid var(--brd-c);
+    padding-bottom: 2px;
+    margin: 18px 0 8px
+}
+
+.cm-wiki-section-subtitle {
+    font-family: Linux Libertine, Georgia, Times, serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 14px 0 6px
+}
+
+.cm-wiki-p {
+    margin: 0 0 10px
+}
+
+.cm-wiki-p br {
+    display: block !important;
+}
+
+.cm-wiki-icon {
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+    margin-right: 3px;
+    color: var(--brd-c)
+}
+
+.cm-wiki-clearfix::after {
+    content: '';
+    display: table;
+    clear: both
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}
