@@ -1,0 +1,249 @@
+.cm-cuma-altar br {
+  display: none !important;
+}
+
+/* === ALTAR PRINCIPAL === */
+.cm-cuma-altar {
+  max-width: 650px;
+  margin: 40px auto;
+  background:
+    linear-gradient(180deg, #e8d3ab 0%, #d9bd8c 100%),
+    repeating-linear-gradient(90deg,
+      transparent 0px,
+      rgba(120,90,50,0.05) 1px,
+      transparent 2px,
+      transparent 60px
+    );
+  border: 4px solid #c9a876;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow:
+    inset 0 0 30px rgba(120,90,50,0.2),
+    0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+ 
+.cm-cuma-altar::before {
+  content: '';
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  border: 2px solid rgba(184,153,104,0.4);
+  border-radius: 8px;
+  pointer-events: none;
+}
+ 
+/* === MANDALA CENTRAL === */
+.cm-cuma-mandala {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 20px rgba(120,90,50,0.25),
+    0 4px 15px rgba(0,0,0,0.3);
+  border: 3px solid rgba(184,153,104,0.6);
+  background: rgba(120,90,50,0.1);
+}
+ 
+.cm-cuma-imagen-mandala {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+ 
+/* === CONTENEDOR DE NICHOS === */
+.cm-cuma-contenedor-nichos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  perspective: 1000px;
+}
+ 
+/* === SEPARADOR DE MES === */
+.cm-cuma-separador-mes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0 4px;
+  color: #4a3728;
+  font-family: 'Georgia', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+ 
+.cm-cuma-separador-mes::before,
+.cm-cuma-separador-mes::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b89968, transparent);
+}
+ 
+/* === NICHO (estatua) === */
+.cm-cuma-nicho {
+  width: 100px;
+  height: 170px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+ 
+.cm-cuma-nicho-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+ 
+.cm-cuma-nicho:hover .cm-cuma-nicho-inner {
+  transform: rotateY(180deg);
+}
+ 
+/* === FRENTE Y REVERSO === */
+.cm-cuma-nicho-frente,
+.cm-cuma-nicho-reverso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+ 
+/* === FRENTE (imagen de la estatua, sin caja: solo la figura "flotando") === */
+.cm-cuma-nicho-frente {
+  background: transparent;
+  border: 3px solid transparent;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.cm-cuma-nicho:hover .cm-cuma-nicho-frente {
+  background: linear-gradient(135deg, #f2e2bf 0%, #e3c99e 100%);
+  border-color: #b89968;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+ 
+.cm-cuma-nicho-reverso {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+ 
+.cm-cuma-imagen-estatua {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+ 
+/* === REVERSO (datos del tema) === */
+.cm-cuma-nicho-reverso {
+  background: linear-gradient(135deg, #2c2416 0%, #1a1510 100%);
+  border: 3px solid #b89968;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 1px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+ 
+.cm-cuma-nicho-reverso::-webkit-scrollbar { width: 4px; }
+.cm-cuma-nicho-reverso::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.3);
+  border-radius: 2px;
+}
+.cm-cuma-nicho-reverso::-webkit-scrollbar-thumb {
+  background: #b89968;
+  border-radius: 2px;
+}
+.cm-cuma-nicho-reverso::-webkit-scrollbar-thumb:hover { background: #d9bd8c; }
+ 
+.cm-cuma-icono {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  background: linear-gradient(135deg, #faf5e6 0%, #ecdfc0 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+ 
+.cm-cuma-icono i {
+  font-size: 18px;
+  color: #4a3728;
+}
+ 
+.cm-cuma-nombre-tema {
+  color: #f8f4e8;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  margin-bottom: 10px;
+  line-height: 0.95;
+  display: block;
+}
+ 
+.cm-cuma-info-con,
+.cm-cuma-info-fecha,
+.cm-cuma-info-lugar {
+  color: #d4c4aa;
+  font-size: 9px !important;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  display: inline;
+  margin: -2px 0;
+  line-height: 1;
+}
+ 
+.cm-cuma-info-con { font-style: italic; }
+ 
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cm-cuma-altar { max-width: 100%; padding: 30px 20px; }
+  .cm-cuma-mandala { width: 240px; height: 240px; margin-bottom: 30px; }
+  .cm-cuma-nicho { width: 90px; height: 150px; }
+  .cm-cuma-contenedor-nichos { gap: 12px; }
+  .cm-cuma-nombre-tema { font-size: 11px; }
+  .cm-cuma-info-con, .cm-cuma-info-fecha, .cm-cuma-info-lugar {
+    font-size: 8px !important;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .cm-cuma-mandala { width: 200px; height: 200px; }
+  .cm-cuma-nicho { width: 85px; height: 140px; }
+  .cm-cuma-icono { width: 35px; height: 35px; }
+  .cm-cuma-icono i { font-size: 16px; }
+  .cm-cuma-nombre-tema { font-size: 10px; }
+  .cm-cuma-info-con, .cm-cuma-info-fecha, .cm-cuma-info-lugar { font-size: 7px; }
+}
+ 
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+.signature-catta a { color: #aaa; text-decoration: none; transition: color 0.3s; }
+.signature-catta a:hover { color: #666; }
