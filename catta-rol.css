@@ -166,14 +166,14 @@ word-break: auto-phrase;
     margin-top: 20px;
 }
 
-.cm-catta-signature img {
+.content.clearfix .cm-catta-signature img, .cm-catta-signature img {
     max-width: 150px;
     height: auto;
     opacity: 0.8;
 }
 
 .style-sigrid {
-  color: var(--g10);
+  color: var(--sami);
   font-weight: 700;
 }
 
