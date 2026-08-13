@@ -1,0 +1,159 @@
+.cm-sigrid-post-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 38px 44px 42px;
+  background: var(--bckg-1);
+  border: 1px solid var(--brd-c);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.12);
+  isolation: isolate;
+}
+
+.cm-sigrid-post-wrap br {
+  display: none !important;
+}
+
+.cm-sigrid-post-wrap::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  border: 1px solid var(--sigrid-acc1);
+  opacity: 0.3;
+  z-index: 10;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.cm-sigrid-post-wrap::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  bottom: 16px;
+  right: -14px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--sigrid-acc1),
+    transparent
+  );
+  opacity: 0.6;
+  transform: rotate(45deg);
+  z-index: 11;
+  pointer-events: none;
+}
+
+.cm-sigrid-post-head {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.cm-sigrid-post-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--sigrid-acc1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sigrid-acc1);
+  font-size: 16px;
+}
+
+.cm-sigrid-post-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cm-sigrid-post-meta {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 20px;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--brd-c);
+  font-size: 11px;
+  justify-content: center;
+}
+
+.cm-sigrid-post-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.75;
+  letter-spacing: 0.3px;
+}
+
+.cm-sigrid-post-meta i {
+  font-size: 10px;
+  color: var(--sigrid-acc1);
+}
+
+.cm-sigrid-post-body {
+  position: relative;
+  z-index: 2;
+  min-height: 130px;
+  padding: 4px 2px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family: "Inter", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--color-text);
+  caret-color: var(--sigrid-acc2);
+  outline: none;
+  overflow: visible;
+}
+
+.cm-sigrid-post-body br {
+  display: block !important;
+}
+
+.cm-sigrid-post-body:empty::before {
+  content: attr(data-placeholder);
+  opacity: 0.4;
+  font-style: italic;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+}
+
+.cm-sigrid-post-body::first-letter {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--sigrid-acc2);
+  float: left;
+  line-height: 0.8;
+  padding: 6px 8px 0 0;
+}
+
+.cm-sigrid-post-body::selection {
+  background: var(--sigrid-acc1);
+  color: var(--sigrid-acc2);
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+.signature-catta a { color: #aaa; text-decoration: none; transition: color 0.3s; }
+.signature-catta a:hover { color: #666; }

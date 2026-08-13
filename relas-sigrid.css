@@ -1,0 +1,174 @@
+.cm-sigrid-rel-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+  padding: 30px 28px 26px;
+  background: var(--bckg-1);
+  border: 1px solid var(--brd-c);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.12);
+}
+
+.cm-sigrid-rel-wrap br {
+  display: none !important;
+}
+
+.cm-sigrid-rel-wrap:before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--sigrid-acc1);
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cm-sigrid-rel-wrap:after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  bottom: 16px;
+  right: -14px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--sigrid-acc1),
+    transparent
+  );
+  opacity: 0.6;
+  transform: rotate(45deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cm-sigrid-rel-eyebrow {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sigrid-acc2);
+  opacity: 0.65;
+  margin-bottom: 22px;
+}
+
+.cm-sigrid-rel-grid {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cm-sigrid-rel-card {
+  margin-top: 10px;
+  flex: 1 1 190px;
+  max-width: 206px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 22px 14px 18px;
+  background: var(--bckg-2);
+  border: 1px solid var(--brd-c);
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cm-sigrid-rel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.cm-sigrid-rel-trace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 104px;
+  z-index: 1;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.cm-sigrid-rel-trace path {
+  fill: none;
+  stroke: var(--sigrid-rel-c);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.cm-sigrid-rel-photowrap {
+  position: relative;
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  padding: 3px;
+  border-radius: 50%;
+  border: 2px solid var(--sigrid-rel-c);
+}
+
+.cm-sigrid-rel-photowrap.cm-sigrid-rel-key {
+  box-shadow:
+    0 0 0 4px var(--bckg-2),
+    0 0 0 6px var(--sigrid-rel-c);
+}
+
+.cm-sigrid-rel-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.cm-sigrid-rel-name {
+  position: relative;
+  z-index: 2;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cm-sigrid-rel-line {
+  position: relative;
+  z-index: 2;
+  width: 26px;
+  height: 1px;
+  margin: 0 auto 9px;
+  background: var(--sigrid-rel-c);
+  opacity: 0.7;
+}
+
+.cm-sigrid-rel-type {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 9.5px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--sigrid-rel-c);
+  opacity: 0.9;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+.signature-catta a { color: #aaa; text-decoration: none; transition: color 0.3s; }
+.signature-catta a:hover { color: #666; }
