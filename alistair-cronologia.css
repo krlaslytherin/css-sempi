@@ -1,0 +1,178 @@
+.cm-alistair-cronologia-wrap{
+  display:flex;
+  justify-content:center;
+  padding:24px 12px;
+  font-family:'Segoe UI', system-ui, sans-serif;
+}
+ 
+.cm-alistair-cronologia-wrap br{
+  display:none !important;
+}
+ 
+.cm-alistair-cronologia-book{
+  width:100%;
+  max-width:620px;
+  background:
+    repeating-linear-gradient(180deg, transparent 0px, transparent 30px, rgba(47,110,99,.09) 31px),
+    linear-gradient(180deg, #f7f3e6, #efe8d4);
+  border-radius:4px;
+  padding:26px 28px 22px 40px;
+  box-shadow:0 18px 30px -18px rgba(20,30,28,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+  color:#26332f;
+  position:relative;
+}
+.cm-alistair-cronologia-book::before{
+  content:"";
+  position:absolute;
+  left:26px; top:0; bottom:0;
+  width:1px;
+  background:rgba(217,122,92,.4);
+}
+ 
+.cm-alistair-cronologia-title{
+  text-align:center;
+  padding-bottom:14px;
+  margin-bottom:18px;
+  border-bottom:2px solid var(--cm-alistair-cronologia-1);
+}
+.cm-alistair-cronologia-eyebrow{
+  display:block;
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--cm-alistair-cronologia-1);
+  margin-bottom:4px;
+}
+.cm-alistair-cronologia-heading{
+  margin:0;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1.6rem;
+}
+ 
+.cm-alistair-cronologia-month{ margin-bottom:20px; }
+.cm-alistair-cronologia-month:last-of-type{ margin-bottom:16px; }
+ 
+.cm-alistair-cronologia-month-name{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin:0 0 10px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1.05rem;
+  color:var(--cm-alistair-cronologia-1);
+}
+.cm-alistair-cronologia-month-icon{
+  font-size:.95rem;
+  color:var(--cm-alistair-cronologia-2);
+}
+ 
+.cm-alistair-cronologia-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+ 
+.cm-alistair-cronologia-entry{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding-bottom:10px;
+  border-bottom:1px dotted rgba(38,51,47,.25);
+}
+.cm-alistair-cronologia-entry:last-child{ border-bottom:none; }
+ 
+.cm-alistair-cronologia-status{
+  flex-shrink:0;
+  width:24px; height:24px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  margin-top:1px;
+}
+.cm-alistair-cronologia-status i{ font-size:.72rem; }
+.cm-alistair-cronologia-status.is-abierto{
+  background:rgba(127,184,172,.25);
+  color:var(--cm-alistair-cronologia-1);
+}
+.cm-alistair-cronologia-status.is-cerrado{
+  background:rgba(38,51,47,.12);
+  color:#5b6a63;
+}
+.cm-alistair-cronologia-status.is-abandonado{
+  background:rgba(217,122,92,.18);
+  color:#b5573b;
+}
+ 
+.cm-alistair-cronologia-info{ flex:1; min-width:0; }
+.cm-alistair-cronologia-topic{
+  display:block;
+  font-weight:600;
+  font-size:.92rem;
+  color:#26332f;
+  text-decoration:none;
+  border-bottom:1px solid var(--cm-alistair-cronologia-1);
+}
+.cm-alistair-cronologia-topic:hover{
+  color:var(--cm-alistair-cronologia-1);
+}
+.cm-alistair-cronologia-topic--muted{ color:#5b6a63; }
+ 
+.cm-alistair-cronologia-meta{
+  margin:3px 0 0;
+  font-size:.76rem;
+  color:#5b6a63;
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  align-items:center;
+}
+.cm-alistair-cronologia-dot{ opacity:.5; }
+ 
+/* Nombre de "con quién": color según el grupo de esa persona */
+.cm-alistair-cronologia-person{ font-weight:700; }
+.cm-alistair-cronologia-person--ciudadanos{ color:#6A93B5; }
+.cm-alistair-cronologia-person--celebridades{ color:#6F628A; }
+.cm-alistair-cronologia-person--sanidad{ color:#7DAE9B; }
+.cm-alistair-cronologia-person--seguridad{ color:#7c3535; }
+.cm-alistair-cronologia-person--empresarios{ color:#873E65; }
+.cm-alistair-cronologia-person--criminales{ color:#323A5F; }
+.cm-alistair-cronologia-person--pesca{ color:#4D919F; }
+.cm-alistair-cronologia-person--refineria{ color:#5D7260; }
+.cm-alistair-cronologia-person--sami{ color:#B88A99; }
+.cm-alistair-cronologia-person--comercio-industria{ color:#BFB069; }
+ 
+.cm-alistair-cronologia-legend{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  padding-top:12px;
+  margin-top:4px;
+  border-top:1px solid rgba(38,51,47,.15);
+}
+.cm-alistair-cronologia-legend-item{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  font-size:.7rem;
+  color:#5b6a63;
+}
+.cm-alistair-cronologia-legend-item i{
+  font-size:.68rem;
+  color:var(--cm-alistair-cronologia-1);
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

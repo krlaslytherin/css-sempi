@@ -1,0 +1,120 @@
+.cm-post-christoffer{
+  box-sizing:border-box;
+  max-width:620px;
+  width:100%;
+  padding:46px 44px 30px;
+  background:var(--bckg-2);
+  color:var(--color-text);
+  border:1px solid var(--brd-c);
+  outline:1px solid var(--cm-post-christoffer-1);
+  outline-offset:-11px;
+  margin:0 auto; 
+}
+.cm-post-christoffer br{
+  display: none !important;
+}
+.cm-post-christoffer-title{
+  margin:0;
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:26px;
+  line-height:1.25;
+  letter-spacing:.5px;
+  color:var(--color-text);
+}
+.cm-post-christoffer-title span{
+  display:block;
+}
+.cm-post-christoffer-rule{
+  display:block;
+  width:36px;
+  height:1px;
+  margin:18px auto 26px;
+  background:var(--cm-post-christoffer-1);
+}
+.cm-post-christoffer-body{
+  overflow-wrap:break-word;
+  word-wrap:break-word;
+}
+.cm-post-christoffer-body div{
+  margin:0 0 18px;
+}
+.cm-post-christoffer-body::first-letter{
+  float:left;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:58px;
+  line-height:.8;
+  padding:2px 14px 0 0;
+  color:var(--cm-post-christoffer-1);
+}
+
+  .cm-post-christoffer-body br{
+  display: block !important;
+}
+  
+.cm-post-christoffer-footer{
+  margin-top:50px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.cm-post-christoffer-ft{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:14.5px;
+  color:var(--color-text);
+  opacity:.85;
+}
+.cm-post-christoffer-line{
+  display:block;
+  height:1px;
+  margin-right:4px;
+  background:var(--brd-c);
+}
+.cm-post-christoffer-ft a{
+  color:var(--cm-post-christoffer-1);
+  text-decoration:none;
+}
+.cm-post-christoffer-meta{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.cm-post-christoffer-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 12px;
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:12px;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  color:var(--color-text);
+  border:1px solid var(--brd-c);
+}
+.cm-post-christoffer-tag i{
+  font-size:11px;
+  color:var(--cm-post-christoffer-1);
+}
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

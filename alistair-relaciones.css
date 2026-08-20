@@ -1,0 +1,169 @@
+.cm-alistair-relaciones-wrap{
+  display:flex;
+  justify-content:center;
+  padding:24px 12px;
+  font-family:'Segoe UI', system-ui, sans-serif;
+}
+
+.cm-alistair-relaciones-wrap br{
+  display:none !important;
+}
+
+.cm-alistair-relaciones-guide{
+  width:100%;
+  max-width:640px;
+  background:linear-gradient(180deg, #f2ecdd, #e9e0c9);
+  border-radius:6px;
+  padding:26px 28px 30px;
+  box-shadow:0 18px 30px -18px rgba(20,30,28,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+  color:#26332f;
+}
+
+.cm-alistair-relaciones-title{
+  text-align:center;
+  padding-bottom:16px;
+  margin-bottom:20px;
+  border-bottom:2px solid var(--cm-alistair-relaciones-1);
+}
+.cm-alistair-relaciones-eyebrow{
+  display:block;
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--cm-alistair-relaciones-1);
+  margin-bottom:4px;
+}
+.cm-alistair-relaciones-heading{
+  margin:0;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1.7rem;
+  color:#26332f;
+}
+
+.cm-alistair-relaciones-family{ margin-bottom:26px; }
+.cm-alistair-relaciones-family:last-child{ margin-bottom:0; }
+
+.cm-alistair-relaciones-family-name{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:.86rem;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--cm-alistair-relaciones-1);
+  margin:0 0 14px;
+  padding-bottom:6px;
+  border-bottom:1px dotted rgba(38,51,47,.35);
+}
+.cm-alistair-relaciones-family-name i{
+  font-size:.95rem;
+  width:16px;
+  text-align:center;
+  flex-shrink:0;
+  color:var(--cm-alistair-relaciones-1);
+}
+.cm-alistair-relaciones-latin{
+  font-style:italic;
+  font-weight:600;
+  color:#26332f;
+}
+.cm-alistair-relaciones-sub{
+  font-weight:400;
+  color:#5b6a63;
+  font-size:.78rem;
+}
+
+.cm-alistair-relaciones-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.cm-alistair-relaciones-card{
+  display:flex;
+  flex-direction:column;
+  flex:1 1 calc(33.333% - 11px);
+  min-width:160px;
+  box-sizing:border-box;
+  background:rgba(255,255,255,.4);
+  border:1px solid rgba(38,51,47,.12);
+  border-radius:4px;
+  padding:14px 14px 16px;
+  text-align:center;
+}
+.cm-alistair-relaciones-card--importante{
+  border-color:var(--card-color, var(--cm-alistair-relaciones-1));
+  box-shadow:0 0 0 1px var(--card-color, var(--cm-alistair-relaciones-1)) inset;
+}
+
+.cm-alistair-relaciones-frame{
+  position:relative;
+  width:76px;
+  height:76px;
+  margin:0 auto 10px;
+}
+.cm-alistair-relaciones-frame img{
+  width:100%; height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid #f2ecdd;
+  box-shadow:0 0 0 2px var(--card-color, var(--cm-alistair-relaciones-2));
+  display:block;
+}
+.cm-alistair-relaciones-card--importante .cm-alistair-relaciones-frame img{
+  box-shadow:0 0 0 3px var(--card-color, var(--cm-alistair-relaciones-1));
+}
+.cm-alistair-relaciones-badge{
+  position:absolute;
+  right:-4px; bottom:-4px;
+  width:24px; height:24px;
+  background:#f2ecdd;
+  border:2px solid var(--card-color, var(--cm-alistair-relaciones-1));
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--card-color, var(--cm-alistair-relaciones-1));
+}
+.cm-alistair-relaciones-badge i{ font-size:.62rem; }
+
+.cm-alistair-relaciones-name{
+  display:block;
+  margin:0 0 3px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1rem;
+  color:#26332f;
+}
+.cm-alistair-relaciones-tag{
+  display:block;
+  margin:0 0 8px;
+  font-size:.72rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--card-color, var(--cm-alistair-relaciones-1));
+  font-weight:600;
+}
+.cm-alistair-relaciones-note{
+  display:block;
+  margin:0;
+  font-size:.8rem;
+  line-height:1.45;
+  color:#5b6a63;
+}
+  .signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+    color: #666;
+}
