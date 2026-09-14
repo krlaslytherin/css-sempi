@@ -135,6 +135,9 @@
   .cm-maren-tablilla-body br{
     display:block !important;
   }
+  .cm-maren-tablilla-body i{
+  color: color-mix(in srgb, var(--bmaren-accent) 90%, black)
+  }
   
   .cm-maren-tablilla-body::first-letter {
     font-family: 'Caveat', cursive;
