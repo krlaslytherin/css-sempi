@@ -1,0 +1,244 @@
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600&display=swap');
+
+  .cm-maren-cronologia {
+    font-family: 'Quicksand', sans-serif;
+    width: 750px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .cm-maren-cronologia br{
+    display: none !important;
+  }
+
+  .cm-maren-cronologia-title {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    margin: 0 0 20px;
+  }
+
+  .cm-maren-cronologia-input { display: none; }
+
+  .cm-maren-cronologia-tab {
+    display: inline-block;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    color: #A97D8C;
+    background: #F0E2DC;
+    padding: 8px 18px 7px;
+    margin: 0 3px -1px 0;
+    border: 1px solid rgba(107,67,86,0.14);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .cm-maren-cronologia-input:checked + .cm-maren-cronologia-tab {
+    background: #FBF3E7;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    top: 0;
+  }
+
+  .cm-maren-cronologia-panel {
+    display: none;
+    background-color: #FBF3E7;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(201,143,164,0.06) 0%, transparent 45%),
+      repeating-linear-gradient(0deg, rgba(107,67,86,0.015) 0px, rgba(107,67,86,0.015) 1px, transparent 1px, transparent 3px);
+    border: 1px solid rgba(107,67,86,0.14);
+    border-radius: 0 6px 6px 6px;
+    padding: 30px 26px 24px;
+    box-shadow: 0 10px 24px rgba(107,67,86,0.14);
+  }
+
+  #cm-maren-crono-tab-pasado:checked ~ #cm-maren-crono-panel-pasado,
+  #cm-maren-crono-tab-2026:checked ~ #cm-maren-crono-panel-2026,
+  #cm-maren-crono-tab-2027:checked ~ #cm-maren-crono-panel-2027,
+  #cm-maren-crono-tab-2028:checked ~ #cm-maren-crono-panel-2028 {
+    display: block;
+  }
+
+  /* --- separador de mes --- */
+  .cm-maren-cronologia-month {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    margin: 26px 0 14px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgba(107,67,86,0.28);
+  }
+  .cm-maren-cronologia-month:first-child { margin-top: 0; }
+
+  /* --- entrada --- */
+  .cm-maren-cronologia-entry {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    background: rgba(255,255,255,0.45);
+    border: 1px solid rgba(107,67,86,0.12);
+    border-radius: 4px;
+    box-shadow: 0 6px 14px rgba(107,67,86,0.09);
+  }
+
+  /* fecha tipo calendario "pegado" */
+  .cm-maren-cronologia-date-wrap {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  .cm-maren-cronologia-date-tape {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    width: 36px;
+    height: 14px;
+    background: repeating-linear-gradient(45deg, #E7B8C4, #E7B8C4 5px, var(--bmaren-accent) 5px, var(--bmaren-accent) 10px);
+    opacity: 0.9;
+    z-index: 2;
+  }
+  .cm-maren-cronologia-date {
+    width: 56px;
+    background: #fff;
+    border: 1px solid rgba(107,67,86,0.18);
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(107,67,86,0.2);
+    transform: rotate(-3deg);
+    overflow: hidden;
+  }
+  .cm-maren-cronologia-date-month-tab {
+    background: var(--bmaren-accent);
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px 0;
+    letter-spacing: 0.03em;
+  }
+  .cm-maren-cronologia-date-day {
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    padding: 6px 0 5px;
+  }
+
+  .cm-maren-cronologia-entry-body {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-right: 6px;
+  }
+
+  .cm-maren-cronologia-entry-title {
+    font-family: 'Caveat', cursive;
+    font-size: 23px;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(107,67,86,0.35);
+  }
+  .cm-maren-cronologia-entry-title:hover { color: #C98FA4; }
+
+  .cm-maren-cronologia-entry-meta {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--bmaren-accent) 90%, black);
+    margin-top: 5px;
+  }
+  .cm-maren-cronologia-person {
+    color: var(--group-color);
+    font-weight: 600;
+  }
+
+  .cm-maren-cronologia-status {
+    margin-left: 8px;
+  }
+  .cm-maren-cronologia-status i {
+    margin-right: 3px;
+  }
+  .cm-maren-cronologia-status--abierto { color: #8FA888; }
+  .cm-maren-cronologia-status--cerrado { color: #A97D8C; }
+  .cm-maren-cronologia-status--abandonado { color: #C98FA4; }
+
+  /* espacio más grande para anotaciones */
+  .cm-maren-cronologia-entry-note {
+    font-family: 'Caveat', cursive;
+    font-size: 17px;
+    line-height: 1.45;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(107,67,86,0.18);
+  }
+
+  /* polaroid pequeña, modular */
+  .cm-maren-cronologia-entry-photo {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 64px;
+    background: #fff;
+    padding: 5px 5px 16px;
+    box-shadow: 0 5px 10px rgba(107,67,86,0.2);
+    transform: rotate(4deg);
+  }
+  .cm-maren-cronologia-entry-photo img {
+    display: block;
+    width: 100%;
+    height: 56px;
+    object-fit: cover;
+    filter: sepia(0.12) saturate(1.05);
+  }
+
+  /* post-it, modular */
+  .cm-maren-cronologia-entry-postit {
+    position: absolute;
+    bottom: -12px;
+    right: 18px;
+    width: 74px;
+    background: #F7E1E6;
+    padding: 8px 7px 7px;
+    font-family: 'Caveat', cursive;
+    font-size: 13px;
+    line-height: 1.2;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    text-align: center;
+    transform: rotate(-4deg);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .cm-maren-cronologia-entry-flower {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 50px;
+    height: auto;
+    transform: rotate(-12deg);
+  }
+  .cm-maren-cronologia-entry-flower img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}

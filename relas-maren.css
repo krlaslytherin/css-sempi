@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600&display=swap');
+
+   .cm-maren-relaciones {
+    font-family: 'Quicksand', sans-serif;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .cm-maren-relaciones br {
+    display: none !important;
+  }
+
+  .cm-maren-relaciones-title {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    margin: 0 0 6px;
+  }
+
+  .cm-maren-relaciones-subtitle {
+    font-size: 12px;
+    text-align: center;
+    color: color-mix(in srgb, var(--bmaren-accent) 90%, black);
+    margin: 0 0 26px;
+  }
+
+  .cm-maren-relaciones-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 26px;
+  }
+
+  .cm-maren-relaciones-card {
+    box-sizing: border-box;
+    flex: 0 0 calc((100% - 52px) / 3);
+    position: relative;
+    background-color: #FBF3E7;
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(201,143,164,0.07) 0%, transparent 45%),
+      repeating-linear-gradient(0deg, rgba(107,67,86,0.015) 0px, rgba(107,67,86,0.015) 1px, transparent 1px, transparent 3px);
+    border: 1px solid rgba(107,67,86,0.14);
+    padding: 26px 14px 18px;
+    box-shadow: 0 10px 22px rgba(107,67,86,0.15);
+  }
+  .cm-maren-relaciones-card:nth-child(1) { transform: rotate(-2.5deg); }
+  .cm-maren-relaciones-card:nth-child(2) { transform: rotate(1.5deg); }
+  .cm-maren-relaciones-card:nth-child(3) { transform: rotate(-1deg); }
+
+  .cm-maren-relaciones-tape {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-4deg);
+    width: 60px;
+    height: 20px;
+    background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--bmaren-accent) 70%, black), color-mix(in srgb, var(--bmaren-accent) 70%, black) 6px, var(--bmaren-accent) 6px, var(--bmaren-accent) 12px);
+    opacity: 0.9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  }
+
+  .cm-maren-relaciones-photo {
+    width: 100%;
+    background: #fff;
+    padding: 7px 7px 22px;
+    margin: 0 0 12px;
+    box-shadow: 0 6px 12px rgba(107,67,86,0.2);
+    position: relative;
+    border: 2px solid transparent;
+    transition: border-color 0.25s ease;
+  }
+  .cm-maren-relaciones-photo:hover {
+    border-color: var(--group-color);
+  }
+
+  .cm-maren-relaciones-photo-inner {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cm-maren-relaciones-photo img {
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    filter: sepia(0.12) saturate(1.05);
+  }
+
+  .cm-maren-relaciones-photo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(74, 59, 63, 0.55);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .cm-maren-relaciones-photo:hover .cm-maren-relaciones-photo-overlay {
+    opacity: 1;
+  }
+  .cm-maren-relaciones-photo-overlay i {
+    font-size: 26px;
+    color: var(--group-color);
+  }
+
+  .cm-maren-relaciones-name {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    color: var(--group-color);
+    line-height: 1;
+    margin: 0 0 2px;
+  }
+
+  .cm-maren-relaciones-type {
+    font-size: 11px;
+    text-align: center;
+    color: color-mix(in srgb, var(--bmaren-accent) 90%, black);
+    margin: 0 0 10px;
+  }
+
+  .cm-maren-relaciones-note {
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    text-align: center;
+    color: color-mix(in srgb, var(--bmaren-accent) 70%, black);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .cm-maren-relaciones-flower {
+    position: absolute;
+    bottom: -10px;
+    right: -8px;
+    width: 50px;
+    height: auto;
+    transform: rotate(10deg);
+  }
+  .cm-maren-relaciones-flower img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+.signature-catta {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    width: 100%;
+}
+ 
+.signature-catta a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.signature-catta a:hover {
+    color: #666;
+}
