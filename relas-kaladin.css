@@ -1,0 +1,96 @@
+  .cm-kal-relaciones {
+  max-width: 750px;
+  margin: 30px auto;
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  background: var(--bckg-1);
+  border: 3px double var(--cm-kal-1);
+  color: var(--color-text);
+  padding: 26px 24px 22px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+  .cm-kal-relaciones br{
+  display: none !important;
+}
+  
+.cm-kal-relaciones-title {
+  text-align: center;
+  font-size: 24px;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  color: var(--color-text);
+  margin-bottom: 18px;
+}
+.cm-kal-relaciones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+.cm-kal-relaciones-card {
+  width: 140px;
+  text-align: center;
+  position: relative;
+}
+.cm-kal-relaciones-photo-wrap {
+  position: relative;
+  width: 110px;
+  margin: 0 auto;
+}
+.cm-kal-relaciones-photo {
+  width: 110px;
+  height: 110px;
+  border: 2px solid var(--card-color, var(--cm-kal-1));
+  background: var(--bckg-2);
+  overflow: hidden;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+}
+.cm-kal-relaciones-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cm-kal-relaciones-seal {
+  position: absolute;
+  bottom: -12px;
+  right: 2px;
+  width: 36px;
+  height: 34px;
+  background: var(--card-color);
+  border-radius: 42% 58% 63% 37% / 55% 40% 60% 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bckg-1);
+  font-size: 13px;
+  transform: rotate(-7deg);
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.4), inset 0 0 4px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+.cm-kal-relaciones-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--card-color);
+}
+.cm-kal-relaciones-rel {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--color-text);
+  opacity: 0.75;
+  margin-top: 2px;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

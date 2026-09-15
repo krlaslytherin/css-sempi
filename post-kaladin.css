@@ -1,0 +1,118 @@
+.cm-kal-tablilla {
+  max-width: 750px;
+  margin: 30px auto;
+  background: var(--bckg-1);
+  border: 3px double var(--cm-kal-1);
+  color: var(--color-text);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+.cm-kal-tablilla br{
+  display: none !important;
+}
+.cm-kal-tablilla-border {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  opacity: 0.55;
+  color: var(--cm-kal-1);
+}
+.cm-kal-tablilla-banner {
+  width: calc(100% - 44px);
+  margin: 0 22px;
+  height: 200px;
+  border: 1px solid var(--cm-kal-1);
+  outline: 1px solid var(--brd-c);
+  outline-offset: 3px;
+  overflow: hidden;
+  background: var(--bckg-2);
+}
+.cm-kal-tablilla-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cm-kal-tablilla-banner--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  color: var(--cm-kal-1);
+  background: var(--bckg-2);
+}
+.cm-kal-tablilla-header {
+  padding: 20px 35px 4px;
+  text-align: center;
+}
+.cm-kal-tablilla-titulo {
+  font-size: 26px;
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+}
+.cm-kal-tablilla-titulo::first-letter {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 34px;
+  color: var(--cm-kal-1);
+}
+.cm-kal-tablilla-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 20px;
+  font-size: 13px;
+  font-style: italic;
+  opacity: 0.8;
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+}
+.cm-kal-tablilla-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.cm-kal-tablilla-meta i { color: var(--cm-kal-1); font-style: normal; }
+.cm-kal-tablilla-divider {
+  height: 1px;
+  width: 70%;
+  margin: 16px auto;
+  background: linear-gradient(to right, transparent, var(--cm-kal-1) 30%, var(--cm-kal-1) 70%, transparent);
+  position: relative;
+}
+.cm-kal-tablilla-divider::before {
+  content: '✦';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  background: var(--bckg-1);
+  padding: 0 8px;
+  color: var(--cm-kal-1);
+  font-size: 10px;
+}
+.cm-kal-tablilla-body {
+  padding: 4px 40px 26px;
+  line-height: 1.9;
+  text-align: justify;
+}
+.cm-kal-tablilla-body br{
+  display: block !important;
+}
+.cm-kal-tablilla-body::first-letter {
+  font-size: 46px;
+  font-weight: bold;
+  color: var(--cm-kal-1);
+  margin-right: 3px;
+  font-family: 'UnifrakturMaguntia', cursive;
+  line-height: 1;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

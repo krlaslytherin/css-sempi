@@ -1,0 +1,90 @@
+.cm-kal-cronologia {
+  max-width: 750px;
+  margin: 30px auto;
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  background: var(--bckg-1);
+  border: 3px double var(--cm-kal-1);
+  color: var(--color-text);
+  padding: 26px 30px 22px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+ .cm-kal-cronologia br{
+  display: none !important;
+}
+  
+.cm-kal-cronologia-title {
+  text-align: center;
+  font-size: 24px;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+.cm-kal-cronologia-month {
+  font-size: 13px;
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  color: var(--cm-kal-1);
+  border-bottom: 1px solid var(--brd-c);
+  padding-bottom: 4px;
+  margin: 22px 0 12px;
+}
+.cm-kal-cronologia-month:first-of-type { margin-top: 0; }
+.cm-kal-cronologia-entry {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+.cm-kal-cronologia-status {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  margin-top: 2px;
+  border: 1px solid var(--brd-c);
+}
+.cm-kal-cronologia-status--abierto { color: #5c7a3c; border-color: #5c7a3c; }
+.cm-kal-cronologia-status--cerrado { color: var(--cm-kal-1); border-color: var(--cm-kal-1);}
+.cm-kal-cronologia-status--abandonado { color: var(--color-text); opacity: 0.5; transform: rotate(-8deg); border-color: var(--color-text);}
+.cm-kal-cronologia-tema {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--cm-kal-1);
+}
+.cm-kal-cronologia-tema:hover { color: var(--cm-kal-1); }
+.cm-kal-cronologia-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--color-text);
+  opacity: 0.75;
+  margin-top: 3px;
+  }
+  .signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}

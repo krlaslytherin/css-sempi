@@ -1,0 +1,126 @@
+.cm-kal-baul {
+  max-width: 750px;
+  margin: 30px auto;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  background: var(--bckg-1);
+  border: 3px double var(--brd-c);
+  color: var(--color-text);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+  position: relative;
+}
+  .cm-kal-baul br{
+  display: none !important;
+}
+  
+.cm-kal-baul-border {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  opacity: 0.55;
+  color: var(--cm-kal-1);
+}
+.cm-kal-baul-photo-wrap {
+  padding: 0 22px;
+}
+.cm-kal-baul-photo {
+  width: 100%;
+  height: 250px;
+  border: 1px solid var(--cm-kal-1);
+  outline: 1px solid var(--brd-c);
+  outline-offset: 3px;
+  overflow: hidden;
+  background: var(--bckg-2);
+}
+.cm-kal-baul-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cm-kal-baul-name {
+  text-align: center;
+  font-size: 26px;
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  color: var(--color-text);
+  margin: 16px 0 2px;
+}
+.cm-kal-baul-name::first-letter {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 34px;
+  color: var(--cm-kal-1);
+}
+.cm-kal-baul-divider {
+  height: 1px;
+  width: 70%;
+  margin: 14px auto;
+  background: linear-gradient(to right, transparent, var(--cm-kal-1) 30%, var(--cm-kal-1) 70%, transparent);
+  position: relative;
+}
+.cm-kal-baul-divider::before {
+  content: '✦';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  background: var(--bckg-1);
+  padding: 0 8px;
+  color: var(--cm-kal-1);
+  font-size: 10px;
+}
+.cm-kal-baul-oath-wrap {
+  position: relative;
+  padding: 6px 40px 10px;
+}
+.cm-kal-baul-oath-wrap .fa-quote-left,
+.cm-kal-baul-oath-wrap .fa-quote-right {
+  position: absolute;
+  font-size: 15px;
+  color: var(--cm-kal-1);
+  opacity: 0.6;
+}
+.cm-kal-baul-oath-wrap .fa-quote-left { top: -6px; left: 200px; }
+.cm-kal-baul-oath-wrap .fa-quote-right { bottom: -2px; right: 200px; }
+.cm-kal-baul-oath {
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+.cm-kal-baul-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 24px 26px;
+}
+.cm-kal-baul-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: var(--color-text);
+  background: var(--bckg-2);
+  border: 1px solid var(--brd-c);
+  border-radius: 4px;
+  transition: border-color 0.25s;
+}
+.cm-kal-baul-btn:hover { border-color: var(--cm-kal-1); }
+.cm-kal-baul-btn i { font-size: 14px; color: var(--cm-kal-1); }
+.cm-kal-baul-btn span { font-size: 12px; letter-spacing: 0.4px; }
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}
