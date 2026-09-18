@@ -1,0 +1,113 @@
+.cm-carling {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 10px 0 0;
+    box-sizing: border-box;
+    color: var(--color-text);
+}
+  .cm-carling br {
+    display:none !important;
+}
+
+/* ornamentos */
+.cm-carling-orn{
+    width:100%;
+    height:125px;
+    background-image:url("https://cdn.jsdelivr.net/gh/krlaslytherin/css-sempi@main/arabesco.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
+.cm-carling-orn--top{
+    transform:scaleY(-1);
+}
+
+.cm-carling-orn--bot{
+    margin-top:30px;
+}
+
+/* cabecera */
+.cm-carling-head {
+    text-align: center;
+    padding: 4px 20px 14px;
+}
+
+.cm-carling-title {
+    font-family: 'Fleur De Leah', cursive;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--cm-carling-1);
+    padding: 0 0 6px;
+}
+
+.cm-carling-sub {
+    font-size: 17px;
+    letter-spacing: .3px;
+    color: var(--cm-carling-1);
+}
+
+.cm-carling-body {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 22px 0 6px;
+    box-sizing: border-box;
+    text-align: justify;
+    hyphens: none;
+}
+
+.cm-carling-body b,
+.cm-carling-body strong,
+.cm-carling-body i,
+.cm-carling-body em {
+    color: var(--cm-carling-1);
+}
+
+.cm-carling-body br {
+    display:block !important;
+}
+
+  .cm-carling-body::first-letter {
+  font-size: 46px;
+  font-weight: bold;
+  color: var(--cm-carling-1);
+  margin-right: 3px;
+  font-family: 'Fleur De Leah', cursive;
+  line-height: 1;
+}
+
+/* pie */
+.cm-carling-meta {
+    font-size: 14px;
+    text-align: right;
+    color: var(--cm-carling-1);
+    padding: 18px 65px 12px;
+}
+.cm-carling-rule {
+    width: 600px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    height: 2px;
+    background: #eec07c;
+}
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #fff;
+}
