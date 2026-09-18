@@ -85,6 +85,15 @@
     color: var(--cm-carling-1);
     padding: 18px 65px 12px;
 }
+  .cm-carling-meta-mencion {
+    font-size: 14px;
+    text-align: left;
+    color: var(--cm-carling-1);
+    padding: 18px 65px 12px;
+}
+  .cm-carling-meta-mencion br{
+    display: block !important;
+}
 .cm-carling-rule {
     width: 600px;
     max-width: calc(100% - 40px);
