@@ -53,6 +53,10 @@ body{
     white-space: nowrap;
 }
 
+.cm-conv-phone-wrapper br{
+    display:none !important;
+}
+
 .cm-conv-phone {
     width: 385px;
     height: 830px;
