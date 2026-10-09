@@ -32,6 +32,10 @@ body{
   display: none;
 }
 
+.cm-negocio-root br {
+display: none !important;
+}
+
 /* ── CONTENEDOR GENERAL ── */
 
 .cm-negocio-root {
