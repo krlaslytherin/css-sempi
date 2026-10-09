@@ -1,0 +1,159 @@
+.cm-mayosempi {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--bckg-3);
+    color: var(--color-text);
+    border: 1px solid var(--brd-c);
+    padding: 24px 26px 4px;
+}
+
+.cm-mayosempi br{
+    display: none !important;
+}
+
+.cm-mayosempi-bunting {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.cm-mayosempi-bunting {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.cm-mayosempi-flag {
+    position: relative;
+    width: 30px;
+    height: 22px;
+    flex-shrink: 0;
+    background:
+        linear-gradient(
+            to right,
+            transparent 0 29%,
+            #fff 29% 51%,
+            transparent 51% 100%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 0 36%,
+            #fff 36% 64%,
+            transparent 64% 100%
+        ),
+        var(--cm-may-1);
+}
+
+.cm-mayosempi-flag::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to right,
+            transparent 0 36%,
+            var(--cm-may-2) 36% 44%,
+            transparent 44% 100%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 0 43%,
+            var(--cm-may-2) 43% 57%,
+            transparent 57% 100%
+        );
+}
+
+.cm-mayosempi-flag:nth-child(odd) {
+    transform: translateY(4px);
+}
+
+.cm-mayosempi-title {
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: var(--cm-may-1);
+    margin-top:10px;
+}
+
+.cm-mayosempi-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--cm-may-2);
+    padding: 4px 0 8px;
+   margin-top:10px;
+}
+
+.cm-mayosempi-rule {
+    width: 200px;
+    max-width: calc(100% - 40px);
+    margin: 8px auto 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--cm-may-1) 50%, var(--cm-may-2) 50%);
+}
+
+.cm-mayosempi-body {
+    padding: 18px 8px 4px;
+    text-align: justify;
+}
+
+.cm-mayosempi-body br{
+    display: block !important;
+}
+
+.cm-mayosempi-body::first-letter {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-may-1);
+}
+
+.cm-mayosempi-body b,
+.cm-mayosempi-body strong,
+.cm-mayosempi-body em {
+    color: var(--cm-may-1);
+}
+
+.cm-mayosempi-body i{
+    color: var(--cm-may-2);
+}
+
+.cm-mayosempi-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 16px 8px 22px;
+    margin-top: 8px;
+    border-top: 1px dashed var(--cm-may-2);
+    font-size: 13px;
+}
+
+.cm-mayosempi-field { display: flex; align-items: center; gap: 7px; }
+.cm-mayosempi-field i { color: var(--cm-may-2); font-size: 14px; }
+.cm-mayosempi-field b { color: var(--cm-may-1); font-weight: 700; }
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

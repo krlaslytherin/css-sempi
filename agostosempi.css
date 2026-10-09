@@ -1,0 +1,206 @@
+.cm-agostosempi {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom,    #10122b 0%,    #1d1f45 15%,    var(--bckg-3) 55%);
+    color: var(--color-text);
+    border: 1px solid var(--brd-c);
+    padding: 26px 26px 4px;
+    overflow: hidden;
+}
+
+.cm-agostosempi br{
+    display: none !important;
+}
+
+.cm-agostosempi-star {
+    position: absolute;
+    color: var(--cm-ago-1);
+    font-size: 10px;
+}
+
+.cm-agostosempi-castle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2px;
+    height: 60px;
+    margin-bottom: 6px;
+}
+
+.cm-agostosempi-tower {
+    background: #14163a;
+    width: 16px;
+}
+
+.cm-agostosempi-tower::before {
+    content: "";
+    display: block;
+    width: 0; height: 0;
+    margin: 0 auto;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #14163a;
+    transform: translateY(-10px);
+}
+
+.cm-agostosempi-tower--main { width: 24px; }
+.cm-agostosempi-tower--main::before { border-left-width: 12px; border-right-width: 12px; border-bottom-width: 14px; transform: translateY(-14px); }
+
+.cm-agostosempi-burst {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cm-ago-2);
+    box-shadow:
+        0 -14px 0 -1px var(--cm-ago-1),
+        0 14px 0 -1px var(--cm-ago-1),
+        14px 0 0 -1px var(--cm-ago-1),
+        -14px 0 0 -1px var(--cm-ago-1),
+        10px -10px 0 -1px var(--cm-ago-2),
+        -10px 10px 0 -1px var(--cm-ago-2),
+        10px 10px 0 -1px var(--cm-ago-2),
+        -10px -10px 0 -1px var(--cm-ago-2);
+}
+
+/* ESTRELLAS */
+.cm-agostosempi > .cm-agostosempi-star:nth-child(1) {
+    top: 10px;
+    left: 20px;
+    font-size: 8px;
+}
+
+.cm-agostosempi > .cm-agostosempi-star:nth-child(2) {
+    top: 26px;
+    left: 60px;
+    font-size: 6px;
+}
+
+.cm-agostosempi > .cm-agostosempi-star:nth-child(3) {
+    top: 14px;
+    right: 24px;
+    font-size: 9px;
+}
+
+.cm-agostosempi > .cm-agostosempi-star:nth-child(4) {
+    top: 34px;
+    right: 70px;
+    font-size: 6px;
+}
+
+.cm-agostosempi > .cm-agostosempi-star:nth-child(5) {
+    top: 10px;
+    right: 44px;
+    font-size: 14px;
+}
+
+/* DESTELLOS */
+.cm-agostosempi > .cm-agostosempi-burst:nth-of-type(1) {
+    top: 8px;
+    left: 40px;
+    margin-top:10px;
+}
+
+.cm-agostosempi > .cm-agostosempi-burst:nth-of-type(2) {
+    top: 16px;
+    right: 36px;
+    margin-top:10px;
+}
+
+/* TORRES DEL CASTILLO */
+.cm-agostosempi-castle > .cm-agostosempi-tower:nth-child(1),
+.cm-agostosempi-castle > .cm-agostosempi-tower:nth-child(5) {
+    height: 24px;
+}
+
+.cm-agostosempi-castle > .cm-agostosempi-tower:nth-child(2),
+.cm-agostosempi-castle > .cm-agostosempi-tower:nth-child(4) {
+    height: 34px;
+}
+
+.cm-agostosempi-castle > .cm-agostosempi-tower:nth-child(3) {
+    height: 52px;
+}
+
+.cm-agostosempi-title {
+    position: relative;
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 34px;
+    color: #fff;
+    text-shadow: 0 0 8px var(--cm-ago-1);
+  margin-top:10px;
+}
+
+.cm-agostosempi-sub {
+    position: relative;
+    text-align: center;
+    font-size: 13px;
+    color: var(--cm-ago-1);
+    padding: 4px 0 12px;
+    margin-top:10px;
+}
+
+.cm-agostosempi-body {
+    padding: 12px 8px 4px;
+    text-align: justify;
+}
+
+.cm-agostosempi-body br{
+    display: block !important;
+}
+
+.cm-agostosempi-body::first-letter {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-ago-2);
+}
+
+.cm-agostosempi-body b,
+.cm-agostosempi-body strong,
+.cm-agostosempi-body em {
+    color: var(--cm-ago-2);
+}
+
+.cm-agostosempi-body i{
+    color: var(--cm-ago-1);
+}
+  
+.cm-agostosempi-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 16px 8px 22px;
+    margin-top: 8px;
+    border-top: 1px dashed var(--cm-ago-1);
+    font-size: 13px;
+}
+
+.cm-agostosempi-field { display: flex; align-items: center; gap: 7px; }
+.cm-agostosempi-field i { color: var(--cm-ago-1); font-size: 14px; }
+.cm-agostosempi-field b { color: var(--cm-ago-2); font-weight: 700; }
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

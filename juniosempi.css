@@ -1,0 +1,167 @@
+.cm-juniosempi {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--bckg-3);
+    color: var(--color-text);
+    border: 1px solid var(--brd-c);
+    overflow: hidden;
+}
+
+.cm-juniosempi br{
+    display: none !important;
+}
+
+.cm-juniosempi-comb {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.cm-juniosempi-hex {
+    width: 30px;
+    height: 26px;
+    background: var(--cm-jun-1);
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    margin: 0 -3px;
+}
+
+.cm-juniosempi-hex:nth-child(even) { background: #f2c14e; margin-top: 13px; }
+
+.cm-juniosempi-bees {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.cm-juniosempi-bees i {
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url("https://imgur.com/29wAQqf.jpg") center / contain no-repeat;
+}
+
+.cm-juniosempi-bees i:nth-child(1) {
+    top: 28px;
+    right: 30px;
+    width: 22px;
+    height: 22px;
+    transform: rotate(-8deg);
+}
+
+.cm-juniosempi-bees i:nth-child(2) {
+    top: 14px;
+    right: 70px;
+    width: 14px;
+    height: 14px;
+    transform: rotate(14deg);
+}
+
+.cm-juniosempi-bees i:nth-child(3) {
+    top: 44px;
+    right: 56px;
+    width: 11px;
+    height: 11px;
+    transform: rotate(-20deg);
+}
+
+.cm-juniosempi-bees i:nth-child(4) {
+    top: 20px;
+    left: 36px;
+    width: 13px;
+    height: 13px;
+    transform: rotate(10deg);
+}
+
+.cm-juniosempi-bees i:nth-child(5) {
+    top: 50px;
+    left: 60px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-14deg);
+}
+
+.cm-juniosempi-title {
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--cm-jun-2);
+    padding: 18px 20px 2px;
+    margin-top:15px;
+}
+
+.cm-juniosempi-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--cm-jun-1);
+    padding-bottom: 6px;
+    margin-top:15px;
+}
+
+.cm-juniosempi-body {
+    padding: 14px 32px 4px;
+    text-align: justify;
+}
+
+.cm-juniosempi-body br{
+    display: block !important;
+}
+
+.cm-juniosempi-body::first-letter {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-jun-2);
+}
+
+.cm-juniosempi-body b,
+.cm-juniosempi-body strong,
+.cm-juniosempi-body em {
+    color: var(--cm-jun-2);
+}
+
+.cm-juniosempi-body i{
+    color: var(--cm-jun-1);
+}
+
+.cm-juniosempi-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 16px 32px 20px;
+    margin-top: 8px;
+    border-top: 1px dashed var(--cm-jun-1);
+    font-size: 13px;
+}
+
+.cm-juniosempi-field { display: flex; align-items: center; gap: 7px; }
+.cm-juniosempi-field i { color: var(--cm-jun-1); font-size: 14px; }
+.cm-juniosempi-field b { color: var(--cm-jun-2); font-weight: 700; }
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

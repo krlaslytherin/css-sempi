@@ -1,0 +1,129 @@
+.cm-abrilsempi {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--bckg-3);
+    color: var(--color-text);
+    border: 1px solid var(--brd-c);
+    padding: 34px 26px 4px;
+    overflow: hidden;
+}
+.cm-abrilsempi br{
+    display: none !important;
+}
+
+.cm-abrilsempi-eggs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cm-abrilsempi-egg {
+    width: 22px;
+    height: 30px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.cm-abrilsempi-egg--1 { background: repeating-linear-gradient(45deg, var(--cm-abr-1) 0 4px, #fff 4px 8px); }
+.cm-abrilsempi-egg--2 { background: var(--cm-abr-2); position: relative; }
+.cm-abrilsempi-egg--2::after { content:""; position:absolute; inset:6px 0; background: repeating-linear-gradient(0deg, #ffffff90 0 2px, transparent 2px 6px); }
+.cm-abrilsempi-egg--3 { background: radial-gradient(circle at 30% 30%, #ffffffaa 0 3px, transparent 4px) , var(--cm-abr-1); background-size: 8px 8px, 100% 100%; }
+.cm-abrilsempi-egg--4 { background: var(--cm-abr-2); }
+.cm-abrilsempi-egg--5 { background: repeating-linear-gradient(-45deg, var(--cm-abr-1) 0 4px, var(--cm-abr-2) 4px 8px); }
+
+.cm-abrilsempi-rabbit {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 26px;
+    color: var(--cm-abr-1);
+    opacity: .9;
+    transform: rotate(-8deg);
+}
+.conejoabril {
+  position:absolute; 
+  top:10px; 
+  right:16px; 
+  font-size:26px; 
+  color:var(--cm-abr-1); opacity:.9; 
+  transform:rotate(-8deg);
+}
+  
+.cm-abrilsempi-title {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--cm-abr-1);
+}
+
+.cm-abrilsempi-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--cm-abr-2);
+    padding-top: 2px;
+    padding-bottom: 8px;
+}
+
+.cm-abrilsempi-body {
+    padding: 12px 8px 4px;
+    text-align: justify;
+}
+
+  .cm-abrilsempi-body br{
+    display: block !important;
+}
+
+.cm-abrilsempi-body::first-letter {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-abr-1);
+}
+
+.cm-abrilsempi-body b,
+.cm-abrilsempi-body strong,
+.cm-abrilsempi-body i,
+.cm-abrilsempi-body em {
+    color: var(--cm-abr-1);
+}
+
+.cm-abrilsempi-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 16px 8px 22px;
+    margin-top: 8px;
+    border-top: 1px dashed var(--cm-abr-1);
+    font-size: 13px;
+}
+
+.cm-abrilsempi-field { display: flex; align-items: center; gap: 7px; }
+.cm-abrilsempi-field i { color: var(--cm-abr-2); font-size: 14px; }
+.cm-abrilsempi-field b { color: var(--cm-abr-1); font-weight: 700; }
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

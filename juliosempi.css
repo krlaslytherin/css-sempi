@@ -1,0 +1,138 @@
+.cm-juliosempi {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--bckg-3);
+    color: var(--color-text);
+    border: 1px solid var(--brd-c);
+    overflow: hidden;
+}
+
+.cm-juliosempi br{
+    display: none !important;
+}
+
+.cm-juliosempi-waves {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.cm-juliosempi-ship {
+    position: absolute;
+    z-index: 2;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--cm-jul-2);
+    font-size: 24px;
+}
+
+.cm-juliosempi-waves::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: var(--bckg-1);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q25 0 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10 V20 H0 Z' fill='black'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q25 0 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10 V20 H0 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.cm-juliosempi-title {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 30px;
+    color: var(--cm-jul-1);
+    padding: 16px 20px 2px;
+}
+
+.cm-juliosempi-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--cm-jul-2);
+    padding-bottom: 4px;
+}
+
+/* cuerda como separador */
+.cm-juliosempi-rope {
+    width: 220px;
+    max-width: calc(100% - 40px);
+    margin: 12px auto 0;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, var(--cm-jul-2) 0 6px, var(--cm-jul-1) 6px 12px);
+    border-radius: 3px;
+}
+
+.cm-juliosempi-body {
+    padding: 18px 32px 4px;
+    text-align: justify;
+}
+  
+.cm-juliosempi-body br{
+    display: block !important;
+}
+  
+.cm-juliosempi-body::first-letter {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-jul-1);
+}
+
+.cm-juliosempi-body b,
+.cm-juliosempi-body strong,
+.cm-juliosempi-body em {
+    color: var(--cm-jul-1);
+}
+
+.cm-juliosempi-body i{
+    color: var(--cm-jul-2);
+}
+
+.cm-juliosempi-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 16px 32px 20px;
+    margin-top: 8px;
+    border-top: 1px dashed var(--cm-jul-2);
+    font-size: 13px;
+}
+
+.cm-juliosempi-field { display: flex; align-items: center; gap: 7px; }
+.cm-juliosempi-field i { color: var(--cm-jul-2); font-size: 14px; }
+.cm-juliosempi-field b { color: var(--cm-jul-1); font-weight: 700; }
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

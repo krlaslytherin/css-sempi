@@ -1,0 +1,116 @@
+.cm-marzosempi {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--bckg-3);
+    color: var(--color-text);
+    border: 1px solid var(--brd-c);
+    overflow: hidden;
+}
+
+  .cm-marzosempi br{
+    display:none !important;
+}
+
+.cm-marzosempi-arch {
+    position: relative;
+    height: 90px;
+    background: var(--cm-mar-1);
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.cm-marzosempi-arch i {
+    color: #ffffffcc;
+    font-size: 18px;
+}
+
+.cm-marzosempi-title {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--cm-mar-1);
+    padding: 18px 20px 2px;
+}
+
+.cm-marzosempi-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--cm-mar-2);
+    padding-bottom: 4px;
+}
+
+.cm-marzosempi-body {
+    padding: 16px 32px 4px;
+    text-align: justify;
+}
+
+  .cm-marzosempi-body br{
+    display: block !important;
+}
+
+.cm-marzosempi-body::first-letter {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-mar-1);
+}
+
+.cm-marzosempi-body b,
+.cm-marzosempi-body strong,
+.cm-marzosempi-body em{
+    color: var(--cm-mar-1);
+}
+  
+.cm-marzosempi-body i{
+    color: var(--cm-mar-2);
+}
+
+/* datos como chips redondeados */
+.cm-marzosempi-info {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 18px 20px 20px;
+}
+
+.cm-marzosempi-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bckg-1);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 12px;
+}
+
+.cm-marzosempi-chip i { color: var(--cm-mar-2); font-size: 12px; }
+.cm-marzosempi-chip b { color: var(--cm-mar-1); font-weight: 700; }
+
+  .signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}
