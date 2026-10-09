@@ -39,6 +39,10 @@ body{
   overflow: hidden;
 }
 
+.cm-inmueble-root br{
+  display: none !important;
+}
+
 /* ── GALERÍA ── */
 
 .cm-inmueble-galeria {
@@ -184,6 +188,10 @@ body{
   line-height: 1.8;
 }
 
+.cm-inmueble-descripcion br{
+  display: block !important;
+}
+
 /* ── ESTANCIAS ── */
 
 .cm-inmueble-estancias-grid {
@@ -223,6 +231,38 @@ body{
   color: var(--cm-color-acento2);
   font-size: 13px;
   margin-top: 3px;
+}
+.cm-inmueble-distribucion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.cm-inmueble-plano {
+  width: 100%;
+  text-align: center;
+}
+
+.cm-inmueble-plano-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+
+.cm-inmueble-plano-nombre {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: inherit;
+  margin-top: 10px;
+}
+
+.cm-inmueble-distribucion br {
+  display: none !important;
 }
 
 .signature-catta {
