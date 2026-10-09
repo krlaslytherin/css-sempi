@@ -1,0 +1,152 @@
+.cm-febrerosempi {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: var(--bckg-2);
+    color: var(--color-text);
+    border: 1px solid var(--brd-c);
+    overflow: hidden;
+}
+  
+.cm-febrerosempi br{
+    display: none !important;
+}
+
+.cm-febrerosempi-flap {
+    position: relative;
+    height: 100px;
+    background: var(--cm-feb-1);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.cm-febrerosempi-seal {
+    position: absolute;
+    top: 78px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--cm-feb-2);
+    box-shadow: 0 3px 6px #00000050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.cm-febrerosempi-seal i {
+    color: var(--cm-feb-1);
+    font-size: 17px;
+}
+
+.cm-febrerosempi-stamp {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    width: 38px;
+    height: 46px;
+    border: 2px dashed var(--cm-feb-2);
+    background: #00000020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(6deg);
+    z-index: 2;
+}
+
+.cm-febrerosempi-stamp i {
+    color: var(--cm-feb-2);
+    font-size: 30px;
+}
+
+/* contenido tipo carta */
+.cm-febrerosempi-content {
+    padding: 14px 34px 4px;
+}
+
+.cm-febrerosempi-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--cm-feb-1);
+    padding-top: 6px;
+  margin-top:10px;
+}
+
+.cm-febrerosempi-salute {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--cm-feb-1);
+    padding: 12px 0 2px;
+}
+
+.cm-febrerosempi-body {
+    padding: 8px 0 4px;
+    text-align: justify;
+}
+
+  .cm-febrerosempi-body br{
+    display: block !important;
+}
+
+.cm-febrerosempi-body::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-feb-1);
+}
+
+.cm-febrerosempi-body b,
+.cm-febrerosempi-body strong,
+.cm-febrerosempi-body i,
+.cm-febrerosempi-body em {
+    color: var(--cm-feb-1);
+}
+
+.cm-febrerosempi-ps {
+    font-size: 13px;
+    font-style: italic;
+    padding: 16px 0 20px;
+    margin-top: 10px;
+    border-top: 1px dashed var(--brd-c);
+    line-height: 1.7;
+}
+
+.cm-febrerosempi-ps b {
+    font-style: normal;
+    color: var(--cm-feb-1);
+}
+
+.cm-febrerosempi-ps i {
+    color: var(--cm-feb-2);
+    font-size: 12px;
+    margin: 0 2px 0 10px;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

@@ -1,0 +1,179 @@
+.cm-septiembresempi {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 14px 0;
+    box-sizing: border-box;
+    background: var(--bckg-2);
+    border: 1px solid var(--brd-c);
+    color: var(--color-text);
+}
+
+  .cm-septiembresempi br{
+    display:none !important;
+}
+
+.cm-septiembresempi-decor {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 22px;
+    padding: 4px 20px;
+}
+
+.cm-septiembresempi-decor--bot {
+    align-items: flex-start;
+    margin-top: 6px;
+}
+  .cm-septiembresempi-velas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.cm-septiembresempi-velas i {
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 24px;
+  margin: 12px 9px 4px;
+  background: #fff;
+  border: 1px solid var(--cm-sept-1);
+  border-radius: 2px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.cm-septiembresempi-velas i::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  background: var(--cm-sept-2);
+  clip-path: path("M4 12C0 8 0 5 4 0C8 5 8 8 4 12Z");
+}
+
+.cm-septiembresempi-velas i:nth-child(even)::before {
+  background: var(--cm-sept-1);
+}
+
+.cm-septiembresempi-velas i:nth-child(1) {
+  transform: translateY(4px) rotate(-6deg);
+}
+
+.cm-septiembresempi-velas i:nth-child(2) {
+  transform: translateY(-6px) rotate(4deg);
+}
+
+.cm-septiembresempi-velas i:nth-child(3) {
+  transform: translateY(2px) rotate(-2deg);
+}
+
+.cm-septiembresempi-velas i:nth-child(4) {
+  transform: translateY(-4px) rotate(7deg);
+}
+
+.cm-septiembresempi-velas i:nth-child(5) {
+  transform: translateY(5px) rotate(-8deg);
+}
+
+.cm-septiembresempi-candle {
+    width: 20px;
+    height: auto;
+    display: block;
+}
+
+/* cabecera */
+.cm-septiembresempi-head {
+    text-align: center;
+    padding: 4px 20px 4px;
+}
+
+.cm-septiembresempi-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    line-height: 1.1;
+    color: var(--cm-sept-1);
+}
+
+.cm-septiembresempi-sub {
+    font-size: 15px;
+    letter-spacing: .3px;
+    padding-top: 2px;
+}
+
+.cm-septiembresempi-rule {
+    width: 260px;
+    max-width: calc(100% - 60px);
+    margin: 14px auto 0;
+    height: 2px;
+    background: var(--cm-sept-2);
+    border-radius: 2px;
+}
+
+.cm-septiembresempi-body {
+    padding: 20px 34px 6px;
+    text-align: justify;
+}
+  
+.cm-septiembresempi-body br{
+    display:block !important;
+}
+
+.cm-septiembresempi-body::first-letter {
+    font-family: 'Pacifico', cursive;
+    font-size: 46px;
+    line-height: 1;
+    float: left;
+    padding: 4px 8px 0 0;
+    color: var(--cm-sept-1);
+}
+
+.cm-septiembresempi-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 16px 34px 4px;
+    flex-wrap: wrap;
+}
+
+.cm-septiembresempi-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.cm-septiembresempi-field i {
+    color: var(--cm-sept-21);
+    font-size: 15px;
+    flex: none;
+}
+
+.cm-septiembresempi-field b {
+    color: var(--cm-sept-1);
+    font-weight: 700;
+    margin-right: 2px;
+}
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}

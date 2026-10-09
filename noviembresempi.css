@@ -1,0 +1,192 @@
+.cm-noviembresempi {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background:
+        radial-gradient(circle at 10% 12%, var(--cm-nov-2) 0%, transparent 32%),
+        radial-gradient(circle at 90% 90%, var(--cm-nov-1) 0%, transparent 36%),
+        var(--bckg-3);
+    padding: 30px 20px;
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+  .cm-noviembresempi br{
+    display: none !important;
+}
+.cm-noviembresempi-leaf {
+    position: absolute;
+    color: var(--cm-nov-1);
+    opacity: .8;
+  z-index: 10;
+}
+
+.cm-noviembresempi-flake {
+    position: absolute;
+    color: var(--cm-nov-2);
+    opacity: .8;
+  z-index: 10;
+}
+
+.cm-noviembresempi-tree {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-size: 30px;
+    color: var(--cm-nov-1);
+    opacity: .55;
+  z-index: 10;
+}
+
+  /* HOJAS */
+.cm-noviembresempi-leaf:nth-of-type(2){
+  top:16px;
+  left:56px;
+  font-size:16px;
+  transform:rotate(-12deg);
+}
+
+.cm-noviembresempi-leaf:nth-of-type(3){
+  top:48px;
+  left:20px;
+  font-size:13px;
+  transform:rotate(20deg);
+}
+
+.cm-noviembresempi-leaf:nth-of-type(4){
+  top:70px;
+  left:60px;
+  font-size:11px;
+  transform:rotate(-6deg);
+}
+
+/* COPOS DE NIEVE */
+.cm-noviembresempi-flake:nth-of-type(5){
+  top:14px;
+  right:18px;
+  font-size:16px;
+}
+
+.cm-noviembresempi-flake:nth-of-type(6){
+  top:40px;
+  right:46px;
+  font-size:11px;
+}
+
+.cm-noviembresempi-flake:nth-of-type(7){
+  bottom:16px;
+  right:12px;
+  font-size:18px;
+}
+
+.cm-noviembresempi-flake:nth-of-type(8){
+  bottom:44px;
+  right:38px;
+  font-size:10px;
+}
+
+.cm-noviembresempi-panel {
+    position: relative;
+    background: var(--bckg-2);
+    border: 1px solid var(--brd-c);
+    padding: 26px 30px 20px;
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+.cm-noviembresempi-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.15;
+    color: var(--cm-nov-1);
+}
+
+.cm-noviembresempi-sub {
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--cm-nov-2);
+    padding-top: 4px;
+    margin-bottom: 6px;
+}
+
+.cm-noviembresempi-body {
+    padding: 16px 4px 2px;
+    text-align: justify;
+}
+
+    .cm-noviembresempi-body br{
+    display: block !important;
+}
+
+.cm-noviembresempi-body::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1;
+    float: left;
+    padding: 2px 8px 0 0;
+    color: var(--cm-nov-1);
+}
+
+.cm-noviembresempi-body b,
+.cm-noviembresempi-body strong,
+.cm-noviembresempi-body i,
+.cm-noviembresempi-body em {
+    color: var(--cm-nov-1);
+}
+
+/* datos: fila limpia, sin traslapes */
+.cm-noviembresempi-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    margin-top: 14px;
+    border-top: 1px dashed var(--brd-c);
+    font-size: 13px;
+}
+
+.cm-noviembresempi-field {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.cm-noviembresempi-field i {
+    color: var(--cm-nov-2);
+    font-size: 14px;
+    flex: none;
+}
+
+.cm-noviembresempi-field b {
+    color: var(--cm-nov-1);
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+.signature-catta {
+  margin-top: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.signature-catta a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signature-catta a:hover {
+  color: #666;
+}
