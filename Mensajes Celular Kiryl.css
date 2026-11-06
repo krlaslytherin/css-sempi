@@ -277,25 +277,6 @@ body{
     cursor: pointer;
 }
 
-@keyframes cm-conv-slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 480px) {
-    .cm-conv-phone {
-        width: 100%;
-        max-width: 380px;
-        height: auto;
-        aspect-ratio: 385/830;
-    }
-}
 .signature-catta {
   margin-top: 5px;
   text-align: center;
@@ -313,4 +294,618 @@ body{
 
 .signature-catta a:hover {
   color: #666;
+}
+
+/* ===== GALERÍAS ===== */
+.cm-conv-bubble-galeria {
+    width: 80%;
+    max-width: 80%;
+    padding: 4px 4px 22px;
+}
+
+.cm-conv-galeria3,
+.cm-conv-galeria-mas4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cm-conv-gal-img {
+    position: relative;
+    width: calc(50% - 1.5px);
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.cm-conv-gal-img:active {
+    opacity: 0.9;
+}
+
+/* galería de 3: la primera ocupa todo el ancho */
+.cm-conv-galeria3 .cm-conv-gal-img:first-child {
+    width: 100%;
+    height: 150px;
+}
+
+/* galería de 4: overlay fijo +N en la última */
+.cm-conv-gal-mas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+/* ===== UBICACIÓN EN TIEMPO REAL ===== */
+.cm-conv-bubble-ubicacion {
+    width: 85%;
+    max-width: 85%;
+    padding: 4px 4px 6px;
+}
+
+.cm-conv-ubi-mapa {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #aab7c4;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px 6px 0 0;
+}
+
+.cm-conv-ubi-avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.cm-conv-ubi-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 10px;
+    background: rgba(0, 0, 0, 0.07);
+    border-radius: 0 0 6px 6px;
+    font-size: 13px;
+    color: #54656f;
+}
+
+.cm-conv-ubi-info i {
+    font-size: 17px;
+    color: #3a4a52;
+}
+
+.cm-conv-ubi-hora {
+    margin-left: auto;
+    font-size: 11px;
+    color: #5a5;
+    white-space: nowrap;
+}
+
+.cm-conv-ubi-stop {
+    padding: 10px 0 4px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #e53935;
+    cursor: pointer;
+}
+
+/* ===== CONTACTO COMPARTIDO ===== */
+.cm-conv-bubble-contacto {
+    width: 75%;
+    max-width: 75%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cm-conv-cto-datos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 24px;
+}
+
+.cm-conv-cto-avatar {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+.cm-conv-cto-nombre {
+    flex: 1;
+    min-width: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #000;
+    word-break: break-word;
+}
+
+.cm-conv-cto-hora {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 11px;
+    color: #5a5;
+}
+
+.cm-conv-cto-botones {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cm-conv-cto-btn {
+    flex: 1;
+    padding: 11px 6px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #00a884;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cm-conv-cto-btn + .cm-conv-cto-btn {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cm-conv-cto-btn:active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* ===== CHAT DE GRUPO ===== */
+
+/* header: subtítulo de miembros en una línea */
+.cm-conv-contact-details {
+    min-width: 0;
+}
+
+.cm-conv-contact-status {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cm-conv-header-icons {
+    gap: 16px;
+}
+
+/* fondo editable del chat */
+.cm-conv-fondo {
+    background-size: cover;
+    background-position: center;
+}
+
+/* separador de fecha */
+.cm-conv-fecha {
+    align-self: center;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 12px;
+    color: #54656f;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+/* avatar junto al primer mensaje de cada persona */
+.cm-conv-message.cm-conv-received {
+    align-items: flex-start;
+}
+
+.cm-conv-msg-avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+/* mensajes seguidos de la misma persona */
+.cm-conv-message.cm-conv-seguido {
+    margin-top: -6px;
+    padding-left: 36px;
+}
+
+.cm-conv-bubble.cm-conv-bubble-inicio {
+    border-radius: 0 8px 8px 8px;
+}
+
+.cm-conv-bubble-sent.cm-conv-bubble-inicio {
+    border-radius: 8px 0 8px 8px;
+}
+
+.cm-conv-bubble.cm-conv-bubble-seguido {
+    border-radius: 8px;
+}
+
+/* nombre del remitente */
+.cm-conv-autor {
+    margin-bottom: 2px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* doble check */
+.cm-conv-bubble-sent .cm-conv-text {
+    padding-right: 68px;
+}
+
+.cm-conv-check {
+    margin-left: 3px;
+    color: #53bdeb;
+}
+
+/* tarjeta de enlace */
+.cm-conv-bubble-link {
+    width: 75%;
+    max-width: 75%;
+    padding: 4px 4px 24px;
+}
+
+.cm-conv-link-img {
+    width: 100%;
+    height: 100px;
+    background-color: #bbb;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px 6px 0 0;
+}
+
+.cm-conv-link-info {
+    padding: 8px 10px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 0 0 6px 6px;
+}
+
+.cm-conv-link-titulo {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.cm-conv-link-url {
+    font-size: 13px;
+    color: #54656f;
+}
+
+.cm-conv-link-url i {
+    margin-right: 6px;
+}
+
+/* botón de bajar */
+.cm-conv-scroll-down {
+    position: absolute;
+    bottom: 68px;
+    right: 14px;
+    z-index: 5;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    color: #54656f;
+    cursor: pointer;
+}
+
+/* barra de escribir */
+.cm-conv-input-multi {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 14px;
+}
+
+.cm-conv-input-multi .cm-conv-input-icon {
+    font-size: 18px;
+}
+
+.cm-conv-input-texto {
+    flex: 1;
+}
+
+.cm-conv-mic {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00a884;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ===== AUDIOS ===== */
+.cm-conv-bubble-audio {
+    width: 80%;
+    max-width: 80%;
+    padding: 8px 10px 24px;
+}
+
+.cm-conv-audio-fila {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cm-conv-audio-avatar {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+.cm-conv-audio-mic {
+    position: absolute;
+    bottom: -2px;
+    right: -5px;
+    font-size: 15px;
+}
+
+.cm-conv-bubble-sent .cm-conv-audio-mic {
+    color: #53bdeb;
+}
+
+.cm-conv-bubble-received .cm-conv-audio-mic {
+    color: #00a884;
+}
+
+.cm-conv-audio-play {
+    flex-shrink: 0;
+    font-size: 24px;
+    color: #8696a0;
+    cursor: pointer;
+}
+
+.cm-conv-audio-pista {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    padding-left: 18px;
+}
+
+/* punto de progreso */
+.cm-conv-audio-pista::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.cm-conv-bubble-sent .cm-conv-audio-pista::before {
+    background: #53bdeb;
+}
+
+.cm-conv-bubble-received .cm-conv-audio-pista::before {
+    background: #00a884;
+}
+
+.cm-conv-audio-onda {
+    height: 24px;
+}
+
+/* onda de barras (enviado) */
+.cm-conv-audio-barras {
+    background:
+        linear-gradient(90deg, #8696a0 2px, transparent 2px) 0 50% / 9px 70% repeat-x,
+        linear-gradient(90deg, #8696a0 2px, transparent 2px) 3px 50% / 14px 100% repeat-x,
+        linear-gradient(90deg, #8696a0 2px, transparent 2px) 6px 50% / 17px 45% repeat-x;
+}
+
+/* onda de puntos (recibido sin reproducir) */
+.cm-conv-audio-puntos {
+    background: radial-gradient(circle, #8696a0 1.2px, transparent 1.6px) 0 50% / 6px 100% repeat-x;
+}
+
+.cm-conv-audio-dur {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    color: #667;
+}
+
+/* hora y doble check (omite si ya los tienes del chat de grupo) */
+.cm-conv-check {
+    margin-left: 3px;
+    color: #53bdeb;
+}
+
+/* ===== TRANSCRIPCIÓN (checkbox oculto) ===== */
+.cm-conv-tr-input {
+    display: none;
+}
+
+.cm-conv-tr-btn {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #00a884;
+    cursor: pointer;
+}
+
+.cm-conv-tr-texto {
+    display: none;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.cm-conv-tr-input:checked ~ .cm-conv-tr-texto{
+    display: block;
+}
+
+/* ===== PLAY QUE ABRE EL TEXTO (audio enviado) ===== */
+.cm-conv-audio-play .cm-conv-ico-pausa {
+    display: none !important;
+}
+
+.cm-conv-tr-input:checked ~ .cm-conv-audio-fila .cm-conv-ico-play {
+    display: none !important;
+}
+
+.cm-conv-tr-input:checked ~ .cm-conv-audio-fila .cm-conv-ico-pausa {
+    display: inline-block !important;
+}
+/* ===== MENSAJE ELIMINADO ===== */
+.cm-conv-bubble-borrado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+}
+
+.cm-conv-bubble-borrado i {
+    font-size: 16px;
+    color: #8696a0;
+}
+
+.cm-conv-borrado-txt {
+    padding-right: 50px;
+    font-size: 14px;
+    font-style: italic;
+    color: #667;
+}
+
+/* ===== NOTA DE VIDEO ===== */
+.cm-conv-message.cm-conv-vn {
+    align-items: center;
+    gap: 8px;
+}
+
+.cm-conv-vn-reenviar {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+}
+
+.cm-conv-vn-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.cm-conv-vn-circulo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 4px solid #DCF8C6;
+    border-radius: 50%;
+    background: #000;
+    transform: translateZ(0);
+}
+
+.cm-conv-vn-circulo video {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #000;
+}
+
+.cm-conv-vn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 58px;
+    height: 58px;
+    margin: -29px 0 0 -29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+    pointer-events: none;
+}
+
+.cm-conv-vn-circulo video:focus + .cm-conv-vn-play {
+    display: none;
+}
+
+.cm-conv-vn-dur {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+}
+
+.cm-conv-vn-hora {
+    align-self: flex-end;
+    margin-top: 4px;
+    padding: 3px 10px;
+    background: #DCF8C6;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #5a5;
+}
+
+/* recibido: aro y píldora blancos */
+.cm-conv-received .cm-conv-vn-circulo {
+    border-color: #fff;
+}
+
+.cm-conv-received .cm-conv-vn-hora {
+    align-self: flex-start;
+    background: #fff;
+    color: #667;
 }
