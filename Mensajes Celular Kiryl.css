@@ -909,3 +909,114 @@ body{
     background: #fff;
     color: #667;
 }
+/* ===== FOTO DE UNA VEZ (CLICKEABLE) ===== */
+.cm-conv-uv-in {
+    display: none;
+}
+
+.cm-conv-bubble-unavez {
+    padding: 10px 14px;
+}
+
+.cm-conv-uv-click {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.cm-conv-uv-icono {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #667;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 500;
+    color: #667;
+}
+
+.cm-conv-bubble-received .cm-conv-uv-icono {
+    border-color: #00a884;
+    color: #00a884;
+}
+
+.cm-conv-uv-txt {
+    padding-right: 62px;
+    font-size: 16px;
+    color: #667;
+}
+
+.cm-conv-bubble-sent .cm-conv-uv-txt {
+    padding-right: 72px;
+}
+
+.cm-conv-uv-txt-abierta {
+    display: none;
+    font-style: italic;
+}
+
+/* visor de la foto */
+.cm-conv-uv-visor {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.cm-conv-uv-cerrar-btn {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cm-conv-uv-img {
+    width: 92%;
+    height: 72%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cm-conv-uv-ver:checked ~ .cm-conv-uv-visor {
+    display: flex;
+}
+
+/* al cerrar: queda "Abierta" (déjalo al final) */
+.cm-conv-uv-cerrar:checked ~ .cm-conv-uv-visor {
+    display: none;
+}
+
+.cm-conv-uv-cerrar:checked ~ .cm-conv-bubble .cm-conv-uv-click {
+    pointer-events: none;
+}
+
+.cm-conv-uv-cerrar:checked ~ .cm-conv-bubble .cm-conv-uv-icono {
+    border-color: #8696a0;
+    color: #8696a0;
+}
+
+.cm-conv-uv-cerrar:checked ~ .cm-conv-bubble .cm-conv-uv-num {
+    display: none;
+}
+
+.cm-conv-uv-cerrar:checked ~ .cm-conv-bubble .cm-conv-uv-txt-foto {
+    display: none;
+}
+
+.cm-conv-uv-cerrar:checked ~ .cm-conv-bubble .cm-conv-uv-txt-abierta {
+    display: inline;
+}
