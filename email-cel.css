@@ -28,6 +28,11 @@ body{
     box-sizing: border-box;
 }
 
+.cm-gmail-read-wrapper br {
+    display: none !important;
+}
+
+
 .cm-gmail-read-wrapper ::-webkit-scrollbar {
     width: 6px;
 }
@@ -46,6 +51,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 
 .cm-gmail-read-phone {
