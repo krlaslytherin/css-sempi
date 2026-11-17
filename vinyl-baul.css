@@ -26,21 +26,30 @@ body{
     padding: 20px;
     background-color: transparent;
     box-sizing: border-box;
+    white-space: normal;
+}
+
+.vinyl-main-container br,
+.vinyl-grid br {
+    display: none !important;
 }
 
 .vinyl-grid {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
+    max-width: 640px;
     margin: 0 auto;
     font-size: 0;
-    text-align: center;
 }
 
 .vinyl-container {
     perspective: 1000px;
     width: 250px !important;
-    display: inline-block !important;
-    vertical-align: top;
+    display: block !important;
+    flex: 0 0 auto;
     margin: 30px;
     font-size: 14px;
     box-sizing: border-box;
