@@ -47,6 +47,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+    }
+.cm-activecall-wrapper br{
+    display: none !important;
 }
 
 .cm-activecall-phone {
