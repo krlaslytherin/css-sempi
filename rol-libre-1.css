@@ -27,7 +27,9 @@ word-break: auto-phrase;
   font-family: 'Georgia', 'Garamond', serif;
   padding: 20px;
 }
-
+.cm-tabla-tarot br{
+ display:none !important;
+}
 .cm-tabla-card {
   background: var(--background-1);
   border: 8px solid var(--var-1);
@@ -189,6 +191,9 @@ word-break: auto-phrase;
   padding: 25px 15px;
   position: relative;
   min-height: 150px;
+}
+.cm-tabla-content br{
+  display: block !important;
 }
 
 .cm-tabla-star {
