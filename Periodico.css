@@ -20,6 +20,26 @@ body{
 --g12: var(--inactivos);
 }
 
+.cm-principal > br,
+.cm-encabezado > br,
+.cm-linea1 > br,
+.cm-linea2 > br,
+.cm-linea3 > br,
+.cm-contenido > br,
+.cm-columnaizquierda > br,
+.cm-foto > br,
+.cm-piedefoto > br,
+.cm-pieizquierda > br,
+.cm-piederecha > br,
+.cm-columnaderecha > br,
+.cm-pie > br,
+.cm-textofirma > br,
+.cm-principal + br,
+.signature-catta + br,
+link + br {
+  display: none !important;
+}
+
 .cm-principal {
   display: flex;
   flex-direction: column;
