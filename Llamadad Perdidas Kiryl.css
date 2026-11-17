@@ -52,7 +52,11 @@ body{
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+    margin-top:10px;
 }
+
+.cm-call-phone-wrapper br{
+    display: none !important;}
 
 .cm-call-phone {
     width: 385px;
